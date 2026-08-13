@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** {{13/08/2026}}
+**Status:** 🟨 em andamento
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -59,15 +59,16 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 
 | Nome completo | Matrícula | GitHub |
 |---|---:|---|
-| {{...}} | {{...}} | {{...}} |
+| {{Augusto Pereira Teixeira}} | {{24.123.008-5}} | {{augustotx}} |
+| {{João Pedro Bazoli Palma}} | {{24.123.041-6}} | {{joaopedroBP}} |
 
 ## 0.2 Título atual do TCC
 
-{{...}}
+{{Benchmarking Multi-Linguagem: Uma Metodologia para Comparação de Desempenho entre Linguagens de Programação}}
 
 ## 0.3 Orientador(a)
 
-{{...}}
+{{Leonardo Anjoletto Ferreira}}
 
 ## 0.4 Qual é o resultado principal atualmente previsto no TCC?
 
@@ -78,20 +79,20 @@ Marque e descreva:
 - [ ] modelo de IA/ML/LLM;
 - [ ] biblioteca/API/framework;
 - [ ] análise de dataset;
-- [ ] estudo/benchmark/avaliação experimental;
+- [x] estudo/benchmark/avaliação experimental;
 - [ ] infraestrutura/backend;
 - [ ] componente embarcado/IoT;
 - [ ] outro: {{...}}.
 
-**Descrição:** {{...}}
+**Descrição:** {{No nosso trabalho, é proposta a criação de uma base de dados para benchmarking multi-linguagem, composta por dados obtidos a partir da execução padronizada de diferentes algoritmos em diversas linguagens de programação, considerando métricas como tempo de compilação, tempo de execução e aspectos relacionados à complexidade do desenvolvimento código.}}
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
 - [ ] Sim, a interface já faz parte do TCC.
 - [ ] Parcialmente; existe alguma interação, mas ainda não está bem definida.
-- [ ] Não. O TCC é predominantemente técnico e não previa interface.
+- [x] Não. O TCC é predominantemente técnico e não previa interface.
 
-**Explique o que está formalmente previsto no TCC:** {{...}}
+**Explique o que está formalmente previsto no TCC:** {{Como resultado esperado, busca-se fornecer uma base empírica que permita comparações mais justas e objetivas, contribuindo para a escolha mais adequada de linguagens de programação em diferentes contextos.}}
 
 > Esta resposta serve para separar o compromisso do TCC do projeto da disciplina. Mesmo quando a opção for **não**, a equipe irá definir uma interface para exercitar IHC.
 
@@ -101,11 +102,11 @@ Marque e descreva:
 
 ## 1.1 Explique o TCC em uma frase, sem citar linguagem de programação, framework ou banco de dados.
 
-{{...}}
+{{Nosso TCC visa a criação de um método objetivo de comparar e analisar a performance de linguagens de programação de paradigmas e formas de execução diferentes para diversos problemas.}}
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-{{[F/H/?] ...}}
+{{[F/H/?] **F** Empresas e organizações atualmente escolhem suas linguagens de programação com base em tendências de mercado ou preferências individuais em detrimento de métricas objetivas. **H** A elaboração de uma base de dados com comparações objetivas entre diversas linguagens pode ser útil para essas escolhas. **?** Não sabemos se existe uma linguagem "ideal" para uso geral, ou seja, que encontre o equilíbrio entre usabilidade e performance.}}
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -115,17 +116,18 @@ Complete, se ajudar:
 
 Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
 
-{{...}}
+{{Nosso TCC analisa e compara a performance e a complexidade de desenvolvimento de linguagens de programação diversas}}
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-{{[F/H/?] ...}}
+{{[F/H/?] **F** Pessoas, organizações e empresas terão uma base de dados robusta o suficiente para ajudar na escolha de linguagem nos seus projetos. **H** Entes interessados usarão os dados e o código disponibilizados pelo estudo. **?** Não sabemos se o mercado busca critérios objetivos na escolha de uma linguagem para projetos ou processos.}}
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
 | Mérito/contribuição técnica | Possível aplicação/valor em uso |
 |---|---|
-| {{...}} | {{...}} |
+| {{Criação do método de avaliação}} | {{Uso do método por interessados para comparações entre linguagens}} |
+| {Criação da base de dados} | {Empresas e organizações podem usar os dados para escolher linguagens para projetos específicos} |
 
 ---
 
