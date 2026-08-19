@@ -120,7 +120,10 @@ Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar 
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-{{[F/H/?] **F** Pessoas, organizações e empresas terão uma base de dados robusta o suficiente para ajudar na escolha de linguagem nos seus projetos. **H** Entes interessados usarão os dados e o código disponibilizados pelo estudo. **?** Não sabemos se o mercado busca critérios objetivos na escolha de uma linguagem para projetos ou processos.}}
+[F/H/?]
+- **F** Pessoas, organizações e empresas terão uma base de dados robusta o suficiente para ajudar na escolha de linguagem nos seus projetos.
+- **H** Entes interessados usarão os dados e o código disponibilizados pelo estudo.
+- **?** Não sabemos se o mercado busca critérios objetivos na escolha de uma linguagem para projetos ou processos.
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
@@ -146,18 +149,27 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
 | {{DBA / analista / gestor / técnico / pesquisador / usuário final...}} | {{...}} | {{...}} | F / H / ? |
+| Técnico | Mantenedor (manutenção, atualização) | manteria o repositório e o código em estado funcional e atualizaria código a depender de mudanças significativas no(s) compilado(es) e/ou interpretador(es) | F |
+| Estudante | Usuário | utilizaria para fins acadêmicos/de pesquisa | H |
+| Professor | Usuário | utilizaria para decidir qual linguagem usar para tarefas ou cursos | H |
+| Gestor de Projetos | Usuário | usaria para decidir qual linguagem usar para projetos específicos | H |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
 | Stakeholder | Como é afetado | Usa interface? | Status/evidência |
 |---|---|---|---|
 | {{...}} | {{...}} | sim/não | {{...}} |
+| Desenvolvedor | caso estiver em um projeto onde um gestor usou a interface para decidir uma linguagem, ele terá que usá-la | não | F |
+| Estudante | se um professor usar a ferramenta para decidir uma linguagem para uma tarefa, ele terá que usá-la | não | F |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
 Considere conhecimento do domínio, experiência tecnológica, frequência de uso, necessidades de acessibilidade, responsabilidade profissional, familiaridade com métricas, linguagem técnica, urgência etc.
 
-{{[F/H/?] ...}}
+[F/H/?]
+- **H** Por causa dos possíveis usuários, em sua maior parte, possuírem familiaridade com desenvolvimento de software e/ou mais de uma linguagem de programação, a interação com a ferramenta não precisaria ser tão técnica (i.e. um engenheiro de software não precisa de tutoriais ou descrições detalhadas sobre gráficos de performance);
+- **F** Quanto mais específico e nichado um problema for, melhor o uso da ferramenta para encontrar a linguagem ideal para solunioná-lo;
+- **?** Não sabemos se isso será de grande uso para professores em sala de aula.
 
 ---
 
@@ -167,23 +179,30 @@ Considere conhecimento do domínio, experiência tecnológica, frequência de us
 
 Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”.
 
-{{[F/H/?] ...}}
+[F/H/?]
+
+- **F** Visualizar comparações de performance de diferentes linguagens de programação em diferentes contextos;
+- **H** Eleger uma linguagem específica para um projeto e/ou programa;
+- **H** Verificar se a linguagem usada em algum projeto foi ideal para o problema em questão;
+- **F** Usar a base de dados para ampliação e/ou criação de comparações.
 
 ## 3.2 Quais são as atividades mais importantes?
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | {{...}} | {{...}} | {{...}} | {{...}} |
-| A02 | {{...}} | {{...}} | {{...}} | {{...}} |
-| A03 | {{...}} | {{...}} | {{...}} | {{...}} |
+| A01 | Visualizar comparações | Usuário | Crítica | F |
+| A02 | Filtrar resultados por linguagem, categoria de problema, data, etc | Usuário | Crítica | F |
+| A03 | Atualizar base de dados (código, resultados, etc) | Técnico/Mantenedor | Moderada | H |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
-{{[F/H/?] ...}}
+[F/H/?]
+**F** Atividade que é mais frequente é a visualização de comparações, visto que esse é o objetivo principal do projeto.
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-{{[F/H/?] ...}}
+[F/H/?]
+**F** A visualização de comparações é a mais crítica. Se for mal executada, pode proporcionar comparações desonestas e inadequadas para o problema específico do usuário.
 
 ---
 
@@ -191,34 +210,49 @@ Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashbo
 
 ## 4.1 Como essas atividades são realizadas hoje, antes da interface imaginada na disciplina?
 
-Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.
+<!--Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.-->
+É utilizada a linha de comando com scripts de execução para gerar os resultados de execução e gráficos de comparação.
 
 {{[F/H/?] ...}}
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
-{{[F/H/?] ...}}
+[F/H/?]
+
+- **F** É necessário rodar os scripts de execução toda vez que houver uma mudança em algum código. Isso demanda tempo, esforço e é extremamente repetitivo.
+- **F** Ainda não há uma forma de construir uma base de dados do zero de forma automática.
+- **H** Se um script de execução mudar de sintaxe ou formato, isso pode quebrar a execução de todo o programa.
+
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
+[F/H/?]
 
-{{[F/H/?] ...}}
+- **F** Gráficos de performance (e.g. uso de memória VS tempo de execução);
+- **H** Diferenças entre paradigma das linguagens analisadas;
+- **H** Tipo de linguagem (interpretada VS compilada, tipada VS não tipada, etc)
+
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
-{{[F/H/?] ...}}
+[F/H/?]
+- **F** Se a execução falhar, os gráficos e os resultados não são gerados;
+- **H** Se um usuário comparar resultados de categorias diferentes (e.g. gerenciamento de memória VS busca em grafos), ele pode tomar uma decisão imprecisa.
 
 ## 4.5 Conte uma situação concreta.
 
 Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificuldade e consequência. **Não descreva ainda a futura solução.**
 
-{{[F/H/?] narrativa...}}
+- **F** Um gestor de projetos precisa escolher uma linguagem para um projeto específico.
+- **F** Um professor precisa escolher uma linguagem para uma tarefa ou matéria específica.
+- **F** Um programador quer saber qual linguagem é mais eficiente para um devido problema.
 
 ## 4.6 Que evidência existe hoje?
 
 | Evidência/fonte | O que sustenta | Limitação |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
-
+| Sem uma linguagem especificada, o projeto não se desenvovle | Sem essa decisão básica, o projeto nem começa | Requisitos específicos do projeto (e.g. um projeto web não é compatível com linguagens que não rodam em navegadores) |
+| Sem uma linguagem especificada, o professor pode ter dificuldades na correção de tarefas ou em guiar os alunos na matéria | Exemplos práticos e demonstrações são ferramentas de ensino eficazes | A linguagem tem que ser compatível com a matéria (e.g. não é possível usar C para uma tarefa de análise de dados de forma simples/eficaz) |
+| Sem esse conhecimento, o programador usa a linguagem a qual ele tem mais familiaridade ao invés da mais eficaz | sem uma linguagem especificada, o programador cai na zona de conforto | Linguagens que o programador conhece |
 ---
 
 # 5. Entendendo o contexto de uso
@@ -227,29 +261,44 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 
 {{[F/H/?] ...}}
 
+### Contexto acadêmico:
+- **H** Um pesquisador pode usar a ferramenta para decidir qual linguagem usar para um estudo/projeto
+
+### Contexto corporativo
+- **H** Um gestor de projetos pode usar a ferramenta para decidir a linguagem que melhor equilibra complexidade de desenvolvimento com performance para um problema específico
+
+### Contexto casual
+- **F** Uma pessoa interessada quer ver os resultados sem motivo específico (hobbistas, programadores casuais, entusiastas, etc)
+
+### Contexto técnico
+- **F** Um técnico pode criar mais testes para enriquecer a base de dados
+
 ## 5.2 Em quais dispositivos/equipamentos?
 
-{{[F/H/?] ...}}
+[F/H/?]
+- **F** É possível visualizar os resultados em qualquer dispositivo capaz de se conectar à internet (celular, PC, tablet);
+- **F** É necessário um computador para uso do programa
 
 ## 5.3 Existem condições físicas relevantes?
 
 Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartilhado, interrupções, pressão de tempo etc.
 
-{{[F/H/?] ...}}
+**F** Conexão com a internet e uso de navegador web.
 
 ## 5.4 Existem fatores sociais ou organizacionais?
 
 Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade profissional, auditoria, turnos e colaboração.
 
-{{[F/H/?] ...}}
+Não. Qualquer pessoa tem acesso para visualização.
 
 ## 5.5 Existe necessidade de histórico, rastreabilidade ou auditoria?
 
-{{[F/H/?] ...}}
+**F** É necessário o armazenamento de execuções prévias (em datas e/ou versões antigas), dos resultados das mesmas e do hardware utilizado.
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
 
-{{[F/H/?] ...}}
+- **H** Um erro ou *bug* na geração de gráficos pode criar gráficos errados (erro nas cores, na posição de pontos, etc);
+- **H** Uma base de dados pequena pode gerar resultados enviesados;
 
 ---
 
@@ -261,11 +310,12 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 | Alternativa atual | Quem usa | Para quê | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
-
+| Comparar linguagens de forma artesanal | Programador | para encontrar a melhor linguagem para um problema específico | F |
+| Utilizar histórico de mercado na decisão de linguagem | Gestor de Projetos | para não dificultar o desenvolvimento | F |
+ 
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
 
-{{[F/H/?] ...}}
+- ****
 
 ## 6.3 Quais interfaces profissionais esse público já conhece?
 
