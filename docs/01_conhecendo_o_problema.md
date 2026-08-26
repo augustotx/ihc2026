@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
 **Data:** {{13/08/2026}}
-**Status:** 🟨 em andamento
+**Status:** 🟩 concluída
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -511,9 +511,9 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 Prepare uma explicação de até três frases:
 
-1. **Problema/atividade humana:** {{...}}
-2. **Contribuição técnica do TCC:** {{...}}
-3. **Como uma pessoa poderia utilizar essa contribuição:** {{...}}
+1. **Problema/atividade humana:** Desenvolvedores escolhendo linguagens com base em análise de mercado e/ou viés pessoal
+2. **Contribuição técnica do TCC:** Método de comparação objetivo e base de dados com resultados para comparação
+3. **Como uma pessoa poderia utilizar essa contribuição:** Para escolher linguagens para projetos com base em métricas objetivas
 
 Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico.
 
