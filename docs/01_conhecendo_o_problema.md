@@ -315,25 +315,35 @@ Não. Qualquer pessoa tem acesso para visualização.
  
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
 
-- ****
+- [Debian Benchmark Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html)
+- [Rosetta Code](https://rosettacode.org/wiki/Rosetta_Code)
+- [Repositório](https://github.com/PlummersSoftwareLLC/Primes) do Dave Plummer (criador do gerenciador de tarefas do Windows) de benchmarks de números primos em mais de 100 linguagens.
 
 ## 6.3 Quais interfaces profissionais esse público já conhece?
 
 Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, plataformas de dados, ferramentas de monitoramento, painéis de IA, sistemas administrativos.
 
-{{[F/H/?] ...}}
+1. [Debian Benchmark Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html)
+Ele é um exemplo básico de um agregador de problemas e resultados, organizando-os em tabelas. Tem uma interface simmples e explica cada problema para o usuário entender o que uma linguagem ser "boa" ou "rápida" significa para aquela questão específica.
+
+2. [Compiler Explorer](https://godbolt.org/)
+Não é a mesma coisa que a nossa proposta, mas é uma ferramenta que compila e mostra o código de máquina em diversas arquiteturas de computador para várias linguagens, permitindo com que o usuário possa comparar duas ou mais linguagens, arquiteturas e compiladores.
 
 ## 6.4 O que essas soluções parecem fazer bem?
 
-{{[F/H/?] ...}}
+O Debian Benchmark Game apresenta os resultados de suas comparações de forma simples e direta, isto é, sem barreiras para analisar os resultados ou falta de transparência com relação ao código-fonte. Ele analisa desde linguagens muito utilizadas (e.g Go) assim como obscuras (e.g. SmallTalk).
+
+O Compiler Explorer, assim como o anterior, também é direto, mas como o seu uso é centrado em analisar código de máquina, não é igual ao nosso projeto.
 
 ## 6.5 O que parecem fazer mal, dificultar ou não atender?
 
-{{[F/H/?] ...}}
+Ambos não apresentam representações gráficas ou imagens com detalhes, usando apenas texto e, no caso do Benchmark Game, tabelas. (**H**) Isso pode dificultar a interpretação das comparações.
 
 ## 6.6 Que padrões de interface ou vocabulário parecem familiares a esse público?
 
-{{[F/H/?] ...}}
+Padrões de benchmarks/testes: *memória*, *paralelismo*, etc.
+Interfaces profundas, com explicações em detalhe (i.e. Benchmark Game tem expĺicações de cada problema).
+O código-fonte pode ser analisado, permitindo com que o usuário veja se o código usado foi "justo" com a linguagem em questão.
 
 ---
 
@@ -355,24 +365,24 @@ Faça o exercício de transferência de uso:
 
 Responda:
 
-1. quem poderia contratar/adotar a solução? {{...}}
-2. quem seria o usuário direto? {{...}}
-3. quem administraria/configuraria? {{...}}
-4. quem interpretaria resultados? {{...}}
-5. quem tomaria decisões? {{...}}
-6. quais dados/entradas seriam necessários? {{...}}
-7. quais resultados deveriam ser compreendidos? {{...}}
-8. que erros/rupturas seriam possíveis? {{...}}
+1. quem poderia contratar/adotar a solução? Empresas/organizações que criam software próprio, escolas, universidades.
+2. quem seria o usuário direto? Desenvolvedores de software, gestores de projetos, professores, pesquisadores.
+3. quem administraria/configuraria? Mantenedor(es) de repositório (atualizando/refatorando código, corrigindo erros dos códigos e da interface, etc).
+4. quem interpretaria resultados? Os usuários diretos da ferramenta.
+5. quem tomaria decisões? Os usuários da ferramenta (quais linguagens e/ou problemas avaliar).
+6. quais dados/entradas seriam necessários? Pelos usuários, nenhum. Pelos mantenedores, código novo/reformulado caso necessário.
+7. quais resultados deveriam ser compreendidos? Os resultados dos testes em todas as linguagens avaliadas, assim como os gráficos gerados.
+8. que erros/rupturas seriam possíveis? Caso um mantenedor escreva código errado, os resultados sairiam incorretos ou não seriam computados.
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-{{...}}
+Desenvolvedores de software com acesso a um computador e à internet que tenham interesse ou precisem comparar a performance de linguagens de programação para diversos ou determinados problemas.
 
-**Por que esse perfil foi escolhido?** {{...}}
+**Por que esse perfil foi escolhido?** Foi escolhido pois o usuário ideal do nosso projeto, seja ele com ou sem interface, seria um desenvolvedor de software.
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
-{{...}}
+O objetivo de comparar a performance de linguagens de programação para diversos ou determinados problemas com gráficos, filtros e tabelas.
 
 ## 7.4 Que interface será explorada na disciplina?
 
@@ -380,13 +390,13 @@ Complete:
 
 > **Para fins da disciplina de IHC, será projetada uma interface que permita a `{{perfil}}` utilizar `{{capacidade/resultado do TCC}}` para `{{objetivo}}`, no contexto de `{{situação}}`.**
 
-{{...}}
+Para fins da disciplina de IHC, será projetada uma interface que permita a desenvolvedores de software utilizar os resultados agregados no TCC para fins de comparação, no contexto de um projeto de software acadêmico, corporativo ou pessoal.
 
 ## 7.5 Qual é a relação dessa interface com o TCC?
 
 - [ ] Já fazia parte do TCC.
-- [ ] É um aprofundamento de algo parcialmente previsto.
-- [ ] É uma extensão conceitual criada para a disciplina.
+- [x] É um aprofundamento de algo parcialmente previsto.
+- [x] É uma extensão conceitual criada para a disciplina.
 - [ ] É um protótipo demonstrativo de aplicação potencial.
 - [ ] Outra: {{...}}.
 
@@ -402,20 +412,14 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
-| Dashboard/visão geral | sim/não/talvez | {{...}} | {{...}} |
-| Configuração/parametrização | sim/não/talvez | {{...}} | {{...}} |
-| Entrada/upload/seleção de dados | sim/não/talvez | {{...}} | {{...}} |
-| Acompanhamento de processamento | sim/não/talvez | {{...}} | {{...}} |
-| Relatório/resultados | sim/não/talvez | {{...}} | {{...}} |
-| Histórico com busca/filtros | sim/não/talvez | {{...}} | {{...}} |
-| Comparação de resultados | sim/não/talvez | {{...}} | {{...}} |
-| Explicabilidade/detalhamento | sim/não/talvez | {{...}} | {{...}} |
-| Administração/configurações globais | sim/não/talvez | {{...}} | {{...}} |
-| Usuários/perfis/permissões | sim/não/talvez | {{...}} | {{...}} |
-| CRUD de entidade do domínio | sim/não/talvez | {{...}} | {{...}} |
-| Auditoria/logs | sim/não/talvez | {{...}} | {{...}} |
-| Alertas/ocorrências | sim/não/talvez | {{...}} | {{...}} |
-| Ajuda/documentação | sim/não/talvez | {{...}} | {{...}} |
+| Dashboard/visão geral | sim | É o principal da ferramenta proposta. | Sem isso, não tem ferramenta. |
+| Configuração/parametrização | não | Customização da interface não está no escopo atual | Autoexplicativo. |
+| Relatório/resultados | sim | É o principal da ferramenta | Sem isso, não tem ferramenta. |
+| Histórico com busca/filtros | sim | Filtros fazem parte das comparações | Autoexplicativo. |
+| Comparação de resultados | sim | É o principal da ferramenta proposta. | Sem isso, não tem ferramenta. |
+| Explicabilidade/detalhamento | talvez | Explicação dos problemas, justificativas de código (porque foi escrito assim, etc). | (**?**) Não sabemos se vamos conseguir entregar explicações de todos os problemas a tempo do término da matéria  |
+| Auditoria/logs | talvez | Logs de compilação e execução | (**H**) podem ser úteis para transparência, mas o grupo não vê utilidade para o usuário final |
+| Ajuda/documentação | talvez | Ajudar o usuário na navegação | (**?**) O grupo não sabe se será algo necessário |
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
@@ -427,13 +431,16 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| Ajudar na escolha de uma linguagem | O desenvolvedor precisa escolher uma linguagem para seu(s) projeto(s) | Desenvolvedor | Sem essa escolha, não dá para iniciar um projeto. |
+| Uso de gráficos | Necessidade de analisar comparações visualmente | Usuário da ferramenta | Ferramentas similares não possuem algo similar. |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | {{ação}} | {{objetivo}} | alta/média/baixa |
+| F01 | Comparar resultados | eleger a melhor linguagem para o problema em questão | alta |
+| F02 | Filtrar resultados  | ter maior nuance em sua pesquisa | alta |
+| F03 | Ler explicações/resumos | entender melhor o problema que está vendo | baixa |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -441,7 +448,10 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| Compiladores e Interpretadores | São necessários para executar código | crítico |
+| Sistema Operacional Linux | Para instalar as dependências exigidas | crítico |
+| *Hardware* relativamente moderno (64 bits, *multi-core*)| Para que os resultados não sejam afetados pelo dispositivo (de forma maior, testes de paralelismo) | alto/médio |
+| *Scripts* de Execução | Facilitam a vida do desenvolvedor (automação de testes) | baixo |
 
 ---
 
@@ -449,9 +459,9 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | {{...}} | {{...}} | Entrega 2/3/7/... |
-| H02 | {{...}} | {{...}} | {{...}} |
-| H03 | {{...}} | {{...}} | {{...}} |
+| H01 | Quem vai usar a ferramenta? | É importante para definir o escopo, o uso. | Atividade 3 |
+| H02 | Existem ferramentas que fazem algo próximo do que queremos? | Para entendermos melhor o que fazer e o que não fazer na nossa implementação | Atividade 2 |
+| H03 | Quais serão os usos do projeto? | Para entendermos melhor o que fazer e o que não fazer na nossa implementação | Atividade 5 |
 
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -461,23 +471,23 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 | Pergunta | Síntese atual |
 |---|---|
-| Qual é a contribuição central do TCC? | {{...}} |
-| O TCC já previa interface? | {{...}} |
-| Quem é o usuário prioritário de IHC? | {{...}} |
-| O que ele precisa alcançar? | {{...}} |
-| Qual problema/atividade será estudado? | {{...}} |
-| Como isso acontece hoje? | {{...}} |
-| Qual é o contexto de uso? | {{...}} |
-| Que interface/recorte será explorado? | {{...}} |
-| Como a interface se relaciona ao TCC? | {{...}} |
-| Quais pontos ainda são hipóteses? | {{H01...}} |
+| Qual é a contribuição central do TCC? | criação de uma base de dados para benchmarking multi-linguagem |
+| O TCC já previa interface? | não |
+| Quem é o usuário prioritário de IHC? | desenvolvedores de software |
+| O que ele precisa alcançar? | interface que permita comparações robustas |
+| Qual problema/atividade será estudado? | escolhas de linguagens de programação para projetos |
+| Como isso acontece hoje? | de forma subjetiva (análise de mercado, experiência pessoal, familiaridade) |
+| Qual é o contexto de uso? | desenvolvedores buscando objetividade em suas escolhas de linguagem |
+| Que interface/recorte será explorado? | dashboard com gráficos e tabelas dos resultados |
+| Como a interface se relaciona ao TCC? | funcionaria como um *front-end* para a nossa base de dados |
+| Quais pontos ainda são hipóteses? | Contexto de uso e problema/atividade |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** {{...}}  
-**Fora do escopo de IHC:** {{...}}  
-**Dentro do escopo formal do TCC:** {{...}}  
-**Interface da disciplina será implementada no TCC?** não definido / sim / não — {{justificativa, se houver}}
+**Dentro do escopo de IHC:** dashboard com gráficos e tabelas exibindo os resultados, filtros dos mesmos. 
+**Fora do escopo de IHC:** mantenedor poder inserir novos códigos/problemas
+**Dentro do escopo formal do TCC:** método de comparação objetivo e base de dados
+**Interface da disciplina será implementada no TCC?** não definido — não sabemos se será útil para o TCC final nem se será da qualidade desejada
 
 ---
 
@@ -511,21 +521,21 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 
 # Checklist de qualidade
 
-- [ ] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
-- [ ] A equipe declarou se o TCC já previa interface.
-- [ ] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
-- [ ] A interface de IHC não foi apresentada como obrigação automática do TCC.
-- [ ] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
-- [ ] Usuários diretos e stakeholders foram diferenciados.
-- [ ] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
-- [ ] Objetivo do usuário não foi confundido com objetivo do projeto.
-- [ ] Processo/problema atual foi descrito antes da solução.
-- [ ] Existe situação concreta de uso/problema.
-- [ ] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
-- [ ] Mercado/alternativas existentes foram levantados inicialmente.
-- [ ] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
-- [ ] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
-- [ ] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
+- [x] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
+- [x] A equipe declarou se o TCC já previa interface.
+- [x] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
+- [x] A interface de IHC não foi apresentada como obrigação automática do TCC.
+- [x] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
+- [x] Usuários diretos e stakeholders foram diferenciados.
+- [x] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
+- [x] Objetivo do usuário não foi confundido com objetivo do projeto.
+- [x] Processo/problema atual foi descrito antes da solução.
+- [x] Existe situação concreta de uso/problema.
+- [x] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
+- [x] Mercado/alternativas existentes foram levantados inicialmente.
+- [x] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
+- [x] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
+- [x] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
 - [ ] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
-- [ ] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
-- [ ] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
+- [x] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
+- [x] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
