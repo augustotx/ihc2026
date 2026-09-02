@@ -45,14 +45,14 @@ Desenvolvedores de software com acesso a um computador e à internet que tenham 
 ### Análise C01 — Debian Benchmark Game
 
 **Autor(a):** Augusto Pereira Teixeira — 24.123.008-5  
-**Tipo:** direto  
+**Tipo:** direto
 **Link oficial:** https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html
 **Data de acesso:** 02/09/2026
 
 ### Análise C02 — Rosetta Code
 
 **Autor(a):** João Pedro Bazoli Palma - 24.123.041-6  
-**Tipo:** análogo  
+**Tipo:** análogo
 **Link oficial:** https://rosettacode.org/wiki/Rosetta_Code
 **Data de acesso:** 02/09/2026
 
@@ -64,9 +64,20 @@ C02 - {{...}}
 
 #### Funcionalidades relevantes
 
+##### C01
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| {{...}} | {{...}} | `../assets/02_concorrencia/...` | {{...}} |
+| visualização de tabelas | é selecionado um problema na página inicial | ![tabela com resultados de um problema](../assets/02_concorrencia/debian_table.png) | é básica, mas tem as funções de filtragem esperadas de uma ferramenta desse tipo |
+| filtragem de tabelas | é selecionado um tipo de campo na tabela | ![mesma tabela com o filtro decrescente no campo gz](../assets/02_concorrencia/debian_sort.png) | os filtros na tabela são só em ordem decrescente, mas funcionam |
+| leitura de código-fonte | é selecionado um item da tabela | ![código-fonte do C GCC do mesmo problema](../assets/02_concorrencia/debian_source.png) | o código possui destaque de sintaxe e detalhes sobre a compilação (comandos usados, tempo, etc) |
+| descrição do problema | é selecionado o botão "description" na página da tabela | ![descrição do problema n-body](../assets/02_concorrencia/debian_nbody.png) | descrições curtas, com instruções de implementação em outras linguagens para submissão |
+
+##### C02
+| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
+|---|---|---|---|
+| visualização de um problema em centenas de linguagens diferentes | é selecionada uma *task* na lista de *tasks* do site | ![task hello world](../assets/02_concorrencia/rosetta_helloworld.png) | é básica e difícil (por conta da quantidade de linguagens), mas faz o que é previsto |
+| destaque de sintaxe para certas linguagens | é feito automaticamente | ![destaque de sintaxe do hello world em C](../assets/02_concorrencia/rosetta_c_highlight.png) | não está presente em todas as linguagens (seria humanamente impossível fazer isso para todas) |
+| descrição da *task* | no topo da página de cada *task* existe uma descrição dela | ![descrição da task happy numbers](../assets/02_concorrencia/rosetta_happy_numbers.png) | as descrições são bem diretas, e explicam de forma curta o que cada problema faz |
 
 #### Experiência do usuário e opiniões
 
