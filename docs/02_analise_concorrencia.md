@@ -111,9 +111,12 @@ C02 -
 
 Analise interfaces que moldam a expectativa do público, mesmo que não sejam concorrentes.
 
+### TODO: REVISAR
+
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
 |---|---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{link local}} | {{...}} |
+| StackOverflow | desenvolvedores usam para pesquisar/pedir ajuda com programação | padrões de fórum (post/respostas/comentários, junção em categorias/subcategorias, etc) |
+| {{...}} | {{...}} | {{...}} | {{link local}} | esse tipo de usuário espera uma interface feita para ele, sem "dar as mãos" nem "ensinar o básico" |
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
 
