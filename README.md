@@ -17,44 +17,40 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 ## Identificação
 
-**Título do projeto de IHC:** {{TÍTULO DO PROJETO}}  
-**TCC/projeto de origem:** {{TÍTULO ORIGINAL DO TCC}}  
-**Orientador(a):** {{NOME}}  
+**Título do projeto de IHC:** Visualização de comparações entre linguagens de programação  
+**TCC/projeto de origem:** Benchmarking Multi-Linguagem: Uma Metodologia para Comparação de Desempenho entre Linguagens de Programação  
+**Orientador(a):** Leonardo Anjoletto Ferreira
 **Disciplina:** Interação Humano-Computador  
-**Instituição:** {{INSTITUIÇÃO}}  
-**Semestre:** {{ANO/SEMESTRE}}
+**Instituição:** FEI  
+**Semestre:** Segundo semestre de 2026
 
 ### Equipe
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| {{Nome 1}} | {{matrícula}} | {{@usuario}} | {{...}} |
-| {{Nome 2}} | {{matrícula}} | {{@usuario}} | {{...}} |
+| Augusto Pereira Teixeira| 24.123.008-5| augustotx | a definir |
+| João Pedro Bazoli Palma | 24.123.041-6 | joaopedroBP| a definir |
 
 ## Relação entre TCC e projeto de IHC
 
 | Item | Descrição |
 |---|---|
-| Tema central do TCC | {{...}} |
-| Resultado técnico esperado do TCC | {{algoritmo, estudo, sistema, modelo, análise, API...}} |
-| O TCC já previa interface? | sim / não / parcialmente |
-| Capacidade técnica que pode gerar valor para pessoas | {{...}} |
-| Usuário principal adotado em IHC | {{...}} |
-| Objetivo principal desse usuário | {{...}} |
-| Interface/recorte explorado na disciplina | {{...}} |
-| Relação com o escopo formal do TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra |
+| Tema central do TCC | Comparação entre linguagens de programação |
+| Resultado técnico esperado do TCC | criação de uma base de dados para benchmarking multi-linguagem, composta por dados obtidos a partir da execução padronizada de diferentes algoritmos em diversas linguagens de programação, considerando métricas como tempo de compilação, tempo de execução e aspectos relacionados à complexidade do desenvolvimento código. |
+| O TCC já previa interface? | não |
+| Capacidade técnica que pode gerar valor para pessoas | Uso do método por interessados para comparações entre linguagens e empresas e organizações podem usar os dados para escolher linguagens para projetos específicos |
+| Usuário principal adotado em IHC | Desenvolvedores de software com acesso a um computador e à internet que tenham interesse ou precisem comparar a performance de linguagens de programação para diversos ou determinados problemas. |
+| Objetivo principal desse usuário | O objetivo de comparar a performance de linguagens de programação para diversos ou determinados problemas. |
+| Interface/recorte explorado na disciplina | Não tem recorte |
+| Relação com o escopo formal do TCC | protótipo demonstrativo |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
 
 ## Resumo do projeto pela perspectiva do usuário
 
-Escreva **um parágrafo curto e concreto** explicando: quem é o usuário escolhido, o que precisa alcançar, qual problema enfrenta ou qual atividade precisa executar, em qual contexto e como a contribuição do TCC se relaciona com essa situação.
-
-Evite começar pela tecnologia.
-
-> **Estrutura sugerida:** “`{{tipo de usuário}}` precisa `{{objetivo}}` em `{{contexto}}`. Atualmente enfrenta `{{problema/limitação}}` e utiliza `{{processo/alternativa atual}}`. O tema do TCC investiga `{{contribuição técnica}}`. Para fins da disciplina de IHC, será explorada uma interface que permita `{{forma de uso da contribuição}}`.”
-
 Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md).
+
+Desenvolvedores de software precisam de um metodo objetivo para escolher qual linguagem de programação usar em seus projetos de software. Atualmente, essa escolha é feita levando em conta vieses pessoais e análises mercadológicas, e não uma metodologia regragada. O tema do TCC busca criar uma database contendo comparações de performance de diversas linguagens de programação em múltiplos algoritimos conceituados. Para fins da disciplina de IHC, será explorada uma interface que permita como que o usuário visualize os resultados da database de forma simples e direta, com opções de filtragem.
 
 ## Por que pensar em interface mesmo em TCCs técnicos?
 
@@ -101,7 +97,7 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | # | Entrega | Quantidade mínima / responsabilidade | Status |
 |---:|---|---|---|
 | 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | 🟩 |
-| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | ⬜ |
+| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | 🟨|
 | 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | ⬜ |
 | 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | ⬜ |
 | 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | ⬜ |
