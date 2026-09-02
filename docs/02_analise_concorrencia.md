@@ -85,19 +85,27 @@ Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte id
 
 #### Preço/modelo de negócio
 
-{{...}}
+C01 - É gratuito, aberto e disponível na internet.
+C02 - É gratuito, aberto e disponível na internet. Usa o padrão *wiki* para as suas páginas (parecido com a Wikipédia e similares).
 
 #### Padrões e tendências percebidos
 
-{{...}}
+C01 - É feito com desenvolvedores/programadores experientes em mente. O usuário tem que saber o que cada programa testa interpretando as descrições e/ou o código. A interface é simples mas não acessível (não há explicação do que cada coisa faz).
+C02 - 
 
 #### Pontos positivos, limitações e lições
 
+##### C01
+| Ponto | Evidência | Implicação para nosso projeto |
+|---|---|---|
+| interface simples | não há menus ou opções, só links para outras páginas | nossa interface pode ser parecida, **?** mas não sabemos se a simplicidade implicará em uma interface pior ou mais rasa |
+| não há representação gráfica | só tabelas | nosso projeto terá gráficos para uma representação visual dos resultados |
+| é possível comparar versões antigas do mesmo algoritmo | existem casos em que as linguagens têm várias versões do mesmo algoritmo | isso pode ser interessante para guardar histórico, assim como para a reprodutibilidade do(s) problema(s) |
+
+##### C02
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
 | {{...}} | {{...}} | {{...}} |
-
-> Repita a subseção para C02, C03... até atender à quantidade da equipe.
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 
