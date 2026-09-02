@@ -1,7 +1,7 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 02/09/2026  
+**Status:** 🟨 em andamento  
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
 ## Objetivo da atividade
@@ -30,26 +30,37 @@ Retome o mapa inicial de alternativas e produtos citado na Entrega 1. Aqui a equ
 
 | Item citado na Entrega 1 | Tipo | Por que foi citado | Status inicial | Decisão nesta entrega |
 |---|---|---|---|---|
-| {{...}} | concorrente / análogo / ferramenta cotidiana / processo manual | {{...}} | F / H / ? | analisar / descartar com justificativa |
+| Rosetta Code | análogo | porque é uma biblioteca de códigos e algoritmos em diversas linguagens | F | analisar |
+| Debian Benchmark Game | concorrente | porque agrega resultados de algoritmos diferentes, em diversas linguagens, em tabelas | F | analisar |
+| Repositório do Dave Plummer | processo manual | porque agrega resultados de algoritmos de números primos em mais de 100 linguagens | F | não possui interface |
 
 Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, atualize `H01`, `H02`... em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 ## 1. Público-alvo desta análise
 
-{{descrever e ligar à Entrega 1}}
+Desenvolvedores de software com acesso a um computador e à internet que tenham interesse ou precisem comparar a performance de linguagens de programação para diversos ou determinados problemas.
 
 ## 2. Concorrentes diretos/indiretos
 
-### Análise C01 — {{produto}}
+### Análise C01 — Debian Benchmark Game
 
-**Autor(a):** {{nome — matrícula}}  
-**Tipo:** direto / indireto / análogo  
-**Link oficial:** {{URL}}  
-**Data de acesso:** {{dd/mm/aaaa}}
+**Autor(a):** Augusto Pereira Teixeira — 24.123.008-5  
+**Tipo:** direto  
+**Link oficial:** https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html
+**Data de acesso:** 02/09/2026
+
+### Análise C02 — Rosetta Code
+
+**Autor(a):** João Pedro Bazoli Palma - 24.123.041-6  
+**Tipo:** análogo  
+**Link oficial:** https://rosettacode.org/wiki/Rosetta_Code
+**Data de acesso:** 02/09/2026
 
 #### Contexto e proposta
 
-{{...}}
+C01 - É um exemplo básico de um agregador de problemas e resultados, organizando-os em tabelas. Tem uma interface simples e explica cada problema para o usuário entender o que uma linguagem ser "boa" ou "rápida" significa para aquela questão específica.
+
+C02 - {{...}}
 
 #### Funcionalidades relevantes
 
