@@ -24,8 +24,7 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 **Instituição:** FEI  
 **Semestre:** Segundo semestre de 2026
 
-### Equipe
-
+### Equipe 04
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
 | Augusto Pereira Teixeira| 24.123.008-5| augustotx | a definir |
