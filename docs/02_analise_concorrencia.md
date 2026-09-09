@@ -60,7 +60,7 @@ Desenvolvedores de software com acesso a um computador e à internet que tenham 
 
 C01 - É um exemplo básico de um agregador de problemas e resultados, organizando-os em tabelas. Tem uma interface simples e explica cada problema para o usuário entender o que uma linguagem ser "boa" ou "rápida" significa para aquela questão específica.
 
-C02 - {{...}}
+C02 - Biblioteca de soluções de diversos problemas de programação conceituados resolvidos em centenas de linguagens de programação, organizando-os em blocos de código. Tem uma interface simples, com uma breve descrição de cada problema e uma lista de blocos de código embaixo.  
 
 #### Funcionalidades relevantes
 
@@ -91,7 +91,7 @@ C02 - É gratuito, aberto e disponível na internet. Usa o padrão *wiki* para a
 #### Padrões e tendências percebidos
 
 C01 - É feito com desenvolvedores/programadores experientes em mente. O usuário tem que saber o que cada programa testa interpretando as descrições e/ou o código. A interface é simples mas não acessível (não há explicação do que cada coisa faz).
-C02 - 
+C02 - É feito com desenvolvedores/programadores e interessados em mente. O usuário tem que ter um conhecimento mínimo dos problemas representados na biblioteca. A interface é simples mas não é direta (muitas abas,nenhuma explicação de navegação)  
 
 #### Pontos positivos, limitações e lições
 
@@ -105,7 +105,9 @@ C02 -
 ##### C02
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+|opções de filtragem| não existem opções de filtragem por linguagem ou tipo de problema | nosso projeto terá opções de filtragem |
+|interface simples | não há menus ou opções, só links para outras páginas | nossa interface pode ser parecida, **?** mas não sabemos se a simplicidade implicará em uma interface pior ou mais rasa  |
+|variedade enorme de problemas e linguagens  | biblioteca contendo centenas de problemas resolvidos em centenas de linguagens  | nosso projeto vai ter uma quantidade limitada de problemas e linguagens  |
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 
