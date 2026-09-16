@@ -1,7 +1,7 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
 **Data:** 02/09/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 concluída  
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
 ## Objetivo da atividade
@@ -60,7 +60,7 @@ Desenvolvedores de software com acesso a um computador e à internet que tenham 
 
 C01 - É um exemplo básico de um agregador de problemas e resultados, organizando-os em tabelas. Tem uma interface simples e explica cada problema para o usuário entender o que uma linguagem ser "boa" ou "rápida" significa para aquela questão específica.
 
-C02 - {{...}}
+C02 - Biblioteca de soluções de diversos problemas de programação conceituados resolvidos em centenas de linguagens de programação, organizando-os em blocos de código. Tem uma interface simples, com uma breve descrição de cada problema e uma lista de blocos de código embaixo.  
 
 #### Funcionalidades relevantes
 
@@ -91,7 +91,7 @@ C02 - É gratuito, aberto e disponível na internet. Usa o padrão *wiki* para a
 #### Padrões e tendências percebidos
 
 C01 - É feito com desenvolvedores/programadores experientes em mente. O usuário tem que saber o que cada programa testa interpretando as descrições e/ou o código. A interface é simples mas não acessível (não há explicação do que cada coisa faz).
-C02 - 
+C02 - É feito com desenvolvedores/programadores e interessados em mente. O usuário tem que ter um conhecimento mínimo dos problemas representados na biblioteca. A interface é simples mas não é direta (muitas abas,nenhuma explicação de navegação)  
 
 #### Pontos positivos, limitações e lições
 
@@ -105,7 +105,9 @@ C02 -
 ##### C02
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+|opções de filtragem| não existem opções de filtragem por linguagem ou tipo de problema | nosso projeto terá opções de filtragem |
+|interface simples | não há menus ou opções, só links para outras páginas | nossa interface pode ser parecida, **?** mas não sabemos se a simplicidade implicará em uma interface pior ou mais rasa  |
+|variedade enorme de problemas e linguagens  | biblioteca contendo centenas de problemas resolvidos em centenas de linguagens  | nosso projeto vai ter uma quantidade limitada de problemas e linguagens  |
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 
@@ -113,9 +115,10 @@ Analise interfaces que moldam a expectativa do público, mesmo que não sejam co
 
 ### TODO: REVISAR
 
-| Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
-|---|---|---|---|---|
-| StackOverflow | desenvolvedores usam para pesquisar/pedir ajuda com programação | padrões de fórum (post/respostas/comentários, junção em categorias/subcategorias, etc) | {{**TODO** print do stackoverflow}} | esse tipo de usuário espera uma interface feita para ele, sem "dar as mãos" nem "ensinar o básico" |
+| Software | Por que o público usa | Padrões relevantes | O que aprender |
+|---|---|---|---|
+| StackOverflow | desenvolvedores usam para pesquisar/pedir ajuda com programação | padrões de fórum (post/respostas/comentários, junção em categorias/subcategorias, etc) | esse tipo de usuário espera uma interface feita para ele, sem "dar as mãos" nem "ensinar o básico" |
+| GitHub | repositórios de código e projetos de software | padrão git (repositórios, READMEs) | formas de mostrar arquivos de código e documentação |
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
 
@@ -123,46 +126,47 @@ Registre somente padrões encontrados nas soluções analisadas e que possam ter
 
 | Padrão observado | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Aplicável ao nosso escopo? |
 |---|---|---|---|---|---|
-| dashboard | {{...}} | {{...}} | {{...}} | {{...}} | sim/não/talvez |
-| relatório | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| histórico + filtros | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| administração/CRUD | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| comparação de resultados | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| relatório | C01,C02 | Uma breve descrição dos problemas de programação representados nos produtos | Ajuda o usuário a compreender melhor o problema que está sendo resolvido  | Problemas complexos podem precisar de descrições complexas | sim |
+| histórico + filtros | C01 | Melhor comparação/observação de resultados | O usuário consegue ver problemas específicos, assim como versões anteriores deles | **?** Histório pode ser difícil de implementar | sim |
+| comparação de resultados | C01| Visualizar benchmarks de diferentes linguagens de programação em diversos problemas de forma clara e direta | facilita com que o usuário compare varias linguagens de programação  | Métricas podem ficar confusas caso a visualização seja muito simples | sim |
 
 > O objetivo não é concluir “todo concorrente tem dashboard, então teremos um”. O padrão só será adotado se apoiar uma tarefa rastreável.
 
 ## 4. Síntese comparativa da equipe
 
-| Critério | C01 | C02 | C03 | Oportunidade para o projeto |
-|---|---|---|---|---|
-| Navegação |  |  |  |  |
-| Feedback/estado |  |  |  |  |
-| Prevenção/recuperação de erro |  |  |  |  |
-| Terminologia |  |  |  |  |
-| Acessibilidade |  |  |  |  |
-| Eficiência |  |  |  |  |
+| Critério | C01 | C02 | Oportunidade para o projeto |
+|---|---|---|---|
+| Navegação | Sim | Não | Inspiração para o nosso projeto |
+| Feedback/estado | Não | Não | N.A. |
+| Prevenção/recuperação de erro | Não | Não | N.A. |
+| Terminologia | Sim | Sim | Termos e vocabulário técnico específicos |
+| Acessibilidade | Não | Parcial | C02 tem opções de tamanho de fonte |
+| Eficiência | Sim | Sim | Ambos são sites leves e sem *bloatware* |
 
 ## 5. Recomendações derivadas
 
 Liste recomendações com origem explícita.
 
-- **RC01:** {{recomendação}} — derivada de {{C01/C02/evidência}}.
-- **RC02:** {{...}}
+- **RC01:** Fazer interface leve e direta - derivada de C01
+- **RC02:** Mostrar resultados na mesma página de forma concisa - derivada de C02
+- **RC03:** Descrever brevemente os problemas para o usuário entender como funcionam e como implementá-los - derivada de C01 e C02
+- **RC04:** Métricas bem descritas (tempo, tamanho, compactação, etc) - derivada de C01
 
 ## Referências
 
-{{fontes dos produtos, avaliações e literatura}}
+[Debian Benchmark Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html)
+[Rosetta Code](https://rosettacode.org/wiki/Rosetta_Code)
 
 ## Checklist
 
-- [ ] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
-- [ ] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
-- [ ] Há pelo menos uma análise completa por integrante.
-- [ ] Cada análise contém prints legíveis da interface.
-- [ ] Prints mostram telas/estados relevantes, não apenas logos/homepage.
-- [ ] Foram analisados concorrentes e/ou interfaces representativas ao público.
-- [ ] Em TCC sem interface original, foram investigadas ferramentas profissionais análogas às atividades do usuário escolhido.
-- [ ] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
-- [ ] Opiniões de UX têm fonte.
-- [ ] A síntese compara critérios comuns e produz recomendações.
-- [ ] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
+- [X] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
+- [X] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
+- [X] Há pelo menos uma análise completa por integrante.
+- [X] Cada análise contém prints legíveis da interface.
+- [X] Prints mostram telas/estados relevantes, não apenas logos/homepage.
+- [X] Foram analisados concorrentes e/ou interfaces representativas ao público.
+- [X] Em TCC sem interface original, foram investigadas ferramentas profissionais análogas às atividades do usuário escolhido.
+- [X] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
+- [X] Opiniões de UX têm fonte.
+- [X] A síntese compara critérios comuns e produz recomendações.
+- [X] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
