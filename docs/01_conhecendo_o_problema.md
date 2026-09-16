@@ -106,7 +106,11 @@ Marque e descreva:
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-{{[F/H/?] **F** Empresas e organizações atualmente escolhem suas linguagens de programação com base em tendências de mercado ou preferências individuais em detrimento de métricas objetivas. **H** A elaboração de uma base de dados com comparações objetivas entre diversas linguagens pode ser útil para essas escolhas. **?** Não sabemos se existe uma linguagem "ideal" para uso geral, ou seja, que encontre o equilíbrio entre usabilidade e performance.}}
+**F** Empresas e organizações atualmente escolhem suas linguagens de programação com base em tendências de mercado ou preferências individuais em detrimento de métricas objetivas. Nós temos fontes no nosso TCC sobre isso.
+
+**H** A elaboração de uma base de dados com comparações objetivas entre diversas linguagens pode ser útil para essas escolhas.
+
+**?** Não sabemos se existe uma linguagem que encontre o equilíbrio entre usabilidade e performance.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -116,12 +120,12 @@ Complete, se ajudar:
 
 Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
 
-{{Nosso TCC analisa e compara a performance e a complexidade de desenvolvimento de linguagens de programação diversas}}
+Nosso TCC analisa e compara a performance e a complexidade de desenvolvimento de linguagens de programação diversas.
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
 [F/H/?]
-- **F** Pessoas, organizações e empresas terão uma base de dados robusta o suficiente para ajudar na escolha de linguagem nos seus projetos.
+- **H** Pessoas, organizações e empresas terão uma base de dados robusta o suficiente para ajudar na escolha de linguagem nos seus projetos.
 - **H** Entes interessados usarão os dados e o código disponibilizados pelo estudo.
 - **?** Não sabemos se o mercado busca critérios objetivos na escolha de uma linguagem para projetos ou processos.
 
@@ -129,8 +133,8 @@ Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar 
 
 | Mérito/contribuição técnica | Possível aplicação/valor em uso |
 |---|---|
-| {{Criação do método de avaliação}} | {{Uso do método por interessados para comparações entre linguagens}} |
-| {Criação da base de dados} | {Empresas e organizações podem usar os dados para escolher linguagens para projetos específicos} |
+| Criação do método de avaliação | Uso do método por interessados para comparações entre linguagens |
+| Criação da base de dados | Empresas e organizações podem usar os dados para escolher linguagens para projetos específicos |
 
 ---
 
@@ -140,7 +144,7 @@ Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar 
 
 Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIGINAL` e prossiga para 2.2.
 
-{{[F/H/?] ...}}
+NÃO SE APLICA AO ESCOPO ORIGINAL.
 
 ## 2.2 Quem poderia **usar, configurar, administrar, operar, interpretar ou tomar decisões** a partir da contribuição técnica?
 
@@ -149,7 +153,7 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
 | {{DBA / analista / gestor / técnico / pesquisador / usuário final...}} | {{...}} | {{...}} | F / H / ? |
-| Técnico | Mantenedor (manutenção, atualização) | manteria o repositório e o código em estado funcional e atualizaria código a depender de mudanças significativas no(s) compilado(es) e/ou interpretador(es) | F |
+| Técnico | Mantenedor (manutenção, atualização) | manteria o repositório e o código em estado funcional e atualizaria código a depender de mudanças significativas no(s) compilado(es) e/ou interpretador(es) | **F** pois isso e um padrão de mercado |
 | Estudante | Usuário | utilizaria para fins acadêmicos/de pesquisa | H |
 | Professor | Usuário | utilizaria para decidir qual linguagem usar para tarefas ou cursos | H |
 | Gestor de Projetos | Usuário | usaria para decidir qual linguagem usar para projetos específicos | H |
