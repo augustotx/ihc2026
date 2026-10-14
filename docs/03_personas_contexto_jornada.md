@@ -46,42 +46,55 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 **Base de evidências:** proto-persona a validar, baseada nas Entregas 1 e 2
 
 **Hipóteses da Entrega 1 relacionadas:** H01, H03
-
 | Campo | Descrição |
 | --- | --- |
-| Faixa etária / contexto relevante | Não definida. A idade não é considerada relevante para as tarefas previstas nesta etapa. |
-| Ocupação/papel | Gestor de projetos de software que precisa avaliar alternativas técnicas para implementar um projeto. |
-| Conhecimento do domínio | Conhece linguagens de programação,entende que o desempenho pode variar conforme a linguagem, o algoritmo e o problema executado e possui conhecimento das necessidades e limitações técnicas do projeto que supervisiona.|
-| Experiência tecnológica | Utiliza computador e ferramentas de desenvolvimento de software e possui acesso à internet. |
-| Objetivos | escolher a linguagem de programação idea para o projeto que está supervisionando |
-| Necessidades | Precisa tomar a decisão de qual linguagem de programação utilizar no projeto de software que supervisiona |
-| Dores/frustrações | Escolha de linguagem de programação enviesada pelo mercado e experiência pessoal; Objetivo do projeto supervisionado abrangente quanto a linguagem de programação|
-| Motivadores | Escolher a melhor linguagem possível para o projeto supervisionado |
-| Restrições/acessibilidade | A proposta considera acesso a um computador, navegador e internet. Outras restrições de acessibilidade ainda não foram investigadas. |
-| Ambiente típico de uso | Possivelmente em um ambiente de trabalho, utilizando um computador para consultar e comparar resultados.  |
-| Comportamentos relevantes | Pode pesquisar benchmarks, selecionar um problema, comparar linguagens e analisar métricas antes de tomar uma decisão. A sequência exata de comportamento ainda precisa ser investigada. |
+| Faixa etária / contexto relevante | 42 anos de idade 20 anos de experiẽncia na  |
+| Ocupação/papel | Gestor de projetos de software responsável por avaliar alternativas técnicas e orientar decisões de desenvolvimento. |
+| Conhecimento do domínio | Conhece diferentes linguagens de programação e entende que o desempenho varia conforme a linguagem, o algoritmo e o problema. Também conhece os requisitos técnicos do projeto que supervisiona. |
+| Experiência tecnológica | Utiliza computadores e ferramentas de desenvolvimento no cotidiano profissional e tem acesso à internet para pesquisar soluções técnicas. |
+| Objetivos | Identificar uma linguagem de programação adequada às necessidades e aos objetivos do projeto que supervisiona. |
+| Necessidades | Encontrar informações comparáveis e confiáveis que ajudem a justificar sua escolha de linguagem para a equipe e para o projeto. |
+| Dores/frustrações | Tem dificuldade para distinguir resultados de desempenho relevantes para seu projeto e evitar que a escolha seja influenciada apenas pela popularidade das linguagens ou por preferências pessoais. |
+| Motivadores | Tomar uma decisão técnica bem fundamentada, que contribua para o sucesso do projeto e reduza o risco de escolhas inadequadas. |
+| Restrições/acessibilidade | Depende de um computador, navegador e conexão com a internet para consultar os resultados. Outras restrições ainda não foram investigadas. |
+| Ambiente típico de uso | Provavelmente utiliza a ferramenta no ambiente de trabalho, durante a análise de alternativas técnicas ou o planejamento do projeto. |
+| Comportamentos relevantes | Pesquisa informações sobre linguagens, compara resultados de benchmarks e considera métricas de desempenho para apoiar sua decisão. A sequência exata dessas atividades ainda precisa ser investigada. |
 
 ![Persona P01](../assets/03_personas/persona_p01.svg)
 
-| Campo | Descrição |
-|---|---|
-| Faixa etária / contexto relevante | {{somente o que impacta o uso}} |
-| Ocupação/papel | {{...}} |
-| Conhecimento do domínio | {{...}} |
-| Experiência tecnológica | {{...}} |
-| Objetivos | {{...}} |
-| Necessidades | {{...}} |
-| Dores/frustrações | {{...}} |
-| Motivadores | {{...}} |
-| Restrições/acessibilidade | {{...}} |
-| Ambiente típico de uso | {{...}} |
-| Comportamentos relevantes | {{...}} |
 
 **Decisões de design influenciadas por P01:**
 
-- {{...}}
+- Permitir selecionar o problema que deseja analisar e filtrar os resultados por critérios relevantes.
+- Apresentar resultados de diferentes linguagens de maneira comparável, com métricas claramente identificadas.
+- Disponibilizar informações sobre as condições dos testes, incluindo o hardware utilizado, para ajudar a interpretar os resultados.
+- Evitar apresentar uma linguagem como universalmente superior sem considerar o problema e as condições da comparação.
+- Permitir que o usuário consulte explicações resumidas sobre os problemas avaliados.
 
-> Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
+### Persona P02 — Mariana Costa, estudante e pesquisadora de computação
+
+**Autor(a):** Augusto Pereira Teixeira — 24.123.008-5
+
+**Tipo:** secundária
+
+**Base de evidências:** proto-persona a validar, baseada nos contextos acadêmicos considerados na Entrega 1
+
+**Hipóteses da Entrega 1 relacionadas:** H01, H03
+
+| Campo | Descrição |
+| --- | --- |
+| Faixa etária / contexto relevante | 24 anos, cursando mestrado na área de computação. |
+| Ocupação/papel | Estudante e pesquisadora de computação interessada em investigar o desempenho de diferentes linguagens de programação. |
+| Conhecimento do domínio | Possui conhecimentos de programação e familiaridade com algoritmos, experimentação e análise de resultados. |
+| Experiência tecnológica | Utiliza computadores e ferramentas digitais para estudar, consultar documentação técnica e acessar estudos acadêmicos. |
+| Objetivos | Comparar o desempenho de linguagens em diferentes problemas e compreender os fatores que influenciam os resultados. |
+| Necessidades | Encontrar resultados organizados, conhecer as métricas utilizadas e entender as condições em que os testes foram realizados. |
+| Dores/frustrações | Pode encontrar dificuldades para reunir resultados de diferentes fontes ou interpretar comparações que não apresentam detalhes suficientes sobre os testes.|
+| Motivadores | Aprofundar seus conhecimentos sobre desempenho de linguagens e utilizar resultados confiáveis como apoio às suas pesquisas acadêmicas. |
+| Restrições/acessibilidade | A proposta considera acesso a computador, navegador e internet.|
+| Ambiente típico de uso | Possivelmente em casa, em laboratório ou na universidade, durante atividades de estudo e pesquisa. |
+| Comportamentos relevantes | Pode pesquisar benchmarks, selecionar problemas de interesse, comparar métricas e consultar os resultados para orientar seus estudos ou experimentos. O comportamento real precisa ser investigado. |
+
 
 ### Síntese das personas
 
