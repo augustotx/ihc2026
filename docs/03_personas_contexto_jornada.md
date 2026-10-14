@@ -1,7 +1,7 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 14/10/2005  
+**Status:** 🟨 em andamento`  
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
 ## Objetivo da atividade
@@ -27,17 +27,39 @@ Também considere papéis diferentes quando houver tarefas distintas, por exempl
 Antes de criar personas, retome os tipos de usuários, características relevantes, objetivos e hipóteses registradas na Entrega 1. A persona **não deve transformar uma hipótese inicial em fato por meio de uma história fictícia**.
 
 | Item da Entrega 1 | Status inicial | Evidência disponível agora | Como será tratado nesta entrega |
-|---|---|---|---|
-| {{usuário/objetivo/característica/H01...}} | F / H / ? | {{...}} | incorporar / manter como hipótese / descartar / investigar |
+| --- | --- | --- | --- |
+| Desenvolvedores como público prioritário | F | Definição registrada na Entrega 1 e retomada na Entrega 2 | Incorporar como público principal e base da persona P01 |
+| Escolha de linguagens com base em métricas de desempenho | F | Objetivo de uso definido na Entrega 1 | Incorporar como objetivo principal da persona P01 |
+| Comparação manual ou enviesada entre linguagens | H | Levantamento inicial da Entrega 1 sobre como o problema pode ser resolvido atualmente | Manter como hipótese e usar como base para  as personas P01 e P02 |
+| Interesse em consultar resultados de diferentes problemas e linguagens | H | Escopo proposto para a ferramenta e análise do Debian Benchmark Game na Entrega 2 | usar como necessidade provável e como base para P02 |
+| Necessidade de visualizar e filtrar resultados | H | Funcionalidades F01 e F02 da Entrega 1 e análise de ferramentas semelhantes na Entrega 2 | Incorporar como necessidade de interação, ainda sujeita a validação |
+| Interesse acadêmico na análise de benchmarks | H | Contexto acadêmico considerado na Entrega 1 | Usar como base para a persona P02, mantendo como hipótese |
 
 ## 1. Personas
 
-### Persona P01 — {{nome fictício}}
+### Persona P01 — Rafael Mendes, gestor de projetos de software
 
-**Autor(a):** {{nome — matrícula}}  
-**Tipo:** primária / secundária  
-**Base de evidências:** entrevista / questionário / literatura / observação / proto-persona a validar / combinação  
-**Hipóteses da Entrega 1 relacionadas:** {{H01, H02 ou —}}
+**Autor:** João Pedro Bazoli Palma — 24.123.041-6
+
+**Tipo:** primária
+
+**Base de evidências:** proto-persona a validar, baseada nas Entregas 1 e 2
+
+**Hipóteses da Entrega 1 relacionadas:** H01, H03
+
+| Campo | Descrição |
+| --- | --- |
+| Faixa etária / contexto relevante | Não definida. A idade não é considerada relevante para as tarefas previstas nesta etapa. |
+| Ocupação/papel | Gestor de projetos de software que precisa avaliar alternativas técnicas para implementar um projeto. |
+| Conhecimento do domínio | Conhece linguagens de programação,entende que o desempenho pode variar conforme a linguagem, o algoritmo e o problema executado e possui conhecimento das necessidades e limitações técnicas do projeto que supervisiona.|
+| Experiência tecnológica | Utiliza computador e ferramentas de desenvolvimento de software e possui acesso à internet. |
+| Objetivos | escolher a linguagem de programação idea para o projeto que está supervisionando |
+| Necessidades | Precisa tomar a decisão de qual linguagem de programação utilizar no projeto de software que supervisiona |
+| Dores/frustrações | Escolha de linguagem de programação enviesada pelo mercado e experiência pessoal; Objetivo do projeto supervisionado abrangente quanto a linguagem de programação|
+| Motivadores | Escolher a melhor linguagem possível para o projeto supervisionado |
+| Restrições/acessibilidade | A proposta considera acesso a um computador, navegador e internet. Outras restrições de acessibilidade ainda não foram investigadas. |
+| Ambiente típico de uso | Possivelmente em um ambiente de trabalho, utilizando um computador para consultar e comparar resultados.  |
+| Comportamentos relevantes | Pode pesquisar benchmarks, selecionar um problema, comparar linguagens e analisar métricas antes de tomar uma decisão. A sequência exata de comportamento ainda precisa ser investigada. |
 
 ![Persona P01](../assets/03_personas/persona_p01.svg)
 
