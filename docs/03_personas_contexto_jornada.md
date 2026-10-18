@@ -113,39 +113,41 @@ Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos
 
 | Dimensão | Descrição | Implicação de design |
 |---|---|---|
-| Usuários | {{...}} | {{...}} |
-| Tarefas | {{...}} | {{...}} |
-| Equipamentos | {{...}} | {{...}} |
-| Ambiente físico | {{...}} | {{...}} |
-| Ambiente social/organizacional | {{...}} | {{...}} |
-| Papéis/permissões/governança | {{...}} | {{...}} |
-| Volume de dados/histórico | {{...}} | {{...}} |
+| **Usuários** | Desenvolvedores, gestores (P01) e pesquisadores (P02) com bagagem técnica. | Interface objetiva, sem tutoriais sobre conceitos básicos de programação. |
+| **Tarefas** | Comparar desempenho de linguagens e filtrar testes por tipo de problema. | *Dashboard* com gráficos interativos e tabelas dinâmicas ordenáveis. |
+| **Equipamentos** | Desktops e notebooks com navegador web e conexão à internet. | Layout otimizado para telas maiores, acomodando dados e gráficos amplos. |
+| **Ambiente físico** | Escritórios, *home office* e laboratórios acadêmicos. | Design limpo e legível para minimizar o cansaço em análises longas. |
+| **Ambiente social / organizacional** | Equipes de software, reuniões de planejamento e grupos de pesquisa. | Resultados fáceis de interpretar e compartilhar para fundamentar escolhas. |
+| **Papéis / permissões / governança** | Consulta pública e irrestrita; gestão restrita aos mantenedores. | Acesso direto aos dados, sem necessidade de *login* ou cadastro. |
+| **Volume de dados / histórico** | Histórico de execuções, especificações de *hardware* e versões. | Exibição clara do contexto dos testes (*hardware*, comandos e datas). |
 
 ## 4. Jornada do usuário — equipe
 
-**Persona:** {{P01}}  
-**Objetivo da jornada:** {{...}}  
-**Início e fim da jornada:** {{...}}
+- Persona: Rafael Mendes (Gestor de Projetos de Software).
+- Objetivo: Escolher e justificar a linguagem de programação ideal para um novo projeto com dados reais.
+- Início e fim: Começa no planejamento do projeto e termina na apresentação da escolha para a equipe.
 
-| Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência |
-|---|---|---|---|---|---|---|
-| 1 | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
 
-> A jornada pode incluir etapas **antes, durante e depois** do uso do produto. Não transforme a jornada em lista de telas.
-
+| Etapa | Ação do usuário | Objetivo | Pensamento / Sentimento | Dor / Obstáculo | Oportunidade de design |
+| -------------------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| 1. Surgimento da necessidade | Inicia o planejamento do novo sistema e precisa definir a linguagem de programação. | Escolher a melhor opção técnica para o projeto. | *"Quero uma escolha baseada em desempenho real, não em preferências da equipe."* (Cauteloso) | Risco de escolher por moda, hábito ou gosto pessoal. | Tela inicial direta, focada em categorias de problemas práticos. |
+| 2. Busca por comparações | Pesquisa comparações e testes de desempenho na internet. | Encontrar comparações confiáveis entre as linguagens. | *"Os testes na internet são genéricos e não mostram o cenário real."* (Frustrado) | Dados espalhados e sem detalhes sobre o computador usado nos testes. | Reunir comparações padronizadas e transparentes sobre os testes. |
+| 3. Filtragem de dados | Acessa a plataforma e filtra pelo tipo de problema do seu projeto. | Ver apenas as informações relevantes para o seu cenário. | *"Preciso ver como as linguagens se saem exatamente nesse tipo de tarefa."* (Focado) | Excesso de informações genéricas que não ajudam a decidir. | Filtros simples para ordenar por velocidade e consumo de memória. |
+| 4. Análise dos resultados | Examina os gráficos e tabelas com os resultados obtidos. | Comparar tempo de execução e consumo de memória. | *"O gráfico facilita muito ver a diferença de consumo de memória."* (Confiante) | Dificuldade para entender dados brutos em tabelas longas e complexas. | Painel visual com gráficos claros e resumos simples de cada problema. |
+| 5. Tomada de decisão | Reúne as informações e apresenta a recomendação para o time. | Explicar e defender a escolha da linguagem para a equipe. | *"Tenho dados concretos para mostrar por que essa linguagem é a melhor."* (Satisfeito) | Receio de questionamentos da equipe sobre a escolha feita. | Opção de compartilhar os gráficos e relatórios da comparação de forma direta. |
 ## Síntese
 
-Quais necessidades e objetivos devem obrigatoriamente aparecer nos cenários e nas tarefas seguintes?
+A Entrega 3 mostra que a principal necessidade do gestor (Rafael Mendes — P01) é tomar decisões técnicas baseadas em dados concretos, evitando comparações dispersas e enviesadas da internet. Para atender a esse perfil, a interface de IHC deve ser direta, sem cadastro obrigatório e com gráficos claros sobre o contexto dos testes. Esses aprendizados fundamentam a **Entrega 4 (Análise do Problema)**, em que essas dores serão transformadas em cenários narrativos para diagnosticar os problemas atuais e guiar o design.
 
 ## Checklist
 
-- [ ] Existe pelo menos uma persona por integrante.
-- [ ] As personas não são apenas diferenças demográficas superficiais.
-- [ ] Está claro o que é dado real e o que é hipótese/proto-persona.
-- [ ] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência.
-- [ ] Objetivos e dores têm consequência para o design.
-- [ ] Contexto de uso está coerente com a Entrega 1.
-- [ ] Em TCC sem interface original, a persona possui relação explícita com a contribuição técnica.
-- [ ] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos/tarefas diferentes.
-- [ ] Jornada possui etapas, dores e oportunidades e não é apenas wireflow.
-- [ ] IDs das personas foram adicionados à rastreabilidade.
+- [x] Existe pelo menos uma persona por integrante.
+- [x] As personas não são apenas diferenças demográficas superficiais.
+- [x] Está claro o que é dado real e o que é hipótese/proto-persona.
+- [x] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência.
+- [x] Objetivos e dores têm consequência para o design.
+- [x] Contexto de uso está coerente com a Entrega 1.
+- [x] Em TCC sem interface original, a persona possui relação explícita com a contribuição técnica.
+- [x] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos/tarefas diferentes.
+- [x] Jornada possui etapas, dores e oportunidades e não é apenas wireflow.
+- [x] IDs das personas foram adicionados à rastreabilidade.
