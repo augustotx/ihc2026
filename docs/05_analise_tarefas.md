@@ -1,8 +1,8 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
-**Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT. As três técnicas podem abordar a mesma funcionalidade ou funcionalidades distintas, conforme a orientação da disciplina.
+**Data:** 18/10/2026  
+**Status:** 🟨 em andamento  
+**Responsabilidade:** Cada integrante modela 1 HTA, 1 GOMS e 1 CTT.
 
 ## Objetivo da atividade
 
@@ -28,8 +28,13 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 ## Seleção das tarefas
 
 | ID | Tarefa | Persona/cenário de origem | Frequência/criticidade | Autor responsável |
-|---|---|---|---|---|
-| T01 | {{...}} | {{P01/C01}} | {{...}} | {{...}} |
+| :--- | :--- | :--- | :--- | :--- |
+| **T01** | Comparar métricas de desempenho entre linguagens para escolha técnica | P01 (Rafael) / C01 | Alta frequência / Alta criticidade | João Pedro Bazoli Palma |
+| **T02** | Filtrar resultados por algoritmo e consumo de memória | P01 (Rafael) / C01 | Média frequência / Alta criticidade | João Pedro Bazoli Palma |
+| **T03** | Consolidar informações para justificativa técnica perante a equipe | P01 (Rafael) / C01 | Baixa frequência / Alta criticidade | João Pedro Bazoli Palma |
+| **T04** | Validar as especificações do ambiente de teste e hardware | P02 (Mariana) / C02 | Média frequência / Alta criticidade | Augusto Pereira Teixeira |
+| **T05** | Buscar e comparar métricas de desempenho para artigo acadêmico | P02 (Mariana) / C02 | Alta frequência / Alta criticidade | Augusto Pereira Teixeira |
+| **T06** | Exportar dados e detalhes do benchmark para citação na pesquisa | P02 (Mariana) / C02 | Baixa frequência / Média criticidade | Augusto Pereira Teixeira |
 
 > Priorize tarefas necessárias para que o usuário alcance objetivos centrais. Não desperdice a modelagem em ações triviais isoladas, como “clicar em login”, se o objetivo relevante é maior. Da mesma forma, não modele o funcionamento interno do algoritmo como se fosse uma tarefa humana.
 
