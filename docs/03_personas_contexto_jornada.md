@@ -1,7 +1,7 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
 **Data:** 14/10/2005  
-**Status:** 🟨 em andamento`  
+**Status:** 🟩 em andamento`  
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
 ## Objetivo da atividade
@@ -60,7 +60,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 | Ambiente típico de uso | Provavelmente utiliza a ferramenta no ambiente de trabalho, durante a análise de alternativas técnicas ou o planejamento do projeto. |
 | Comportamentos relevantes | Pesquisa informações sobre linguagens, compara resultados de benchmarks e considera métricas de desempenho para apoiar sua decisão. A sequência exata dessas atividades ainda precisa ser investigada. |
 
-![Persona P01](../assets/03_personas/persona_p01.svg)
+![Persona P01](../assets/03_personas/man.png)
 
 
 **Decisões de design influenciadas por P01:**
@@ -96,6 +96,9 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 | Comportamentos relevantes | Pode pesquisar benchmarks, selecionar problemas de interesse, comparar métricas e consultar os resultados para orientar seus estudos ou experimentos. O comportamento real precisa ser investigado. |
 
 
+![Persona P02](../assets/03_personas/woman.png)
+
+
 ### Síntese das personas
 
 Explique diferenças entre os perfis e qual persona é prioritária. Evite personas duplicadas que só mudam nome/foto.
@@ -105,9 +108,8 @@ Explique diferenças entre os perfis e qual persona é prioritária. Evite perso
 **Persona escolhida:** {{P01}}  
 **Justificativa:** {{por que esse perfil é relevante}}
 
-![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
+![Mapa de empatia](../assets/03_personas/Mapa_Empatia.png)
 
-Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos. Diferencie **evidência** de **hipótese**.
 
 ## 3. Contexto de uso — consolidação
 
