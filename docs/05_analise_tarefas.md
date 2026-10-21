@@ -74,55 +74,87 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 - Os **planos** indicam ordem, alternativa, repetição ou condição?
 - A decomposição parou em nível útil para projeto de interação?
 
-### **GOMS — T02 Filtrar resultados por algoritmo e consumo de memória**
+- 
+## **GOMS — T01 Comparar métricas de desempenho entre linguagens para escolha técnica**
 
 **Autor(a):** João Pedro Bazoli Palma — 24.123.041-6
 
-#### **Goal**
+### **Goal**
 
-- **G0:** Filtrar os resultados de benchmark por algoritmo e por limite de consumo de memória.
+#### **G0:** Comparar métricas de desempenho entre duas ou mais linguagens de programação para fundamentar uma escolha técnica.
 
-#### **Métodos, operadores e regras de seleção**
+- **Métodos, operadores e regras de seleção**
 
-#### **G1: Filtrar por tipo/categoria de algoritmo**
+#### **G1: Selecionar o algoritmo/problema de interesse**
 
-- **Method M1.A (Busca por palavra-chave):**
-  - Identificar algoritmo → Mover cursor → Clicar na busca → Digitar termo → Clicar na sugestão.
-- **Method M1.B (Menu de categorias):**
-  - Identificar tipo de processamento → Clicar no menu suspenso → Clicar na categoria desejada.
-- **Selection Rule SR1:** Usar M1.A quando souber o nome do algoritmo; usar M1.B para explorar opções por categoria.
+- **Method M1.A (Busca direta por palavra-chave):**
+  - Identificar algoritmo → Mover cursor até a busca → Clicar no campo → Digitar nome → Clicar na opção desejada.
+- **Method M1.B (Navegação por categoria de processamento):**
+  - Identificar tipo de processamento → Clicar no menu suspenso de categorias → Clicar na categoria desejada.
+- **Selection Rule SR1:** Usar M1.A quando souber o nome exato do algoritmo; usar M1.B quando quiser explorar por categoria.
 
-#### **G2: Restringir por limite de consumo de memória**
+#### **G2: Selecionar linguagens e gerar confronto direto**
 
-- **Method M2.A (Slider de memória):**
-  - Definir teto visual → Arrastar o marcador do slider até o limite desejado.
-- **Method M2.B (Campo numérico):**
-  - Definir limite exato em MB → Clicar no campo numérico → Digitar o valor → Pressionar Enter.
-- **Selection Rule SR2:** Usar M2.A para ajuste rápido e visual; usar M2.B para definir uma restrição rígida e exata.
+- **Method M2 (Confronto de linguagens e métricas):**
+  - Mover cursor até o seletor de linguagens → Marcar as linguagens a comparar → Marcar as métricas (tempo e memória) → Clicar em "Gerar Comparativo".
 
-#### **G3: Confirmar resultados**
+#### **G3: Analisar os resultados e tomar decisão**
 
-- **Method M3 (Análise dos dados):**
-  - Aguardar atualização dos gráficos → Analisar se as linguagens restantes atendem ao projeto.
+- **Method M3 (Interpretação visual e validação):**
+  - Observar gráfico de velocidade relativa → Observar gráfico de uso de memória → Identificar a linguagem mais eficiente para o projeto.
+ 
+## **CTT — T01 Comparar métricas de desempenho entre linguagens para escolha técnica**
 
+**Autor(a):** João Pedro Bazoli Palma — 24.123.041-6
 
-## CTT — T03 {{nome da tarefa}}
+### **Descrição da tarefa**
 
-**Autor(a):** {{nome — matrícula}}
-
-### Descrição
-
-{{...}}
+O gestor Rafael Mendes (P01) acessa a plataforma para escolher e fundamentar a linguagem de programação de um novo projeto. Ele define o algoritmo de interesse, escolhe as linguagens e métricas desejadas, aguarda o processamento do sistema e analisa os gráficos gerados para tomar sua decisão técnica.
 
 ### Diagrama
 
 ![CTT T03](../assets/05_tarefas/ctt_t03.svg)
 
-### Legenda e relações temporais usadas
+---
 
-| Operador/relação | Significado no diagrama | Exemplo no modelo |
-|---|---|---|
-| {{...}} | {{...}} | {{...}} |
+### **Legenda dos tipos de tarefas**
+
+- **[A]** **Tarefa Abstrata (Abstract):** Meta principal que precisa ser decomposta em sub-tarefas.
+- **[U]** **Tarefa de Usuário (User):** Ação puramente mental/cognitiva do usuário (análise ou decisão).
+- **[I]** **Tarefa de Interação (Interaction):** Ação direta do usuário na interface do sistema.
+- **[S]** **Tarefa de Sistema (System):** Processamento automático realizado pelo sistema.
+
+### **Legenda dos operadores temporais utilizados**
+
+| **Operador** | **Nome da relação** | **Significado na Tarefa T01** |
+| --- | --- | --- |
+| **&gt;>** | Habilitação (Sequencial) | A conclusão de uma tarefa habilita o início da próxima. |
+| **[]>>** | Habilitação com Troca de Informação | A tarefa é concluída e envia parâmetros/dados para a próxima. |
+| **[]** | Escolha (Alternativa) | Escolha entre duas ações mutuamente exclusivas. |
+| \*\*\` | | |
+
+---
+
+### **Estrutura textual da árvore (Decomposição CTT)**
+
+- **T01: Comparar métricas de desempenho entre linguagens** **[A]**
+  - *Plano temporal principal:* `1. Definir Problema &gt;&gt; 2. Configurar Comparativo []&gt;&gt; 3. Processar Resultados &gt;&gt; 4. Analisar e Decidir`
+  - **1. Definir Problema/Algoritmo** **[A]**
+    - *Relação:* `1.1 Buscar por Nome [] 1.2 Selecionar por Categoria`
+    - **1.1 Buscar por nome** **[I]:** Digitar o termo no campo de busca rápida.
+    - **1.2 Selecionar por categoria** **[I]:** Escolher o tipo de processamento no menu suspenso.
+  - **2. Configurar Comparativo** **[A]**
+    - *Relação:* `2.1 Selecionar Linguagens ||| 2.2 Selecionar Métricas`
+    - **2.1 Selecionar linguagens** **[I]:** Escolher as linguagens a serem comparadas.
+    - **2.2 Selecionar métricas** **[I]:** Marcar as métricas desejadas (tempo e memória).
+  - **3. Processar e Exibir Resultados** **[A]**
+    - *Relação:* `3.1 Consultar Banco []&gt;&gt; 3.2 Renderizar Gráfico`
+    - **3.1 Consultar banco** **[S]:** O sistema busca os dados de benchmark filtrados.
+    - **3.2 Renderizar gráfico** **[S]:** O sistema gera os gráficos comparativos na tela.
+  - **4. Analisar e Decidir** **[A]**
+    - *Relação:* `4.1 Avaliar Gráficos &gt;&gt; 4.2 Tomar Decisão Técnica`
+    - **4.1 Avaliar gráficos** **[U]:** O gestor interpreta a diferença de velocidade e uso de memória.
+    - **4.2 Tomar decisão técnica** **[U]:** O gestor define a linguagem escolhida e registra os dados.
 
 Identifique, quando aplicável, tarefas de usuário, sistema, interação e tarefas abstratas. Verifique se concorrência, escolha, habilitação, desabilitação e repetição estão representadas corretamente segundo a notação adotada em aula.
 
