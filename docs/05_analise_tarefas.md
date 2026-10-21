@@ -40,23 +40,36 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 ---
 
-## HTA — T01 {{nome da tarefa}}
+## HTA — T01 Comparar métricas de desempenho entre linguagens para escolha técnica
 
-**Autor(a):** {{nome — matrícula}}
+**Autor(a):** João Pedro Bazoli Palma — 24.123.041-6
 
-### Descrição da tarefa
+##### **Descrição da tarefa**
 
-{{objetivo, ponto de início, conclusão esperada, contexto}}
+- **Objetivo:** Escolher a linguagem ideal para um novo projeto com base em velocidade e uso de memória.
+- **Ponto de início:** Acesso à ferramenta de consulta de benchmarks.
+- **Conclusão esperada:** Comparativo claro entre linguagens para fundamentar a decisão técnica.
+- **Contexto:** Rafael Mendes (P01) precisa definir a linguagem em 2 dias e justificar para a equipe.
 
 ### Diagrama
 
 ![HTA T01](../assets/05_tarefas/hta_t01.svg)
 
-### Decomposição e planos
+#### **Decomposição e planos**
 
-| ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
-|---|---|---|---|
-| 0 | {{objetivo principal}} | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| **ID** | **Objetivo/operação** | **Plano/ordem** | **Problema ou decisão de design observada** |
+| --- | --- | --- | --- |
+| **0** | Comparar desempenho entre linguagens para escolha técnica | `1 > 2 > 3`. Se houver dúvida nos dados, faça `4`. | Evitar muitas etapas antes de exibir os resultados. |
+| **1** | Selecionar o problema/algoritmo | `1.1 OU 1.2` | Incluir resumos simples dos problemas. |
+| **1.1** | Buscar algoritmo por palavra-chave | Operação | Aceitar termos genéricos e sinônimos na busca. |
+| **1.2** | Selecionar algoritmo por categoria | Operação | Agrupar por tipo de processamento (ex: memória, CPU). |
+| **2** | Selecionar linguagens e métricas | `2.1 + 2.2` | Permitir comparar 2 ou mais linguagens lado a lado. |
+| **2.1** | Escolher as linguagens para comparação | Operação | Facilitar a seleção direta na interface. |
+| **2.2** | Definir métricas (tempo e memória) | Operação | Exibir ambas as métricas na mesma visualização. |
+| **3** | Analisar os resultados | `3.1` | Mostrar a diferença em termos relativos (ex: "2x mais rápida"). |
+| **3.1** | Avaliar o ganho relativo de desempenho | Operação | Facilitar a interpretação sem exigir cálculos manuais. |
+| **4** | Checar credibilidade do teste | `4.1` (Opcional) | Exibir o computador e o compilador em um clique para dar credibilidade. |
+| **4.1** | Conferir especificações do hardware e versões | Operação | Garantir transparência sobre as condições do teste. |
 
 **Verificação do HTA:**
 
