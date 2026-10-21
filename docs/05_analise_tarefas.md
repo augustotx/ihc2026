@@ -30,11 +30,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 | ID | Tarefa | Persona/cenário de origem | Frequência/criticidade | Autor responsável |
 | :--- | :--- | :--- | :--- | :--- |
 | **T01** | Comparar métricas de desempenho entre linguagens para escolha técnica | P01 (Rafael) / C01 | Alta frequência / Alta criticidade | João Pedro Bazoli Palma |
-| **T02** | Filtrar resultados por algoritmo e consumo de memória | P01 (Rafael) / C01 | Média frequência / Alta criticidade | João Pedro Bazoli Palma |
-| **T03** | Consolidar informações para justificativa técnica perante a equipe | P01 (Rafael) / C01 | Baixa frequência / Alta criticidade | João Pedro Bazoli Palma |
-| **T04** | Validar as especificações do ambiente de teste e hardware | P02 (Mariana) / C02 | Média frequência / Alta criticidade | Augusto Pereira Teixeira |
-| **T05** | Buscar e comparar métricas de desempenho para artigo acadêmico | P02 (Mariana) / C02 | Alta frequência / Alta criticidade | Augusto Pereira Teixeira |
-| **T06** | Exportar dados e detalhes do benchmark para citação na pesquisa | P02 (Mariana) / C02 | Baixa frequência / Média criticidade | Augusto Pereira Teixeira |
+| **T02** | Buscar e comparar métricas de desempenho para artigo acadêmico | P02 (Mariana) / C02 | Alta frequência / Alta criticidade | Augusto Pereira Teixeira |
 
 > Priorize tarefas necessárias para que o usuário alcance objetivos centrais. Não desperdice a modelagem em ações triviais isoladas, como “clicar em login”, se o objetivo relevante é maior. Da mesma forma, não modele o funcionamento interno do algoritmo como se fosse uma tarefa humana.
 
@@ -78,27 +74,37 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 - Os **planos** indicam ordem, alternativa, repetição ou condição?
 - A decomposição parou em nível útil para projeto de interação?
 
----
+### **GOMS — T02 Filtrar resultados por algoritmo e consumo de memória**
 
-## GOMS — T02 {{nome da tarefa}}
+**Autor(a):** João Pedro Bazoli Palma — 24.123.041-6
 
-**Autor(a):** {{nome — matrícula}}
+#### **Goal**
 
-### Goal
+- **G0:** Filtrar os resultados de benchmark por algoritmo e por limite de consumo de memória.
 
-`G0: {{meta do usuário}}`
+#### **Métodos, operadores e regras de seleção**
 
-### Métodos, operadores e regras de seleção
+#### **G1: Filtrar por tipo/categoria de algoritmo**
 
-- **Method M1:** {{...}}
-  - Operators: {{perceber, apontar, clicar, digitar, decidir... conforme o nível adotado}}
-- **Method M2:** {{...}}
-  - Operators: {{...}}
-- **Selection Rule SR1:** usar M1 quando {{condição}}; usar M2 quando {{condição}}.
+- **Method M1.A (Busca por palavra-chave):**
+  - Identificar algoritmo → Mover cursor → Clicar na busca → Digitar termo → Clicar na sugestão.
+- **Method M1.B (Menu de categorias):**
+  - Identificar tipo de processamento → Clicar no menu suspenso → Clicar na categoria desejada.
+- **Selection Rule SR1:** Usar M1.A quando souber o nome do algoritmo; usar M1.B para explorar opções por categoria.
 
-> Não chame qualquer passo de “método”. Em GOMS, métodos são sequências alternativas capazes de atingir uma meta; regras de seleção explicam quando escolher entre eles.
+#### **G2: Restringir por limite de consumo de memória**
 
----
+- **Method M2.A (Slider de memória):**
+  - Definir teto visual → Arrastar o marcador do slider até o limite desejado.
+- **Method M2.B (Campo numérico):**
+  - Definir limite exato em MB → Clicar no campo numérico → Digitar o valor → Pressionar Enter.
+- **Selection Rule SR2:** Usar M2.A para ajuste rápido e visual; usar M2.B para definir uma restrição rígida e exata.
+
+#### **G3: Confirmar resultados**
+
+- **Method M3 (Análise dos dados):**
+  - Aguardar atualização dos gráficos → Analisar se as linguagens restantes atendem ao projeto.
+
 
 ## CTT — T03 {{nome da tarefa}}
 
