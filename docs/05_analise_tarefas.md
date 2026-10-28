@@ -40,7 +40,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 **Autor(a):** João Pedro Bazoli Palma — 24.123.041-6
 
-##### **Descrição da tarefa**
+### Descrição da tarefa
 
 - **Objetivo:** Escolher a linguagem ideal para um novo projeto com base em velocidade e uso de memória.
 - **Ponto de início:** Acesso à ferramenta de consulta de benchmarks.
@@ -51,7 +51,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 ![HTA T01](../assets/05_tarefas/hta_t01.svg)
 
-#### **Decomposição e planos**
+### Decomposição e planos
 
 | **ID** | **Objetivo/operação** | **Plano/ordem** | **Problema ou decisão de design observada** |
 | --- | --- | --- | --- |
@@ -74,18 +74,17 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 - Os **planos** indicam ordem, alternativa, repetição ou condição?
 - A decomposição parou em nível útil para projeto de interação?
 
-- 
-## **GOMS — T01 Comparar métricas de desempenho entre linguagens para escolha técnica**
+## GOMS — T01 Comparar métricas de desempenho entre linguagens para escolha técnica
 
 **Autor(a):** João Pedro Bazoli Palma — 24.123.041-6
 
-### **Goal**
+### Goal
 
-#### **G0:** Comparar métricas de desempenho entre duas ou mais linguagens de programação para fundamentar uma escolha técnica.
+#### G0: Comparar métricas de desempenho entre duas ou mais linguagens de programação para fundamentar uma escolha técnica.
 
-- **Métodos, operadores e regras de seleção**
+#### Métodos, operadores e regras de seleção
 
-#### **G1: Selecionar o algoritmo/problema de interesse**
+### G1: Selecionar o algoritmo/problema de interesse
 
 - **Method M1.A (Busca direta por palavra-chave):**
   - Identificar algoritmo → Mover cursor até a busca → Clicar no campo → Digitar nome → Clicar na opção desejada.
@@ -93,38 +92,38 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
   - Identificar tipo de processamento → Clicar no menu suspenso de categorias → Clicar na categoria desejada.
 - **Selection Rule SR1:** Usar M1.A quando souber o nome exato do algoritmo; usar M1.B quando quiser explorar por categoria.
 
-#### **G2: Selecionar linguagens e gerar confronto direto**
+### G2: Selecionar linguagens e gerar confronto direto
 
 - **Method M2 (Confronto de linguagens e métricas):**
   - Mover cursor até o seletor de linguagens → Marcar as linguagens a comparar → Marcar as métricas (tempo e memória) → Clicar em "Gerar Comparativo".
 
-#### **G3: Analisar os resultados e tomar decisão**
+### G3: Analisar os resultados e tomar decisão
 
 - **Method M3 (Interpretação visual e validação):**
   - Observar gráfico de velocidade relativa → Observar gráfico de uso de memória → Identificar a linguagem mais eficiente para o projeto.
  
-## **CTT — T01 Comparar métricas de desempenho entre linguagens para escolha técnica**
+## CTT — T01 Comparar métricas de desempenho entre linguagens para escolha técnica
 
 **Autor(a):** João Pedro Bazoli Palma — 24.123.041-6
 
-### **Descrição da tarefa**
+### Descrição da tarefa
 
 O gestor Rafael Mendes (P01) acessa a plataforma para escolher e fundamentar a linguagem de programação de um novo projeto. Ele define o algoritmo de interesse, escolhe as linguagens e métricas desejadas, aguarda o processamento do sistema e analisa os gráficos gerados para tomar sua decisão técnica.
 
 ### Diagrama
 
-![CTT T03](../assets/05_tarefas/ctt_t03.svg)
+![CTT T01](../assets/05_tarefas/ctt_t01.svg)
 
 ---
 
-### **Legenda dos tipos de tarefas**
+### Legenda dos tipos de tarefas
 
 - **[A]** **Tarefa Abstrata (Abstract):** Meta principal que precisa ser decomposta em sub-tarefas.
 - **[U]** **Tarefa de Usuário (User):** Ação puramente mental/cognitiva do usuário (análise ou decisão).
 - **[I]** **Tarefa de Interação (Interaction):** Ação direta do usuário na interface do sistema.
 - **[S]** **Tarefa de Sistema (System):** Processamento automático realizado pelo sistema.
 
-### **Legenda dos operadores temporais utilizados**
+### Legenda dos operadores temporais utilizados
 
 | **Operador** | **Nome da relação** | **Significado na Tarefa T01** |
 | --- | --- | --- |
@@ -135,10 +134,10 @@ O gestor Rafael Mendes (P01) acessa a plataforma para escolher e fundamentar a l
 
 ---
 
-### **Estrutura textual da árvore (Decomposição CTT)**
+### Estrutura textual da árvore (Decomposição CTT)
 
 - **T01: Comparar métricas de desempenho entre linguagens** **[A]**
-  - *Plano temporal principal:* `1. Definir Problema &gt;&gt; 2. Configurar Comparativo []&gt;&gt; 3. Processar Resultados &gt;&gt; 4. Analisar e Decidir`
+  - *Plano temporal principal:* `1. Definir Problema >> 2. Configurar Comparativo []>> 3. Processar Resultados >> 4. Analisar e Decidir`
   - **1. Definir Problema/Algoritmo** **[A]**
     - *Relação:* `1.1 Buscar por Nome [] 1.2 Selecionar por Categoria`
     - **1.1 Buscar por nome** **[I]:** Digitar o termo no campo de busca rápida.
@@ -148,17 +147,111 @@ O gestor Rafael Mendes (P01) acessa a plataforma para escolher e fundamentar a l
     - **2.1 Selecionar linguagens** **[I]:** Escolher as linguagens a serem comparadas.
     - **2.2 Selecionar métricas** **[I]:** Marcar as métricas desejadas (tempo e memória).
   - **3. Processar e Exibir Resultados** **[A]**
-    - *Relação:* `3.1 Consultar Banco []&gt;&gt; 3.2 Renderizar Gráfico`
+    - *Relação:* `3.1 Consultar Banco []>> 3.2 Renderizar Gráfico`
     - **3.1 Consultar banco** **[S]:** O sistema busca os dados de benchmark filtrados.
     - **3.2 Renderizar gráfico** **[S]:** O sistema gera os gráficos comparativos na tela.
   - **4. Analisar e Decidir** **[A]**
-    - *Relação:* `4.1 Avaliar Gráficos &gt;&gt; 4.2 Tomar Decisão Técnica`
+    - *Relação:* `4.1 Avaliar Gráficos >> 4.2 Tomar Decisão Técnica`
     - **4.1 Avaliar gráficos** **[U]:** O gestor interpreta a diferença de velocidade e uso de memória.
     - **4.2 Tomar decisão técnica** **[U]:** O gestor define a linguagem escolhida e registra os dados.
 
-Identifique, quando aplicável, tarefas de usuário, sistema, interação e tarefas abstratas. Verifique se concorrência, escolha, habilitação, desabilitação e repetição estão representadas corretamente segundo a notação adotada em aula.
-
 ---
+
+## HTA — T02 Buscar e comparar métricas para pesquisa acadêmica
+
+Autor(a): Augusto Pereira Teixeira — 24.123.008-5
+
+### Descrição da tarefa
+
+- Objetivo: Encontrar dados confiáveis de desempenho para citar em trabalhos acadêmicos.
+- Ponto de início: Acesso à ferramenta durante a pesquisa.
+- Conclusão esperada: Dados detalhados e validados para inclusão no artigo.
+- Contexto: Mariana (P02) precisa checar hardware e compilador para garantir a credibilidade do estudo.
+
+### Diagrama
+
+![HTA T02](../assets/05_tarefas/hta_t02.svg)
+
+### Decomposição e planos
+
+| ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
+| --- | --- | --- | --- |
+| 0 | Buscar e comparar métricas para pesquisa | Faça 1 > 2 > 3. Se necessário validar o teste, faça 4. | Omitir detalhes do teste tira a credibilidade acadêmica. |
+| 1 | Achar o algoritmo desejado | Faça 1.1 OU 1.2. | Permitir busca por nome ou navegação por categoria. |
+| 1.1 | Buscar algoritmo por nome | Operação. | Aceitar nomenclaturas técnicas do meio acadêmico. |
+| 1.2 | Escolher algoritmo por categoria | Operação. | Agrupar por tipo de processamento (CPU, memória). |
+| 2 | Selecionar linguagens e ver métricas | Faça (2.1 e 2.2) em qualquer ordem. | Isolar só as linguagens analisadas no artigo. |
+| 2.1 | Escolher as linguagens do estudo | Operação. | Permitir marcar 2 ou mais linguagens. |
+| 2.2 | Exibir métricas (tempo e memória) | Operação. | Mostrar valores e gráficos de forma direta. |
+| 3 | Copiar dados para citação | Faça 3.1. | Facilitar a transferência de dados para o artigo. |
+| 3.1 | Copiar resumo e referência do benchmark | Operação. | Botão de cópia rápida formatada para citação. |
+| 4 | Validar ambiente do teste | Opcional: faça 4.1. | Garantir transparência de hardware e compiladores. |
+| 4.1 | Conferir hardware e versão do compilador | Operação. | Exibir detalhes do ambiente em um clique. |
+
+## GOMS — T02 Buscar e comparar métricas para pesquisa acadêmica
+
+Autor(a): Augusto Pereira Teixeira — 24.123.008-5
+
+### Goal
+
+- G0: Encontrar métricas confiáveis e validar o ambiente do teste para citar na pesquisa.
+
+### Métodos, operadores e regras de seleção
+
+### G1: Encontrar o algoritmo
+
+- Method M1.A (Busca por nome): Digitar nome técnico > Clicar no resultado.
+- Method M1.B (Navegação por categoria): Abrir menu de categorias > Clicar na área desejada.
+- Selection Rule SR1: Usar M1.A se souber o nome exato; usar M1.B para explorar categorias.
+
+### G2: Comparar as linguagens
+
+- Method M2 (Filtro e exibição): Marcar as linguagens do artigo > Marcar tempo e memória > Ver gráficos.
+
+### G3: Validar e extrair para o artigo
+
+- Method M3 (Conferência e cópia): Checar hardware e compilador > Clicar em "Copiar dados para citação".
+
+## CTT — T02 Buscar e comparar métricas para pesquisa acadêmica
+
+Autor(a): Augusto Pereira Teixeira — 24.123.008-5
+
+### Descrição da tarefa
+
+Mariana (P02) pesquisa métricas de linguagens para seu artigo. Ela encontra o algoritmo, seleciona as linguagens, o sistema gera os gráficos e ela valida o hardware antes de copiar os dados para o texto.
+
+### Diagrama
+
+![CTT T02](../assets/05_tarefas/ctt_t02.svg)
+
+### Legenda dos operadores temporais utilizados
+
+- >> (Sequencial): Uma etapa habilita a próxima.
+- []>> (Passagem de dados): Conclui a etapa e envia parâmetros para a seguinte.
+- [] (Escolha): Escolha entre duas opções.
+- ||| (Concorrência): Ações que podem ser feitas em qualquer ordem.
+
+### Estrutura textual da árvore (Decomposição CTT)
+
+- T02: Buscar e comparar métricas para pesquisa [A]
+  - Plano principal: 1. Achar Algoritmo >> 2. Configurar Comparativo []>> 3. Processar Resultados >> 4. Validar e Copiar
+  - 1. Achar Algoritmo [A]
+    - Relação: 1.1 Buscar por Nome [] 1.2 Escolher por Categoria
+    - 1.1 Buscar por nome [I]: Digitar o nome no campo de busca.
+    - 1.2 Escolher por categoria [I]: Selecionar a área no menu suspenso.
+  - 2. Configurar Comparativo [A]
+    - Relação: 2.1 Escolher Linguagens ||| 2.2 Selecionar Métricas
+    - 2.1 Escolher linguagens [I]: Marcar as linguagens pesquisadas.
+    - 2.2 Selecionar métricas [I]: Marcar tempo e consumo de memória.
+  - 3. Processar e Exibir Resultados [A]
+    - Relação: 3.1 Consultar Banco []>> 3.2 Renderizar Gráfico
+    - 3.1 Consultar banco [S]: O sistema busca os dados no banco.
+    - 3.2 Renderizar gráfico [S]: O sistema gera os gráficos na tela.
+  - 4. Validar e Copiar [A]
+    - Relação: 4.1 Conferir Hardware e Versões >> 4.2 Copiar Dados >> 4.3 Analisar para o Artigo
+    - 4.1 Conferir hardware e versões [I]: Checar computador e compilador.
+    - 4.2 Copiar dados [I]: Copiar resumo formatado para o artigo.
+    - 4.3 Analisar para o artigo [U]: Avaliar se os dados confirmam a hipótese da pesquisa.
 
 ## Síntese da equipe
 
