@@ -253,9 +253,10 @@ Mariana (P02) pesquisa métricas de linguagens para seu artigo. Ela encontra o a
     - 4.2 Copiar dados [I]: Copiar resumo formatado para o artigo.
     - 4.3 Analisar para o artigo [U]: Avaliar se os dados confirmam a hipótese da pesquisa.
 
+      
 ## Síntese da equipe
 
-Quais problemas de interação, oportunidades e requisitos apareceram a partir das modelagens? Quais tarefas irão para o protótipo e para o teste de usabilidade?
+A modelagem das tarefas T01 e T02 identificou requisitos essenciais para a interface, como gráficos comparativos, busca por algoritmos e transparência sobre o ambiente dos testes. Ambas serão incluídas no protótipo e avaliadas nos testes de usabilidade.Quais problemas de interação, oportunidades e requisitos apareceram a partir das modelagens? Quais tarefas irão para o protótipo e para o teste de usabilidade?
 
 ## Checklist
 
