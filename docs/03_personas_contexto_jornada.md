@@ -48,7 +48,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 **Hipóteses da Entrega 1 relacionadas:** H01, H03
 | Campo | Descrição |
 | --- | --- |
-| Faixa etária / contexto relevante | 42 anos de idade 20 anos de experiẽncia na  |
+| Faixa etária / contexto relevante | 42 anos de idade 20 anos de experiẽncia na área. |
 | Ocupação/papel | Gestor de projetos de software responsável por avaliar alternativas técnicas e orientar decisões de desenvolvimento. |
 | Conhecimento do domínio | Conhece diferentes linguagens de programação e entende que o desempenho varia conforme a linguagem, o algoritmo e o problema. Também conhece os requisitos técnicos do projeto que supervisiona. |
 | Experiência tecnológica | Utiliza computadores e ferramentas de desenvolvimento no cotidiano profissional e tem acesso à internet para pesquisar soluções técnicas. |
@@ -105,8 +105,8 @@ Explique diferenças entre os perfis e qual persona é prioritária. Evite perso
 
 ## 2. Mapa de empatia — equipe
 
-**Persona escolhida:** {{P01}}  
-**Justificativa:** {{por que esse perfil é relevante}}
+**Persona escolhida:** P01
+**Justificativa:** foi escolhida pois é persona mais relevante do projeto.
 
 ![Mapa de empatia](../assets/03_personas/Mapa_Empatia.png)
 
