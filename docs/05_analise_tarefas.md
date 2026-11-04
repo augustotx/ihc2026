@@ -58,12 +58,12 @@ graph TD
     N3["3. Analisar resultados<br>Plano: 3.1"]
     N4["4. Checar credibilidade do teste<br>Plano: 4.1 (Opcional)"]
 
-    N1_1["<u>1.1 Buscar por palavra-chave</u><br>(Operação)"]
-    N1_2["1.2 Selecionar por categoria<br>(Operação)"]
-    N2_1["2.1 Escolher linguagens<br>(Operação)"]
-    N2_2["2.2 Definir métricas<br>(Operação)"]
-    N3_1["3.1 Avaliar ganho relativo<br>(Operação)"]
-    N4_1["4.1 Conferir hardware e versões<br>(Operação)"]
+    N1_1["1.1 Buscar por palavra-chave<br>(Operação)<hr>"]
+    N1_2["1.2 Selecionar por categoria<br>(Operação)<hr>"]
+    N2_1["2.1 Escolher linguagens<br>(Operação)<hr>"]
+    N2_2["2.2 Definir métricas<br>(Operação)<hr>"]
+    N3_1["3.1 Avaliar ganho relativo<br>(Operação)<hr>"]
+    N4_1["4.1 Conferir hardware e versões<br>(Operação)<hr>"]
 
     N0 --> N1
     N0 --> N2
@@ -76,8 +76,6 @@ graph TD
     N2 --> N2_2
     N3 --> N3_1
     N4 --> N4_1
-
-    style N1\_1 stroke-width:3px
 
 ```
 
