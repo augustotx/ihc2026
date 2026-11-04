@@ -50,7 +50,8 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 ### Diagrama
 
 ```mermaid
-graph TD N0["0\. Comparar desempenho entre linguagens<br />Plano: 1 &gt; 2 &gt; 3 (Se dúvida: 4)"]
+graph TD
+N0["0\. Comparar desempenho entre linguagens<br />Plano: 1 &gt; 2 &gt; 3 (Se dúvida: 4)"]
 N1["1\. Selecionar problema/algoritmo<br />Plano: 1.1 OU 1.2"]
 N2["2\. Selecionar linguagens e métricas<br />Plano: 2.1 + 2.2"]
 N3["3\. Analisar resultados<br />Plano: 3.1"]
