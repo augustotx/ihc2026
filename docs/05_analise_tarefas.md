@@ -58,7 +58,7 @@ graph TD
     N3["3. Analisar resultados<br>Plano: 3.1"]
     N4["4. Checar credibilidade do teste<br>Plano: 4.1 (Opcional)"]
 
-    N1_1["1.1 Buscar por palavra-chave<br>(Operação)"]
+    N1_1["<u>1.1 Buscar por palavra-chave</u><br>(Operação)"]
     N1_2["1.2 Selecionar por categoria<br>(Operação)"]
     N2_1["2.1 Escolher linguagens<br>(Operação)"]
     N2_2["2.2 Definir métricas<br>(Operação)"]
