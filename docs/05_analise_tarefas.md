@@ -51,19 +51,18 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 ```mermaid
 graph TD
-    N0["0. Comparar desempenho entre linguagens<br>Plano: 1 > 2 > 3 (Se dúvida: 4)"]
+    N0["0\. Comparar desempenho entre linguagens<br />Plano: 1 &gt; 2 &gt; 3 (Se dúvida: 4)"]
+    N1["1\. Selecionar problema/algoritmo<br />Plano: 1.1 OU 1.2"]
+    N2["2\. Selecionar linguagens e métricas<br />Plano: 2.1 + 2.2"]
+    N3["3\. Analisar resultados<br />Plano: 3.1"]
+    N4["4\. Checar credibilidade do teste<br />Plano: 4.1 (Opcional)"]
 
-    N1["1. Selecionar problema/algoritmo<br>Plano: 1.1 OU 1.2"]
-    N2["2. Selecionar linguagens e métricas<br>Plano: 2.1 + 2.2"]
-    N3["3. Analisar resultados<br>Plano: 3.1"]
-    N4["4. Checar credibilidade do teste<br>Plano: 4.1 (Opcional)"]
-
-    N1_1["1.1 Buscar por palavra-chave<br>(Operação)<hr>"]
-    N1_2["1.2 Selecionar por categoria<br>(Operação)<hr>"]
-    N2_1["2.1 Escolher linguagens<br>(Operação)<hr>"]
-    N2_2["2.2 Definir métricas<br>(Operação)<hr>"]
-    N3_1["3.1 Avaliar ganho relativo<br>(Operação)<hr>"]
-    N4_1["4.1 Conferir hardware e versões<br>(Operação)<hr>"]
+    N1_1["<div>1.1 Buscar por palavra-chave<br />(Operação)</div>"]
+    N1_2["<div>1.2 Selecionar por categoria<br />(Operação)</div>"]
+    N2_1["<div>2.1 Escolher linguagens<br />(Operação)</div>"]
+    N2_2["<div>2.2 Definir métricas<br />(Operação)</div>"]
+    N3_1["<div>3.1 Avaliar ganho relativo<br />(Operação)</div>"]
+    N4_1["<div>4.1 Conferir hardware e versões<br />(Operação)</div>"]
 
     N0 --> N1
     N0 --> N2
@@ -77,6 +76,12 @@ graph TD
     N3 --> N3_1
     N4 --> N4_1
 
+    style N1_1 fill:none,stroke:none
+    style N1_2 fill:none,stroke:none
+    style N2_1 fill:none,stroke:none
+    style N2_2 fill:none,stroke:none
+    style N3_1 fill:none,stroke:none
+    style N4_1 fill:none,stroke:none
 ```
 
 ### Decomposição e planos
