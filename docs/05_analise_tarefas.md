@@ -51,34 +51,37 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 ```mermaid
 graph TD
-N0["0\. Comparar desempenho entre linguagens<br />Plano: 1 &gt; 2 &gt; 3 (Se dúvida: 4)"]
-N1["1\. Selecionar problema/algoritmo<br />Plano: 1.1 OU 1.2"]
-N2["2\. Selecionar linguagens e métricas<br />Plano: 2.1 + 2.2"]
-N3["3\. Analisar resultados<br />Plano: 3.1"]
-N4["4\. Checar credibilidade do teste<br />Plano: 4.1 (Opcional)"]
-N1\_1["<div>1.1 Buscar por palavra-chave<br />(Operação)</div><div></div>"]
-N1\_2["<div>1.2 Selecionar por categoria<br />(Operação)</div><div></div>"]
-N2\_1["<div>2.1 Escolher linguagens<br />(Operação)</div><div></div>"]
-N2\_2["<div>2.2 Definir métricas<br />(Operação)</div><div></div>"]
-N3\_1["<div>3.1 Avaliar ganho relativo<br />(Operação)</div><div></div>"]
-N4\_1["<div>4.1 Conferir hardware e versões<br />(Operação)</div><div></div>"]
-N0 --&gt;N1
-N0 --&gt;N2
-N0 --&gt;N3
-N0 --&gt;N4
-N1 --&gt;N1\_1
-N1 --&gt; N1\_2
-N2 --&gt; N2\_1
-N2 --&gt; N2\_2
-N3 --&gt; N3\_1
-N4 --&gt; N4\_1
-style N1\_1 fill:none,stroke:none
-style N1\_2 fill:none,stroke:none
-style N2\_1 fill:none,stroke:none
-style N2\_2 fill:none,stroke:none
-style N3\_1 fill:none,stroke:none
-style N4\_1 fill:none,stroke:none
+    N0["0\. Comparar desempenho entre linguagens<br />Plano: 1 &gt; 2 &gt; 3 (Se dúvida: 4)"]
+    N1["1\. Selecionar problema/algoritmo<br />Plano: 1.1 OU 1.2"]
+    N2["2\. Selecionar linguagens e métricas<br />Plano: 2.1 + 2.2"]
+    N3["3\. Analisar resultados<br />Plano: 3.1"]
+    N4["4\. Checar credibilidade do teste<br />Plano: 4.1 (Opcional)"]
 
+    N1_1["<div><div>1.1 Buscar por palavra-chave<br />(Operação)</div><div></div></div>"]
+    N1_2["<div><div>1.2 Selecionar por categoria<br />(Operação)</div><div></div></div>"]
+    N2_1["<div><div>2.1 Escolher linguagens<br />(Operação)</div><div></div></div>"]
+    N2_2["<div><div>2.2 Definir métricas<br />(Operação)</div><div></div></div>"]
+    N3_1["<div><div>3.1 Avaliar ganho relativo<br />(Operação)</div><div></div></div>"]
+    N4_1["<div><div>4.1 Conferir hardware e versões<br />(Operação)</div><div></div></div>"]
+
+    N0 --> N1
+    N0 --> N2
+    N0 --> N3
+    N0 --> N4
+
+    N1 --> N1_1
+    N1 --> N1_2
+    N2 --> N2_1
+    N2 --> N2_2
+    N3 --> N3_1
+    N4 --> N4_1
+
+    style N1_1 fill:none,stroke:#333,stroke-width:1px
+    style N1_2 fill:none,stroke:#333,stroke-width:1px
+    style N2_1 fill:none,stroke:#333,stroke-width:1px
+    style N2_2 fill:none,stroke:#333,stroke-width:1px
+    style N3_1 fill:none,stroke:#333,stroke-width:1px
+    style N4_1 fill:none,stroke:#333,stroke-width:1px
 ```
 
 ### Decomposição e planos
