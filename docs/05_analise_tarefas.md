@@ -57,12 +57,12 @@ graph TD
     N3["3\. Analisar resultados<br />Plano: 3.1"]
     N4["4\. Checar credibilidade do teste<br />Plano: 4.1 (Opcional)"]
 
-    N1_1["<div><div>1.1 Buscar por palavra-chave<br />(Operação)</div><div></div></div>"]
-    N1_2["<div><div>1.2 Selecionar por categoria<br />(Operação)</div><div></div></div>"]
-    N2_1["<div><div>2.1 Escolher linguagens<br />(Operação)</div><div></div></div>"]
-    N2_2["<div><div>2.2 Definir métricas<br />(Operação)</div><div></div></div>"]
-    N3_1["<div><div>3.1 Avaliar ganho relativo<br />(Operação)</div><div></div></div>"]
-    N4_1["<div><div>4.1 Conferir hardware e versões<br />(Operação)</div><div></div></div>"]
+    N1_1["<div><div>1.1 Buscar por palavra-chave<br />(Operação)</div><div>------</div></div>"]
+    N1_2["<div><div>1.2 Selecionar por categoria<br />(Operação)</div><div>------</div></div>"]
+    N2_1["<div><div>2.1 Escolher linguagens<br />(Operação)</div><div>------</div></div>"]
+    N2_2["<div><div>2.2 Definir métricas<br />(Operação)</div><div>------</div></div>"]
+    N3_1["<div><div>3.1 Avaliar ganho relativo<br />(Operação)</div><div>------</div></div>"]
+    N4_1["<div><div>4.1 Conferir hardware e versões<br />(Operação)</div><div>------</div></div>"]
 
     N0 --> N1
     N0 --> N2
@@ -75,13 +75,6 @@ graph TD
     N2 --> N2_2
     N3 --> N3_1
     N4 --> N4_1
-
-    style N1_1 fill:none,stroke:#333,stroke-width:1px
-    style N1_2 fill:none,stroke:#333,stroke-width:1px
-    style N2_1 fill:none,stroke:#333,stroke-width:1px
-    style N2_2 fill:none,stroke:#333,stroke-width:1px
-    style N3_1 fill:none,stroke:#333,stroke-width:1px
-    style N4_1 fill:none,stroke:#333,stroke-width:1px
 ```
 
 ### Decomposição e planos
