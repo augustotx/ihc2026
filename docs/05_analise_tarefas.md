@@ -76,6 +76,9 @@ graph TD
     N2 --> N2_2
     N3 --> N3_1
     N4 --> N4_1
+
+    style N1\_1 stroke-width:3px
+
 ```
 
 ### Decomposição e planos
