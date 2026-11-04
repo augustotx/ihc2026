@@ -159,7 +159,48 @@ O gestor Rafael Mendes (P01) acessa a plataforma para escolher e fundamentar a l
 
 ### Diagrama
 
-![CTT T01](../assets/05_tarefas/ctt_t01.svg)
+```mermaid
+graph TD
+    T0["☁️ T01: Comparar métricas de desempenho"]
+
+    T1["☁️ 1. Definir Problema<br />( >> )"]
+    T2["☁️ 2. Configurar Comparativo<br />( []>> )"]
+    T3["💻 3. Processar Resultados<br />( >> )"]
+    T4["☁️ 4. Analisar e Decidir"]
+
+    T1_1["🖥️ 1.1 Buscar por Nome"]
+    T1_2["🖥️ 1.2 Selecionar por Categoria"]
+
+    T2_1["🖥️ 2.1 Selecionar Linguagens"]
+    T2_2["🖥️ 2.2 Selecionar Métricas"]
+
+    T3_1["💻 3.1 Consultar Banco"]
+    T3_2["💻 3.2 Renderizar Gráfico"]
+
+    T4_1["👤 4.1 Avaliar Gráficos"]
+    T4_2["👤 4.2 Tomar Decisão Técnica"]
+
+    T0 --> T1
+    T0 --> T2
+    T0 --> T3
+    T0 --> T4
+
+    T1 --> T1_1
+    T1 --> T1_2
+    T1_1 -.-|"[]"| T1_2
+
+    T2 --> T2_1
+    T2 --> T2_2
+    T2_1 -.-|"|||"| T2_2
+
+    T3 --> T3_1
+    T3 --> T3_2
+    T3_1 -.-|"[]>>"| T3_2
+
+    T4 --> T4_1
+    T4 --> T4_2
+    T4_1 -.-|">>"| T4_2
+```
 
 ---
 
