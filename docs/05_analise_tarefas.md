@@ -49,7 +49,34 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 ### Diagrama
 
-![HTA T01](../assets/05_tarefas/hta_t01.svg)
+```mermaid
+graph TD
+    N0["0. Comparar desempenho entre linguagens<br>Plano: 1 > 2 > 3 (Se dúvida: 4)"]
+
+    N1["1. Selecionar problema/algoritmo<br>Plano: 1.1 OU 1.2"]
+    N2["2. Selecionar linguagens e métricas<br>Plano: 2.1 + 2.2"]
+    N3["3. Analisar resultados<br>Plano: 3.1"]
+    N4["4. Checar credibilidade do teste<br>Plano: 4.1 (Opcional)"]
+
+    N1_1["1.1 Buscar por palavra-chave<br>(Operação)"]
+    N1_2["1.2 Selecionar por categoria<br>(Operação)"]
+    N2_1["2.1 Escolher linguagens<br>(Operação)"]
+    N2_2["2.2 Definir métricas<br>(Operação)"]
+    N3_1["3.1 Avaliar ganho relativo<br>(Operação)"]
+    N4_1["4.1 Conferir hardware e versões<br>(Operação)"]
+
+    N0 --> N1
+    N0 --> N2
+    N0 --> N3
+    N0 --> N4
+
+    N1 --> N1_1
+    N1 --> N1_2
+    N2 --> N2_1
+    N2 --> N2_2
+    N3 --> N3_1
+    N4 --> N4_1
+```
 
 ### Decomposição e planos
 
