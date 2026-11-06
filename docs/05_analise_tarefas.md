@@ -1,7 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
 **Data:** 18/10/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 completa
 **Responsabilidade:** Cada integrante modela 1 HTA, 1 GOMS e 1 CTT.
 
 ## Objetivo da atividade
@@ -325,43 +325,55 @@ graph TD
 
 ### Decomposição e planos
 
-| ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
-| --- | --- | --- | --- |
-| 0 | Buscar e comparar métricas para pesquisa | Faça 1 > 2 > 3. Se necessário validar o teste, faça 4. | Omitir detalhes do teste tira a credibilidade acadêmica. |
-| 1 | Achar o algoritmo desejado | Faça 1.1 OU 1.2. | Permitir busca por nome ou navegação por categoria. |
-| 1.1 | Buscar algoritmo por nome | Operação. | Aceitar nomenclaturas técnicas do meio acadêmico. |
-| 1.2 | Escolher algoritmo por categoria | Operação. | Agrupar por tipo de processamento (CPU, memória). |
-| 2 | Selecionar linguagens e ver métricas | Faça (2.1 e 2.2) em qualquer ordem. | Isolar só as linguagens analisadas no artigo. |
-| 2.1 | Escolher as linguagens do estudo | Operação. | Permitir marcar 2 ou mais linguagens. |
-| 2.2 | Exibir métricas (tempo e memória) | Operação. | Mostrar valores e gráficos de forma direta. |
-| 3 | Copiar dados para citação | Faça 3.1. | Facilitar a transferência de dados para o artigo. |
-| 3.1 | Copiar resumo e referência do benchmark | Operação. | Botão de cópia rápida formatada para citação. |
-| 4 | Validar ambiente do teste | Opcional: faça 4.1. | Garantir transparência de hardware e compiladores. |
-| 4.1 | Conferir hardware e versão do compilador | Operação. | Exibir detalhes do ambiente em um clique. |
+| Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
+|---|---|---|
+| **0** Inspecionar reprodutibilidade do benchmark e exportar dataset para pesquisa | Faça 1 > 2 > 3. Se necessário conferir o código original, faça 4. | A falta de transparência sobre compiladores e hardware compromete a reprodutibilidade científica. |
+| **1** Localizar e abrir o benchmark do experimento | Faça 1.1 OU 1.2 | Permitir encontrar o teste exato tanto pelo nome do algoritmo quanto pelas linguagens envolvidas. |
+| **1.1** Buscar benchmark por algoritmo | Operação | Aceitar nomes de algoritmos e problemas clássicos da literatura. |
+| **1.2** Filtrar por combinação de linguagens | Operação | Isolar o experimento exato entre as linguagens analisadas no estudo. |
+| **2** Auditar ambiente e parâmetros de execução | Faça (2.1 e 2.2) em qualquer ordem | Exibir flags de otimização e versões de compiladores que influenciam diretamente a variação de desempenho. |
+| **2.1** Conferir flags do compilador e versões | Operação | Mostrar detalhadamente versões (ex: GCC vs Clang) e flags de otimização (ex: -O3). |
+| **2.2** Inspecionar especificações do hardware | Operação | Apresentar modelo exato da CPU, memória RAM e sistema operacional dos nós de teste. |
+| **3** Exportar dados brutos e citação acadêmica | Faça 3.1 OU 3.2 (ou ambos) | Facilitar a inclusão de dados brutos na metodologia do artigo e a citação nas referências. |
+| **3.1** Exportar dataset bruto em CSV ou JSON | Operação | Permitir baixar as amostras temporais brutas para análise estatística própria (ex: R, Python). |
+| **3.2** Copiar referência formatada em BibTeX ou ABNT | Operação | Oferecer botão de cópia de citação em um clique nos formatos padrão da academia. |
+| **4** Validar integridade e reprodutibilidade | 4.1 (Opcional) | Permitir que o pesquisador confira o script de automação e o código-fonte usado no benchmark. |
+| **4.1** Visualizar código-fonte e script do teste | Operação | Exibir o repositório ou código do teste diretamente em modal/aba dedicada. |
 
-## GOMS — T02 Buscar e comparar métricas para pesquisa acadêmica
 
-Autor(a): Augusto Pereira Teixeira — 24.123.008-5
+## GOMS — T02 Inspecionar reprodutibilidade do benchmark e exportar dataset para pesquisa
+
+**Autor(a):** Augusto Pereira Teixeira — 24.123.008-5
 
 ### Goal
 
-- G0: Encontrar métricas confiáveis e validar o ambiente do teste para citar na pesquisa.
+#### G0: Auditar a reprodutibilidade do ambiente de testes e extrair dataset bruto e citação para artigo acadêmico.
 
-### Métodos, operadores e regras de seleção
+#### Métodos, operadores e regras de seleção
 
-### G1: Encontrar o algoritmo
+#### G1: Localizar o benchmark do experimento
 
-- Method M1.A (Busca por nome): Digitar nome técnico > Clicar no resultado.
-- Method M1.B (Navegação por categoria): Abrir menu de categorias > Clicar na área desejada.
-- Selection Rule SR1: Usar M1.A se souber o nome exato; usar M1.B para explorar categorias.
+* **Method M1.A (Busca direta por algoritmo):**
+  * Identificar algoritmo -> Digitar nome técnico no campo de busca -> Clicar no experimento correspondente.
+* **Method M1.B (Filtro por combinação de linguagens):**
+  * Mover cursor até o filtro de linguagens -> Selecionar o par de linguagens do estudo -> Clicar em "Filtrar Experimentos" -> Selecionar o benchmark da lista.
+* **Selection Rule SR1:** Usar M1.A quando o objetivo for um algoritmo específico; usar M1.B quando o foco for analisar a competição entre duas linguagens em múltiplos cenários.
 
-### G2: Comparar as linguagens
+#### G2: Inspecionar e auditar o ambiente de testes
 
-- Method M2 (Filtro e exibição): Marcar as linguagens do artigo > Marcar tempo e memória > Ver gráficos.
+* **Method M2.A (Inspeção visual por abas de detalhes do painel):**
+  * Clicar na aba "Versão do Compilador e Flags" -> Ler parâmetros de compilação (ex: -O3, GCC 13.2) -> Clicar na aba "Especificações de Hardware" -> Ler modelo de CPU, RAM e sistema operacional.
+* **Method M2.B (Visualização do manifesto/script YAML de execução):**
+  * Clicar no botão "Ver Manifesto do Teste (YAML/JSON)" -> Rolar pela janela de código -> Inspecionar as configurações de hardware, ambiente e flags unificadas no arquivo de manifesto.
+* **Selection Rule SR2:** Usar M2.A para uma conferência rápida dos metadados de ambiente organizados por seções; usar M2.B quando for necessário validar a especificação técnica completa do script de execução para garantir a reprodutibilidade exata.
 
-### G3: Validar e extrair para o artigo
+#### G3: Exportar dados brutos e citação acadêmica
 
-- Method M3 (Conferência e cópia): Checar hardware e compilador > Clicar em "Copiar dados para citação".
+* **Method M3.A (Exportação via botões da interface):**
+  * Clicar no botão "Exportar Dataset" -> Selecionar formato (CSV ou JSON) -> Confirmar download -> Clicar no botão "Citar Benchmark" -> Selecionar formato (BibTeX ou ABNT) -> Clicar em "Copiar Citação".
+* **Method M3.B (Geração de pacote completo de reprodutibilidade em ZIP):**
+  * Clicar no botão "Baixar Pacote de Reprodutibilidade (.zip)" -> Confirmar download contendo dataset em CSV, manifesto YAML do ambiente e arquivo de citação citation.bib.
+* **Selection Rule SR3:** Usar M3.A para extrair separadamente os dados brutos ou a citação conforme a necessidade pontual da escrita; usar M3.B para obter todos os artefatos de reprodutibilidade empacotados de uma só vez para anexar ao repositório do artigo.
 
 ## CTT — T02 Buscar e comparar métricas para pesquisa acadêmica
 
@@ -369,31 +381,31 @@ Autor(a): Augusto Pereira Teixeira — 24.123.008-5
 
 ### Descrição da tarefa
 
-Mariana (P02) pesquisa métricas de linguagens para seu artigo. Ela encontra o algoritmo, seleciona as linguagens, o sistema gera os gráficos e ela valida o hardware antes de copiar os dados para o texto.
+Mariana Costa (P02) acessa a plataforma para auditar um benchmark e extrair evidências para seu artigo. Ela localiza o experimento, inspeciona o ambiente técnico (hardware, compilador e flags), solicita ao sistema a geração do arquivo de dados brutos e copia a citação acadêmica no padrão BibTeX/ABNT.
 
 ### Diagrama
 
 ```mermaid
 graph TD
-    T0["☁️ T02: Buscar e comparar métricas para pesquisa"]
+    T0["☁️ T02: Inspecionar reprodutibilidade e exportar dataset"]
 
-    T1["☁️ 1. Achar Algoritmo<br />( >> )"]
-    T2["☁️ 2. Configurar Comparativo<br />( []>> )"]
-    T3["💻 3. Processar Resultados<br />( >> )"]
-    T4["☁️ 4. Validar e Copiar"]
+    T1["☁️ 1. Localizar Experimento<br />( >> )"]
+    T2["☁️ 2. Auditar Ambiente<br />( []>> )"]
+    T3["💻 3. Gerar Arquivos de Dados<br />( >> )"]
+    T4["☁️ 4. Exportar e Citar"]
 
-    T1_1["🧑‍💻 1.1 Buscar por Nome"]
-    T1_2["🧑‍💻 1.2 Escolher por Categoria"]
+    T1_1["🧑‍💻 1.1 Buscar por Algoritmo"]
+    T1_2["🧑‍💻 1.2 Filtrar por Linguagens"]
 
-    T2_1["🧑‍💻 2.1 Escolher Linguagens"]
-    T2_2["🧑‍💻 2.2 Selecionar Métricas"]
+    T2_1["🧑‍💻 2.1 Inspecionar Compilador e Flags"]
+    T2_2["🧑‍💻 2.2 Inspecionar Hardware e OS"]
 
-    T3_1["💻 3.1 Consultar Banco"]
-    T3_2["💻 3.2 Renderizar Gráfico"]
+    T3_1["💻 3.1 Compilar Amostras de Teste"]
+    T3_2["💻 3.2 Formatar Dataset CSV e BibTeX"]
 
-    T4_1["🧑‍💻 4.1 Conferir Hardware e Versões"]
-    T4_2["🧑‍💻 4.2 Copiar Dados"]
-    T4_3["👤 4.3 Analisar para o Artigo"]
+    T4_1["🧑‍💻 4.1 Baixar Dataset Bruto"]
+    T4_2["🧑‍💻 4.2 Copiar Citação Acadêmica"]
+    T4_3["👤 4.3 Validar Reprodutibilidade no Artigo"]
 
     T0 --> T1
     T0 --> T2
@@ -415,53 +427,55 @@ graph TD
     T4 --> T4_1
     T4 --> T4_2
     T4 --> T4_3
-    T4_1 -.-|">>"| T4_2
+    T4_1 -.-|"|||"| T4_2
     T4_2 -.-|">>"| T4_3
 ```
 
 ### Legenda dos operadores temporais utilizados
 
-- >> (Sequencial): Uma etapa habilita a próxima.
-- []>> (Passagem de dados): Conclui a etapa e envia parâmetros para a seguinte.
-- [] (Escolha): Escolha entre duas opções.
-- ||| (Concorrência): Ações que podem ser feitas em qualquer ordem.
+| **Operador** | **Nome da relação** | **Significado na Tarefa T02** |
+|---|---|---|
+| **>>** | Habilitação (Sequencial) | A conclusão de uma etapa habilita o início da seguinte. |
+| **[]>>** | Habilitação com Troca de Informação | A auditoria do ambiente conclui e fornece contexto para a geração do dataset. |
+| **[]** | Escolha (Alternativa) | Escolha entre buscar por nome de algoritmo ou filtrar por linguagens. |
+| **\|\|\|** | Concorrência (Paralelo) | As operações podem ser executadas de forma independente. |
 
 ### Estrutura textual da árvore (Decomposição CTT)
 
-- T02: Buscar e comparar métricas para pesquisa [A]
-  - Plano principal: 1. Achar Algoritmo >> 2. Configurar Comparativo []>> 3. Processar Resultados >> 4. Validar e Copiar
-  - 1. Achar Algoritmo [A]
-    - Relação: 1.1 Buscar por Nome [] 1.2 Escolher por Categoria
-    - 1.1 Buscar por nome [I]: Digitar o nome no campo de busca.
-    - 1.2 Escolher por categoria [I]: Selecionar a área no menu suspenso.
-  - 2. Configurar Comparativo [A]
-    - Relação: 2.1 Escolher Linguagens ||| 2.2 Selecionar Métricas
-    - 2.1 Escolher linguagens [I]: Marcar as linguagens pesquisadas.
-    - 2.2 Selecionar métricas [I]: Marcar tempo e consumo de memória.
-  - 3. Processar e Exibir Resultados [A]
-    - Relação: 3.1 Consultar Banco []>> 3.2 Renderizar Gráfico
-    - 3.1 Consultar banco [S]: O sistema busca os dados no banco.
-    - 3.2 Renderizar gráfico [S]: O sistema gera os gráficos na tela.
-  - 4. Validar e Copiar [A]
-    - Relação: 4.1 Conferir Hardware e Versões >> 4.2 Copiar Dados >> 4.3 Analisar para o Artigo
-    - 4.1 Conferir hardware e versões [I]: Checar computador e compilador.
-    - 4.2 Copiar dados [I]: Copiar resumo formatado para o artigo.
-    - 4.3 Analisar para o artigo [U]: Avaliar se os dados confirmam a hipótese da pesquisa.
+* **T02: Inspecionar reprodutibilidade e exportar dataset** **[A]**
+  * *Plano temporal principal:* 1. Localizar Experimento >> 2. Auditar Ambiente []>> 3. Gerar Arquivos de Dados >> 4. Exportar e Citar
+  * **1. Localizar Experimento** **[A]**
+    * *Relação:* 1.1 Buscar por Algoritmo [] 1.2 Filtrar por Linguagens
+    * **1.1 Buscar por algoritmo** **[I]:** Digitar o nome do algoritmo no campo de busca.
+    * **1.2 Filtrar por linguagens** **[I]:** Selecionar o par de linguagens do estudo.
+  * **2. Auditar Ambiente de Teste** **[A]**
+    * *Relação:* 2.1 Inspecionar Compilador e Flags ||| 2.2 Inspecionar Hardware e OS
+    * **2.1 Inspecionar compilador e flags** **[I]:** Checar versão exata (ex: GCC 13.2) e parâmetros de otimização (`-O3`).
+    * **2.2 Inspecionar hardware e OS** **[I]:** Conferir modelo da CPU, memória e sistema operacional.
+  * **3. Gerar Arquivos e Formatação** **[A]**
+    * *Relação:* 3.1 Compilar Amostras de Teste []>> 3.2 Formatar Dataset CSV e BibTeX
+    * **3.1 Compilar amostras de teste** **[S]:** O sistema consolida as medições brutas do experimento.
+    * **3.2 Formatar dataset e citação** **[S]:** O sistema gera o arquivo CSV e a entrada BibTeX/ABNT.
+  * **4. Exportar e Citar** **[A]**
+    * *Relação:* (4.1 Baixar Dataset ||| 4.2 Copiar Citação) >> 4.3 Validar Reprodutibilidade no Artigo
+    * **4.1 Baixar dataset bruto** **[I]:** Efetuar o download do arquivo CSV/JSON.
+    * **4.2 Copiar citação acadêmica** **[I]:** Clicar no botão de cópia da referência BibTeX/ABNT.
+    * **4.3 Validar reprodutibilidade no artigo** **[U]:** Mariana confirma a integridade dos dados para inclusão na metodologia do seu estudo.
 
       
 ## Síntese da equipe
 
-A modelagem das tarefas T01 e T02 identificou requisitos essenciais para a interface, como gráficos comparativos, busca por algoritmos e transparência sobre o ambiente dos testes. Ambas serão incluídas no protótipo e avaliadas nos testes de usabilidade.Quais problemas de interação, oportunidades e requisitos apareceram a partir das modelagens? Quais tarefas irão para o protótipo e para o teste de usabilidade?
+A modelagem das tarefas T01 e T02 identificou requisitos essenciais para a interface, como gráficos comparativos, busca por algoritmos e transparência sobre o ambiente dos testes e a estrutura dos algoritimos codificados. Ambas serão incluídas no protótipo e avaliadas nos testes de usabilidade.Quais problemas de interação, oportunidades e requisitos apareceram a partir das modelagens? Quais tarefas irão para o protótipo e para o teste de usabilidade?
 
 ## Checklist
 
-- [ ] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT.
-- [ ] Cada artefato identifica autor e tarefa.
-- [ ] Diagramas são legíveis e possuem fonte editável quando possível.
-- [ ] HTA contém planos, não apenas árvore de tópicos.
-- [ ] GOMS distingue Goals, Operators, Methods e Selection Rules.
-- [ ] CTT usa operadores temporais e tipos de tarefa coerentes.
-- [ ] Há texto explicando cada diagrama.
-- [ ] Tarefas estão ligadas a cenários/personas na rastreabilidade.
-- [ ] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
-- [ ] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.
+- [x] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT.
+- [x] Cada artefato identifica autor e tarefa.
+- [x] Diagramas são legíveis e possuem fonte editável quando possível.
+- [x] HTA contém planos, não apenas árvore de tópicos.
+- [x] GOMS distingue Goals, Operators, Methods e Selection Rules.
+- [x] CTT usa operadores temporais e tipos de tarefa coerentes.
+- [x] Há texto explicando cada diagrama.
+- [x] Tarefas estão ligadas a cenários/personas na rastreabilidade.
+- [x] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
+- [x] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.
