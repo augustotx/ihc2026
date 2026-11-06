@@ -28,9 +28,9 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 ## Seleção das tarefas
 
 | ID | Tarefa | Persona/cenário de origem | Frequência/criticidade | Autor responsável |
-| :--- | :--- | :--- | :--- | :--- |
+|---|---|---|---|---|
 | **T01** | Comparar métricas de desempenho entre linguagens para escolha técnica | P01 (Rafael) / C01 | Alta frequência / Alta criticidade | João Pedro Bazoli Palma |
-| **T02** | Buscar e comparar métricas de desempenho para artigo acadêmico | P02 (Mariana) / C02 | Alta frequência / Alta criticidade | Augusto Pereira Teixeira |
+| **T02** | Inspecionar reprodutibilidade do benchmark e exportar dataset para pesquisa | P02 (Mariana) / C02 | Média-alta frequência / Alta criticidade | Augusto Pereira Teixeira |
 
 > Priorize tarefas necessárias para que o usuário alcance objetivos centrais. Não desperdice a modelagem em ações triviais isoladas, como “clicar em login”, se o objetivo relevante é maior. Da mesma forma, não modele o funcionamento interno do algoritmo como se fosse uma tarefa humana.
 
@@ -131,23 +131,29 @@ graph TD
 
 #### Métodos, operadores e regras de seleção
 
-### G1: Selecionar o algoritmo/problema de interesse
+#### G1: Selecionar o algoritmo/problema de interesse
 
-- **Method M1.A (Busca direta por palavra-chave):**
-  - Identificar algoritmo → Mover cursor até a busca → Clicar no campo → Digitar nome → Clicar na opção desejada.
-- **Method M1.B (Navegação por categoria de processamento):**
-  - Identificar tipo de processamento → Clicar no menu suspenso de categorias → Clicar na categoria desejada.
-- **Selection Rule SR1:** Usar M1.A quando souber o nome exato do algoritmo; usar M1.B quando quiser explorar por categoria.
+* **Method M1.A (Busca direta por palavra-chave):**
+  * Identificar algoritmo -> Mover cursor até o campo de busca -> Clicar no campo -> Digitar nome do algoritmo -> Clicar no resultado desejado.
+* **Method M1.B (Navegação por categoria de processamento):**
+  * Identificar tipo de processamento -> Clicar no menu suspenso de categorias -> Navegar na lista -> Clicar na categoria desejada.
+* **Selection Rule SR1:** Usar M1.A quando o gestor souber o nome exato do algoritmo; usar M1.B quando quiser explorar os algoritmos por área de processamento.
 
-### G2: Selecionar linguagens e gerar confronto direto
+#### G2: Selecionar linguagens e gerar confronto direto
 
-- **Method M2 (Confronto de linguagens e métricas):**
-  - Mover cursor até o seletor de linguagens → Marcar as linguagens a comparar → Marcar as métricas (tempo e memória) → Clicar em "Gerar Comparativo".
+* **Method M2.A (Seleção manual via caixas de seleção):**
+  * Mover cursor até o painel de linguagens -> Marcar individualmente as linguagens desejadas -> Marcar as métricas (tempo e memória) -> Clicar em "Gerar Comparativo".
+* **Method M2.B (Aplicação de preset de comparação rápida):**
+  * Mover cursor até o menu "Presets Comparativos" -> Clicar na opção pré-configurada (ex: "Linguagens de Alto Desempenho") -> Clicar em "Aplicar Preset".
+* **Selection Rule SR2:** Usar M2.A se o gestor quiser comparar uma combinação específica/personalizada de linguagens; usar M2.B se desejar uma comparação padronizada pré-definida rapidamente.
 
-### G3: Analisar os resultados e tomar decisão
+#### G3: Analisar os resultados e tomar decisão
 
-- **Method M3 (Interpretação visual e validação):**
-  - Observar gráfico de velocidade relativa → Observar gráfico de uso de memória → Identificar a linguagem mais eficiente para o projeto.
+* **Method M3.A (Análise visual por gráficos de barras lado a lado):**
+  * Observar gráfico de velocidade relativa -> Observar gráfico de uso de memória -> Identificar visualmente a linguagem com menor barra de recursos -> Definir a linguagem escolhida.
+* **Method M3.B (Análise por tabela quantitativa e ordenação por coluna):**
+  * Mover cursor até a aba "Tabela de Dados" -> Clicar no cabeçalho da coluna "Tempo (ms)" para ordenar -> Ler os valores exatos da linguagem líder -> Definir a linguagem escolhida.
+* **Selection Rule SR3:** Usar M3.A se o gestor preferir uma visão panorâmica e intuitiva das diferenças relativas; usar M3.B se necessitar dos valores exatos e ordenação precisa para justificar a escolha no relatório.
  
 ## CTT — T01 Comparar métricas de desempenho entre linguagens para escolha técnica
 
@@ -245,20 +251,47 @@ graph TD
 
 ---
 
-## HTA — T02 Buscar e comparar métricas para pesquisa acadêmica
+## HTA — T02 Inspecionar reprodutibilidade do benchmark e exportar dataset para pesquisa
 
-Autor(a): Augusto Pereira Teixeira — 24.123.008-5
+**Autor(a):** Augusto Pereira Teixeira — 24.123.008-5
 
-### Descrição da tarefa
+##### Descrição da tarefa
 
-- Objetivo: Encontrar dados confiáveis de desempenho para citar em trabalhos acadêmicos.
-- Ponto de início: Acesso à ferramenta durante a pesquisa.
-- Conclusão esperada: Dados detalhados e validados para inclusão no artigo.
-- Contexto: Mariana (P02) precisa checar hardware e compilador para garantir a credibilidade do estudo.
+* **Objetivo:** Inspecionar as condições de execução de um benchmark específico (hardware, versão do compilador e flags de otimização) e exportar o dataset bruto junto com a citação formatada para fundamentar um artigo científico.
+* **Ponto de início:** Seleção de um benchmark específico no sistema.
+* **Conclusão esperada:** Download do dataset completo (CSV/JSON) com o ambiente auditado e a citação em formato acadêmico (BibTeX/ABNT) copiada.
+* **Contexto:** Mariana Costa (P02) precisa garantir que os dados citados no seu artigo sejam 100% reprodutíveis e verificáveis pela comunidade acadêmica.
 
 ### Diagrama
 
-![HTA T02](../assets/05_tarefas/hta_t02.svg)
+```mermaid
+graph TD
+    N0["0. Inspecionar reprodutibilidade e exportar dataset<br />Plano: 1 > 2 > 3 (Se necessário: 4)"]
+    N1["1. Localizar e abrir o benchmark do experimento<br />Plano: 1.1 OU 1.2"]
+    N2["2. Auditar ambiente e parâmetros de execução<br />Plano: 2.1 + 2.2"]
+    N3["3. Exportar dados brutos e citação acadêmica<br />Plano: 3.1 OU 3.2"]
+    N4["4. Validar integridade e reprodutibilidade<br />Plano: 4.1 (Opcional)"]
+    N1_1["1.1 Buscar benchmark por algoritmo<br />(Operação)"]
+    N1_2["1.2 Filtrar por combinação de linguagens<br />(Operação)"]
+    N2_1["2.1 Conferir flags do compilador e versões<br />(Operação)"]
+    N2_2["2.2 Inspecionar especificações do hardware<br />(Operação)"]
+    N3_1["3.1 Exportar dataset bruto em CSV ou JSON<br />(Operação)"]
+    N3_2["3.2 Copiar referência formatada em BibTeX ou ABNT<br />(Operação)"]
+    N4_1["4.1 Visualizar código-fonte e script do teste<br />(Operação)"]
+    N0 --> N1
+    N0 --> N2
+    N0 --> N3
+    N0 --> N4
+    N1 --> N1_1
+    N1 --> N1_2
+    N2 --> N2_1
+    N2 --> N2_2
+    N3 --> N3_1
+    N3 --> N3_2
+    N4 --> N4_1
+    classDef operacao fill:#ffffff,stroke:#000000,stroke-width:3px;
+    class N1_1,N1_2,N2_1,N2_2,N3_1,N3_2,N4_1 operacao;
+```
 
 ### Decomposição e planos
 
