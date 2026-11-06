@@ -51,24 +51,26 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 ```mermaid
 graph TD
-    N0["0. Comparar desempenho entre linguagens<br />Plano: 1 > 2 > 3 (Se dúvida: 4)"]
-    N1["1. Selecionar problema/algoritmo<br />Plano: 1.1 OU 1.2"]
-    N2["2. Selecionar linguagens e métricas<br />Plano: 2.1 + 2.2"]
-    N3["3. Analisar resultados<br />Plano: 3.1"]
-    N4["4. Checar credibilidade do teste<br />Plano: 4.1 (Opcional)"]
+    N0["0. Inspecionar reprodutibilidade e exportar dataset<br />Plano: 1 > 2 > 3 (Se necessário: 4)"]
+    N1["1. Localizar e abrir o benchmark<br />Plano: 1.1 OU 1.2"]
+    N2["2. Auditar ambiente e parâmetros<br />Plano: 2.1 + 2.2"]
+    N3["3. Exportar dados e citação<br />Plano: 3.1 OU 3.2"]
+    N4["4. Validar integridade do teste<br />Plano: 4.1 (Opcional)"]
 
-    N1_1["<div>1.1 Buscar por palavra-chave<br />(Operação)</div>"]
-    N1_2["<div>1.2 Selecionar por categoria<br />(Operação)</div>"]
-    N2_1["<div>2.1 Escolher linguagens<br />(Operação)</div>"]
-    N2_2["<div>2.2 Definir métricas<br />(Operação)</div>"]
-    N3_1["<div>3.1 Avaliar ganho relativo<br />(Operação)</div>"]
-    N4_1["<div>4.1 Conferir hardware e versões<br />(Operação)</div>"]
+    N1_1["<div>1.1 Buscar benchmark por algoritmo<br />(Operação)</div>"]
+    N1_2["<div>1.2 Filtrar por combinação de linguagens<br />(Operação)</div>"]
+    N2_1["<div>2.1 Conferir flags do compilador<br />(Operação)</div>"]
+    N2_2["<div>2.2 Inspecionar hardware<br />(Operação)</div>"]
+    N3_1["<div>3.1 Exportar dataset CSV/JSON<br />(Operação)</div>"]
+    N3_2["<div>3.2 Copiar citação BibTeX/ABNT<br />(Operação)</div>"]
+    N4_1["<div>4.1 Visualizar código-fonte do teste<br />(Operação)</div>"]
 
     N1_1_L["────────"]
     N1_2_L["────────"]
     N2_1_L["────────"]
     N2_2_L["────────"]
     N3_1_L["────────"]
+    N3_2_L["────────"]
     N4_1_L["────────"]
 
     N0 --> N1
@@ -81,6 +83,7 @@ graph TD
     N2 --> N2_1
     N2 --> N2_2
     N3 --> N3_1
+    N3 --> N3_2
     N4 --> N4_1
 
     N1_1 ~~~ N1_1_L
@@ -88,6 +91,7 @@ graph TD
     N2_1 ~~~ N2_1_L
     N2_2 ~~~ N2_2_L
     N3_1 ~~~ N3_1_L
+    N3_2 ~~~ N3_2_L
     N4_1 ~~~ N4_1_L
 
     style N1_1_L fill:none,stroke:none,color:#333
@@ -95,6 +99,7 @@ graph TD
     style N2_1_L fill:none,stroke:none,color:#333
     style N2_2_L fill:none,stroke:none,color:#333
     style N3_1_L fill:none,stroke:none,color:#333
+    style N3_2_L fill:none,stroke:none,color:#333
     style N4_1_L fill:none,stroke:none,color:#333
 ```
 
