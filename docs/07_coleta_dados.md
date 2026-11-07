@@ -2,7 +2,7 @@
 
 **Data:** 06/11/2026
 
-**Status:** 
+**Status:** 🟩 completa
 
 **Responsabilidade:** João Pedro Bazoli Palma e Augusto Pereira Teixeira
 
