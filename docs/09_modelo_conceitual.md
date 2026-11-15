@@ -2,7 +2,7 @@
 
 **Data:** 15/11/2026
 
-**Status:** 🟨 em andamento
+**Status:** 🟩 concluída
 
 **Responsabilidade:** João Pedro Bazoli Palma e Augusto Pereira Teixeira
 
