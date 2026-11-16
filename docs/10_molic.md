@@ -1,98 +1,152 @@
-# Entrega 10 — Modelagem da interação com MoLIC
+### Entrega 10 — MoLIC
 
-**Data:** 15/11/2026
+**Data:** 16/11/2026
 
-**Status:** 🟨 em andamento
+**Status:** 🟩 concluída
 
-**Responsabilidade:** João Pedro Bazoli Palma e Augusto Pereira Teixeira
+**Responsabilidade:** 1 solução completa por integrante
 
-## Objetivo da atividade
+#### Objetivo da atividade
 
-Representar a interação em nível conceitual e comunicativo por meio de diagramas MoLIC (*Modelling Language for Interaction as Conversation*), explicitando a conversa entre o usuário e o preposto do sistema (designer) para as tarefas prioritárias de cada integrante.
+Modelar a interação como uma **conversa entre usuário e preposto do designer**, oferecendo visão global dos caminhos que permitem ao usuário atingir seus objetivos — incluindo alternativas e rupturas relevantes. MoLIC não deve ser reduzida a um fluxograma de telas. Use a **notação MoLIC ensinada na disciplina**. Este template foca critérios de qualidade e não substitui a legenda/notação apresentada em aula.
+
+#### Atenção a TCCs sem interface original
+
+O MoLIC não modela o algoritmo por dentro. Ele modela a **conversa de interação necessária para que uma pessoa use a contribuição**. Exemplos de conversas:
+
+* usuário escolhe dados/parâmetros → sistema valida → usuário inicia análise → sistema comunica processamento → usuário interpreta resultado;
+* usuário consulta histórico → refina filtros → abre execução → compara com outra;
+* administrador seleciona perfil → altera permissão → sistema comunica consequências → administrador confirma/cancela;
+* analista recebe alerta → examina evidências → classifica ocorrência → registra decisão.
+
+Modele também rupturas plausíveis: entrada inválida, falha de processamento, ausência de resultado, permissão insuficiente, filtro sem resultados, conflito de alteração, cancelamento ou necessidade de recuperação.
 
 ---
 
-## 1. Soluções individuais
-
-### M01 — Comparação de Desempenho no Dashboard
+#### M01 — Comparação de Desempenho e Trade-Off entre Linguagens
 
 **Autor(a):** João Pedro Bazoli Palma — 24.123.041-6
 
-**Cenário de origem:** CI01 (Rafael Mendes — Gestor Técnico)
+**Cenário de interação de origem:** CI01 (Rafael Mendes — Escolha de arquitetura)
 
-**Objetivos vinculados:** `O01` (Escolher linguagem), `O03` (Localizar benchmark), `O04` (Parametrizar linguagens/métricas), `O05` (Analisar trade-off nos gráficos).
+**Objetivo(s):** O01 — Comparar tempo de execução versus memória
 
-**Tarefas relacionadas (Entrega 5):** T01 (Comparar desempenho de linguagens no catálogo de benchmarks).
+**Tarefa(s) relacionada(s):** T01 — Comparar métricas de desempenho entre linguagens
 
-**Signos relevantes manipulados:** `filtro_categoria`, `seletor_linguagens`, `seletor_metrica`, `grafico_barras`.
+**Signos relevantes:** Gráfico de dispersão, seletores de eixos (tempo/memória), opções logarítmicas (Log X/Y) e checkboxes da tabela de linguagens.
 
-**Link da fonte editável:** *(Inserir link do Draw.io / SVG)*
+##### Diagrama
 
-![Diagrama MoLIC - M01](../assets/10_molic/molic_01_joao_pedro.png)
+![Diagrama MoLIC - M02](../assets/10_molic/M01.jpg)
 
-#### Leitura textual do diagrama (Caminho Principal)
+##### Leitura do diagrama
 
-1. **Abertura:** Parte do ponto de abertura com a meta `gco: Comparar desempenho de linguagens`.
-2. **Cena Principal (Configurar comparação no Dashboard):** O sistema exibe os seletores (`d+u: parâmetros do teste`). Rafael seleciona as linguagens candidatas (Go, Rust, Java), define a métrica ativa (tempo vs. memória) e aciona `u: Atualizar gráfico`.
-3. **Processamento do Sistema (Caixa Preta):** O sistema valida o número de seleções (mínimo 2, máximo 5) e consolida os dados de medição.
-4. **Fechamento da Meta:** O sistema retorna com sucesso (`d: Gráfico comparativo gerado`), transitando com `gcc: Comparar desempenho de linguagens`.
-5. **Cena Final (Analisar trade-off de desempenho):** O preposto plota o gráfico de barras comparativo (`d: grafico_barras`), permitindo a Rafael avaliar visualmente o trade-off e encerrar a consulta no ponto de término.
+###### Caminho principal
 
-#### Alternativas e Rupturas (Breakdowns)
+1. **Abertura:** Com o benchmark selecionado no catálogo (`precond:`), o sistema disponibiliza a tela e abre a conversa (`gco: Comparar desempenho de linguagens`).
+2. **Visualizador de Benchmark:** O preposto exibe o gráfico e a tabela (`d+u:`).
+3. **Parametrização:** O usuário ajusta métricas, escala ou desmarca linguagens em três caixas paralelas (`d+u:`).
+4. **Atualização:** O usuário clica em `u: Atualizar gráfico`. O sistema recalcula os dados no quadrado preto (`[■]`).
+5. **Conclusão:** O sistema devolve `d: Exibir gráfico atualizado`, encerra a meta (`gcc:`) na cena **Análise do Trade-Off** e o usuário finaliza em `u: Concluir decisão` (`◎`).
 
-| Identificador | Ponto de partida | Condição / Ruptura | Comportamento do sistema | Recuperação / Desfecho |
-|---|---|---|---|---|
-| **ALERTA-01** | Cena Principal (Seleção) | Rafael tenta marcar mais de 5 linguagens simultâneas no gráfico. | O sistema emite aviso de limite (`d: "Limite máximo de 5 linguagens atingido"`). | Transita para cena tracejada de aviso; Rafael aciona `u: Desmarcar linguagem excedente` e retorna à configuração. |
-| **ALT-01** | Cena Principal (Filtro) | Rafael deseja isolar apenas algoritmos intensivos em CPU antes de gerar o gráfico. | O preposto aplica a restrição via `u: Filtrar CPU-bound`. | A lista de testes do dashboard é filtrada diretamente sem sair da cena. |
+###### Alternativas e rupturas
+
+| Situação | Onde ocorre | Como o usuário percebe | Caminho de recuperação/saída |
+| :--- | :--- | :--- | :--- |
+| **Ruptura: Nenhuma série selecionada** | Filtro de linguagens | O sistema barra a atualização e abre a cena tracejada `Alerta: Seleção Vazia` (`d: "Selecione ao menos uma linguagem..."`). | Seta tracejada `u: Restaurar seleção de linguagens` retorna à tela com as séries reativadas. |
+| **Alternativa: Ajuste de escala direto** | Cena central | O usuário altera apenas Log X ou Log Y sem mexer nos filtros. | Segue para `u: Atualizar gráfico` e recalcula os eixos de imediato. |
+
+##### Checklist específico de modelagem
+
+* [x] Existe **ponto de abertura** coerente com o início do objetivo.
+* [x] As **cenas de conversa** representam tópicos/assuntos, não nomes de páginas apenas.
+* [x] As transições/falas deixam claro o que o usuário ou o sistema comunica.
+* [x] Há **ponto(s) de encerramento** para objetivos concluídos/abandonados quando aplicável.
+* [x] Processamentos do sistema estão representados conforme a notação adotada em aula, sem "inventar" fala do usuário.
+* [x] Rupturas (breakdowns) relevantes têm feedback e caminho de recuperação, não becos sem saída.
+* [x] Acessos ubíquos/atalhos só aparecem quando semanticamente justificáveis.
+* [x] O diagrama cobre caminhos alternativos importantes, e não apenas o "happy path".
+* [x] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9.
+* [x] O diagrama é legível em tamanho normal no GitHub.
+* [x] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo.
+* [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
 
 ---
 
-### M02 — Auditoria Metodológica e Exportação de Dados
+#### M02 — Auditoria Metodológica e Reprodutibilidade Experimental
 
 **Autor(a):** Augusto Pereira Teixeira — 24.123.008-5
 
-**Cenário de origem:** CI02 (Mariana Costa — Pesquisadora Acadêmica)
+**Cenário de interação de origem:** CI02 (Mariana Costa — Pesquisa acadêmica)
 
-**Objetivos vinculados:** `O02` (Auditar rigor e embasar artigo), `O03` (Localizar benchmark), `O06` (Inspecionar código e Guix), `O07` (Baixar CSV), `O08` (Copiar BibTeX).
+**Objetivo(s):** O02 — Auditar rigor metodológico e obter artefatos experimentais
 
-**Tarefas relacionadas (Entrega 5):** T02 (Auditar reprodutibilidade metodológica e exportar dados/citação).
+**Tarefa(s) relacionada(s):** T02 — Buscar e comparar métricas para artigo acadêmico
 
-**Signos relevantes manipulados:** `campo_busca`, `bloco_guix`, `botao_csv`, `botao_bibtex`, `toast_feedback`.
+**Signos relevantes:** Código-fonte, flags de compilação (`-O3`), receita declarativa GNU Guix, botão de cópia, menu ubíquo `About` e download do `.csv`.
 
-**Link da fonte editável:** *(Inserir link do Draw.io / SVG)*
+##### Diagrama
 
-![Diagrama MoLIC - M02](../assets/10_molic/molic_02_augusto.png)
+![Diagrama MoLIC - M02](../assets/10_molic/M02.jpg)
 
-#### Leitura textual do diagrama (Caminho Principal)
+##### Leitura do diagrama
 
-1. **Abertura:** Parte do ponto de abertura com a meta `gco: Auditar rigor e exportar dados`.
-2. **Cena Principal (Detalhes do Experimento e Reprodutibilidade):** O preposto exibe o código-fonte, flags de compilação (`-O3`) e a receita declarativa do GNU Guix (`d+u: bloco_guix, opções de exportação`). Mariana confere a metodologia e aciona a exportação (`u: Baixar CSV e copiar citação`).
-3. **Processamento do Sistema (Caixa Preta):** O sistema prepara o arquivo tabular para download e copia a referência formatada para a área de transferência.
-4. **Fechamento da Meta:** O sistema conclui o processamento com sucesso (`d: Arquivo CSV enviado e BibTeX copiado`), transitando com `gcc: Auditar rigor e exportar dados`.
-5. **Cena Final (Dados coletados para pesquisa):** O preposto exibe o toast de confirmação (`d: toast_feedback`), e Mariana conclui a tarefa no ponto de encerramento.
+###### Caminho principal (Auditoria do Guix)
 
-#### Alternativas e Rupturas (Breakdowns)
+1. **Abertura:** Com o teste localizado no catálogo (`precond:`), o preposto abre a cena com o código e a meta (`gco: Auditar rigor e coletar artefatos`).
+2. **Reprodutibilidade e Código-Fonte:** A pesquisadora inspeciona código, flags e o script do Guix (`d+u:`).
+3. **Cópia da Receita:** A usuária aciona `u: Copiar receita de reprodução (Guix)`.
+4. **Confirmação Imediata:** Por ser cópia para o clipboard, o sistema apenas avisa na cena **Receita Copiada** (`d: "Comando no clipboard"`).
+5. **Fechamento:** A usuária clica em `u: Concluir auditoria`, ocorrendo o fechamento de sucesso (`gcc:`) até o ponto final (`◎`).
 
-| Identificador | Ponto de partida | Condição / Ruptura | Comportamento do sistema | Recuperação / Desfecho |
-|---|---|---|---|---|
-| **AJUDA-01** | Cena Principal (Detalhes) | Mariana tem dúvidas sobre a máquina física onde os testes foram executados. | Mariana aciona `u: Consultar hardware de teste`. | Desvia para cena tracejada de ajuda com especificações da CPU/RAM; Mariana clica em `u: Voltar aos detalhes`. |
-| **ALT-01** | Cena Principal (Ações) | Mariana deseja apenas a citação bibliográfica, sem fazer o download do CSV. | Mariana aciona apenas `u: Copiar BibTeX`. | O sistema copia o texto para o clipboard, emite o toast de confirmação e finaliza o fluxo. |
+###### Alternativas e rupturas
+
+| Situação | Onde ocorre | Como o usuário percebe | Caminho de recuperação/saída |
+| :--- | :--- | :--- | :--- |
+| **Alternativa: Consulta ao ambiente de teste** | Menu ubíquo `About` | O usuário clica na pílula permanente `About` e acessa a cena de ajuda tracejada (`Ajuda: Máquina de Teste`). | O preposto informa CPU e RAM (`d:`). O usuário clica em `u: Voltar ao teste` e retorna à cena central sem perder nada. |
+| **Alternativa: Download do CSV bruto** | Cena central | O usuário aciona `u: Baixar medições brutas (CSV)`. | O sistema processa o envio no quadrado preto (`[■]`), entrega o arquivo na cena `Dados Obtidos` e encerra com `gcc:`. |
+
+##### Checklist específico de modelagem
+
+* [x] Existe **ponto de abertura** coerente com o início do objetivo.
+* [x] As **cenas de conversa** representam tópicos/assuntos, não nomes de páginas apenas.
+* [x] As transições/falas deixam claro o que o usuário ou o sistema comunica.
+* [x] Há **ponto(s) de encerramento** para objetivos concluídos/abandonados quando aplicável.
+* [x] Processamentos do sistema estão representados conforme a notação adotada em aula, sem "inventar" fala do usuário.
+* [x] Rupturas (breakdowns) relevantes têm feedback e caminho de recuperação, não becos sem saída.
+* [x] Acessos ubíquos/atalhos só aparecem quando semanticamente justificáveis.
+* [x] O diagrama cobre caminhos alternativos importantes, e não apenas o "happy path".
+* [x] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9.
+* [x] O diagrama é legível em tamanho normal no GitHub.
+* [x] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo.
+* [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
 
 ---
 
-## 2. Síntese e decisões de design
+#### Consolidação da equipe
 
-1. **Estrutura Focal em uma Cena Central:** Seguindo a boa prática do MoLIC, cada diagrama foca na cena interativa central da sua respectiva persona (o Dashboard de Comparação para o Rafael e a Tela de Auditoria/Exportação para a Mariana), evitando diagramas sobrecarregados.
-2. **Uso de Cenas Satélites Tracejadas:** Situações de contorno (como o alerta de excesso de linguagens no M01 e a consulta de hardware no M02) foram modeladas como cenas tracejadas auxiliares que retornam à cena principal após a resolução.
-3. **Consolidação dos Processamentos do Sistema:** Cada fluxo contém um ponto central de processamento (caixa preta) que valida os inputs antes de emitir a fala de encerramento da meta (`gcc:`).
+##### Cobertura dos objetivos
+
+| Objetivo | MoLIC que cobre | Lacunas/duplicidades | Decisão |
+| :--- | :--- | :--- | :--- |
+| **O01** — Comparar tempo e memória para decisão técnica | **M01** (Rafael Mendes) | Nenhuma. Foco total no gráfico interativo e filtros. | Modelar parametrização e recuperação de seleção vazia. |
+| **O02** — Auditar reprodutibilidade e exportar dados | **M02** (Mariana Costa) | Duplicidade evitada. O download de CSV fica restrito ao M02. | Separar cópia rápida de receita (clipboard) de download com processamento (`.csv`). |
+
+##### Preparação para o Figma
+
+Componentes e telas derivados das conversas do MoLIC:
+
+1. **Visualizador de Benchmark (M01):** Gráfico de dispersão com eixos dinâmicos, botões de escala logarítmica e tabela com checkboxes.
+2. **Feedback de Ruptura (M01):** Alerta visual quando nenhuma série estiver selecionada com botão de restauração.
+3. **Reprodutibilidade e Código (M02):** Bloco de código com flags `-O3`, comando Guix com botão de copiar, toast de confirmação e link de download do CSV.
+4. **Modal de Hardware (`About` - M02):** Painel acessível pelo topo informando Ryzen 5 3600, 32GB RAM e Kernel Guix, com botão de fechar.
 
 ---
 
-## Checklist
+#### Erros frequentes a evitar
 
-- [x] O documento possui 1 solução completa por integrante (M01 - João Pedro e M02 - Augusto).
-- [x] Cada solução identifica autor, cenário de origem, objetivos, tarefas e signos manipulados.
-- [x] Os diagramas possuem pontos de abertura (círculo preto), cenas de conversa, caixas pretas de processamento e pontos de encerramento (alvo).
-- [x] Transições contêm a identificação explícita de falas do usuário (`u:`) e do sistema (`d:`), além das tags `gco:` e `gcc:`.
-- [x] Há representação de caminhos alternativos e recuperação de rupturas (*breakdowns*) com tabelas explicativas enxutas.
-- [x] Os nomes dos objetivos e signos são rigorosamente idênticos aos definidos nas Entregas 8 e 9.
+* desenhar apenas caixas com nomes de telas e setas de navegação;
+* não modelar falhas, cancelamento, volta ou recuperação;
+* usar rótulos genéricos ("Tela 1", "Processo 2") sem tópico de conversa;
+* criar no Figma fluxos que não existem no MoLIC;
+* diagrama sem legenda/fonte editável e com texto ilegível.
