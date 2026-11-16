@@ -71,7 +71,7 @@ Esta avaliação investiga exclusivamente a **qualidade da interação e da inte
 * [Roteiro de teste](../instrumentos/roteiro_teste_usabilidade.md)
 * [Planilha de observação](../instrumentos/planilha_observacao_modelo.md)
 * [Formulário de avaliação heurística](../instrumentos/formulario_heuristica_modelo.md)
-* Questionário pós-teste simplificado (Perguntas de 1 a 5: facilidade de uso, clareza dos gráficos e satisfação geral).
+* [Questionario_pos_teste](../instrumentos/questionario_pos_teste.md)
 
 ---
 
