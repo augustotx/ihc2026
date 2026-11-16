@@ -1,40 +1,39 @@
-# Modelo acadêmico — Termo/registro de consentimento
+### Modelo acadêmico — Termo/registro de consentimento
 
-**Projeto:** {{...}}  
-**Atividade:** {{entrevista/questionário/teste de usabilidade}}  
-**Responsáveis:** {{...}}  
-**Contato institucional:** {{...}}
+**Projeto:** BMML — Visualizador de Benchmarks Multi-Linguagem
 
-## Convite e objetivo
+**Atividade:** Teste de Usabilidade de Interface
 
-Você está sendo convidado(a) a participar de {{atividade}}. O objetivo é {{avaliar/compreender...}}. **Estamos avaliando o produto/processo, não a sua capacidade.**
+**Responsáveis:** Augusto Pereira Teixeira e João Pedro Bazoli Palma
 
-## O que será solicitado
+**Contato institucional:** {augusto.teixeira, joao.palma}@aluno.faculdade.br
 
-{{descrever tarefas, duração aproximada e ambiente}}
+#### Convite e objetivo
 
-## Registros
+Você está sendo convidado(a) a participar de um teste de usabilidade da interface interativa da ferramenta BMML. O objetivo é avaliar a facilidade de navegação, clareza dos gráficos e localização de informações no protótipo. **Estamos avaliando exclusivamente a interface do sistema, não a sua capacidade individual ou conhecimento técnico.**
 
-- [ ] Não haverá gravação.
-- [ ] Haverá gravação de tela.
-- [ ] Haverá gravação de áudio.
-- [ ] Haverá gravação de vídeo.
+#### O que será solicitado
 
-Explique finalidade, quem terá acesso e prazo/critério de descarte: {{...}}
+Realizar 4 tarefas simples e rápidas (navegar entre benchmarks, ajustar filtros no gráfico e localizar dados do ambiente de teste). A duração total estimada é de **15 a 20 minutos**, realizada presencialmente ou em chamada remota.
 
-## Privacidade
+#### Registros
 
-Os resultados publicados utilizarão identificador anônimo, salvo autorização explícita em contrário. Dados não necessários à atividade não serão coletados.
+* [x] Haverá anotações do observador em planilha.
+* [x] Não haverá gravação de áudio/vídeo da imagem do participante (apenas anotações de tempo e observações de tela).
+* *Finalidade:* Os dados serão utilizados exclusivamente para a disciplina de IHC e o TCC da equipe, sendo descartados ao final do semestre acadêmico.
 
-## Voluntariedade
+#### Privacidade
 
-A participação é voluntária e pode ser interrompida a qualquer momento, sem necessidade de justificativa.
+Os resultados serão tratados com total anonimato (identificados apenas como Participante 1, Participante 2, etc.). Nenhuma informação pessoal ou confidencial será coletada ou divulgada.
 
-## Consentimento
+#### Voluntariedade
 
-Declaro que recebi informações suficientes sobre a atividade e concordo em participar nos termos acima.
+A participação é 100% voluntária e pode ser interrompida a qualquer momento, por qualquer motivo, sem nenhum tipo de prejuízo ou justificativa.
 
-**Participante:** {{nome/assinatura ou mecanismo institucional de aceite}}  
-**Data:** {{...}}
+#### Consentimento
 
-> Ajuste este modelo às exigências do docente/instituição antes de aplicar.
+Declaro que recebi explicações claras sobre o teste e concordo voluntariamente em participar nos termos descritos acima.
+
+**Participante (Nome ou ID anônimo):** ________________________________________
+
+**Data:** ____ /____ /2026
