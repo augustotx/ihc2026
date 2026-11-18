@@ -44,6 +44,8 @@ Converter o conhecimento sobre usuários, tarefas, plataforma e contexto em **me
 | **Privacidade por Design (LGPD)** | Consulta e exportação de dados públicos. | Sem cookies, login ou dados pessoais. | Lei nº 13.709/2018 |
 | **Carga Cognitiva (Nielsen)** | Comparar opções sem alternar páginas. | Métricas lado a lado e cópia em um clique. | Nielsen |
 
+Foi usada a paleta de cores [Catppuccin](https://catppuccin.com/), que tem razão de contraste texto-fundo 10:1 na sua versão escura. Para os gráficos, foi usada a paleta Okabe-Ito (com algumas cores adicionais feitas pelo grupo), para facilitar a visualização dos gráficos por pessoas com os três principais daltonismos (protanopia, deuteranopia e tritanopia).
+
 ---
 
 #### 3. Metas de usabilidade
