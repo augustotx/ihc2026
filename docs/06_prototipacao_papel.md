@@ -2,7 +2,7 @@
 
 **Data:** 06/11/2026
 
-**Status:** 🟨 em andamento
+**Status:** 🟩 concluida
 
 **Responsabilidade:** João Pedro Bazoli Palma e Augusto Pereira Teixeira
 
@@ -56,33 +56,33 @@ Com base nas tarefas priorizadas para P01 e P02, o protótipo explora três fam�
   * **Descrição:** Apresenta a visão geral do projeto, campo de busca, filtros por categoria/linguagem, cards dos algoritmos e link no cabeçalho para a página "Sobre & Hardware".
   * **Controles & Ações:**
     * Clicar no card de um algoritmo → Navega para **`P02`**.
-    * Clicar em "Sobre & Hardware" no menu → Navega para **`P04`**.
+    * Clicar em "About" → Navega para **`P04`**.
 
-    ![prototipo_papel_p01](../assets/606_prototipos/p01.png)
+    ![prototipo_papel_p01](../assets/06_prototipos/p01.png)
 
 * **`P02` — Página do Algoritmo (Dashboard Comparativo):**
   * **Descrição:** Exibe o título e descrição do algoritmo, seletores de linguagens/métricas, gráfico comparativo em barras e atalho para o código e reprodutibilidade.
   * **Controles & Ações:**
     * Clicar em *"Ver Código e Reprodutibilidade Guix"* → Navega para **`P03`**.
-    * Clicar em *"Voltar ao Catálogo"* → Retorna para **`P01`**.
+    * Clicar em *"BMML"* → Retorna para **`P01`**.
    
-    ![prototipo_papel_p02](../assets/606_prototipos/p02.png)
+    ![prototipo_papel_p02](../assets/06_prototipos/p02.png)
 
 * **`P03` — Página de Código & Reprodutibilidade via Guix:**
   * **Descrição:** Apresenta o código-fonte original do benchmark, o manifesto/receita de compilação reprodutível via **GNU Guix**, além dos botões de exportação de dados (CSV/JSON) e citação (BibTeX/ABNT).
   * **Controles & Ações:**
     * Clicar em *"Exportar Dataset (CSV)"* → Dispara o download dos dados brutos.
     * Clicar em *"Copiar BibTeX"* → Copia a citação formatada.
-    * Clicar em *"Ver Especificações de Hardware"* → Navega para **`P04`**.
+    * Clicar em *"About"* → Navega para **`P04`**.
    
-    ![prototipo_papel_p03](../assets/606_prototipos/p03.png)
+    ![prototipo_papel_p03](../assets/06_prototipos/p03.png)
 
 * **`P04` — Página Sobre o Projeto & Infraestrutura de Hardware:**
   * **Descrição:** Explica a metodologia da plataforma de benchmarking e lista o ambiente físico de testes (modelo da CPU, memória RAM, kernel Linux e versão do Guix).
   * **Controles & Ações:**
-    * Clicar em *"Voltar"* → Retorna para a tela anterior (`P01` ou `P03`).
+    * Clicar em *"Voltar"* → "Back to benchmarks" (`P01` ou `P03`).
    
-    ![prototipo_papel_p04](../assets/606_prototipos/p01.png)
+    ![prototipo_papel_p04](../assets/06_prototipos/p04.png)
    
    
 
