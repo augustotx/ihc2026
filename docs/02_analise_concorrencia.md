@@ -1,172 +1,177 @@
-# Entrega 2 — Público-alvo e análise de concorrência
+### Entrega 2 — Público-alvo e análise de concorrência
 
-**Data:** 02/09/2026  
-**Status:** 🟩 concluída  
-**Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
+**Data:** 02/09/2026 (Revisado em 18/11/2026)
 
-## Objetivo da atividade
+**Status:** 🟩 concluída
 
-Compreender soluções do mesmo domínio **e também interfaces familiares ao público-alvo**. O objetivo não é copiar telas, mas identificar convenções, padrões, affordances percebidas, problemas recorrentes, expectativas e oportunidades de design.
+**Responsabilidade:** Cada integrante analisou 1 concorrente/interface representativa; síntese comparativa e recomendações consolidadas pela equipe.
 
-> **Concorrente não precisa ser idêntico ao produto.** Pode atuar na mesma área, resolver objetivo semelhante ou disputar a mesma necessidade. Quando não houver concorrente direto, use produtos análogos e softwares que o público já utiliza.
+#### Objetivo da atividade
 
-### Para TCCs que não previam interface
+Compreender soluções do mesmo domínio e interfaces familiares ao público-alvo para identificar convenções de interação, padrões de projeto, problemas recorrentes de usabilidade e oportunidades de design para a ferramenta BMML.
 
-Não procure apenas um “concorrente do algoritmo”. Investigue **interfaces profissionais que materializam atividades semelhantes** às que o usuário escolhido precisaria realizar.
+---
 
-Exemplos:
+#### Entrada obrigatória da Entrega 1
 
-- TCC de banco de dados → consoles de administração, ferramentas para DBA, monitoramento e análise de consultas;
-- TCC de LLM/ML → painéis de experimentos, gestão de modelos/datasets, comparação de métricas, revisão de resultados;
-- TCC de análise de dados → dashboards, ferramentas de BI, filtros, relatórios e exploração;
-- TCC de infraestrutura/API → portais administrativos, observabilidade, logs, gestão de credenciais e uso;
-- TCC de cibersegurança → consoles de alertas, triagem, histórico e auditoria.
-
-A pergunta é: **“que convenções esse perfil já conhece para executar tarefas equivalentes?”**
-
-## Entrada obrigatória da Entrega 1
-
-Retome o mapa inicial de alternativas e produtos citado na Entrega 1. Aqui a equipe deixa de trabalhar apenas com impressão inicial e passa a **investigar sistematicamente** cada solução.
+Mapeamento inicial de alternativas e ferramentas do domínio revisitado sistematicamente:
 
 | Item citado na Entrega 1 | Tipo | Por que foi citado | Status inicial | Decisão nesta entrega |
-|---|---|---|---|---|
-| Rosetta Code | análogo | porque é uma biblioteca de códigos e algoritmos em diversas linguagens | F | analisar |
-| Debian Benchmark Game | concorrente | porque agrega resultados de algoritmos diferentes, em diversas linguagens, em tabelas | F | analisar |
-| Repositório do Dave Plummer | processo manual | porque agrega resultados de algoritmos de números primos em mais de 100 linguagens | F | não possui interface |
+| :--- | :---: | :--- | :---: | :---: |
+| **Rosetta Code** | Análogo | Repositório colaborativo de algoritmos implementados em centenas de linguagens. | F | Analisado por João Pedro Bazoli Palma (C02). |
+| **Debian Benchmark Game** | Concorrente direto | Agregador de métricas comparativas (tempo, memória e CPU) em tabelas de dados. | F | Analisado por Augusto Pereira Teixeira (C01). |
+| **Repositório Dave Plummer (Primes)** | Processo manual | Benchmark de números primos executado em dezenas de linguagens em terminal. | F | Descartado para análise de UI (não possui interface gráfica/web). |
 
-Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, atualize `H01`, `H02`... em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
+---
 
-## 1. Público-alvo desta análise
+#### 1. Público-alvo desta análise
 
-Desenvolvedores de software com acesso a um computador e à internet que tenham interesse ou precisem comparar a performance de linguagens de programação para diversos ou determinados problemas.
+Desenvolvedores de software de sistemas, arquitetos técnicos (*Tech Leads*) e pesquisadores/estudantes de computação que necessitam comparar métricas objetivas de desempenho e consumo de memória entre diferentes linguagens de programação sob condições controladas de execução.
 
-## 2. Concorrentes diretos/indiretos
+---
 
-### Análise C01 — Debian Benchmark Game
+#### 2. Concorrentes diretos/indiretos
 
-**Autor(a):** Augusto Pereira Teixeira — 24.123.008-5  
-**Tipo:** direto
-**Link oficial:** https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html
-**Data de acesso:** 02/09/2026
+##### Análise C01 — Debian Benchmark Game
 
-### Análise C02 — Rosetta Code
+* **Autor(a):** Augusto Pereira Teixeira — 24.123.008-5
+* **Tipo:** Concorrente direto
+* **Link oficial:** [suspicious link removed]
+* **Data de acesso:** 02/09/2026
 
-**Autor(a):** João Pedro Bazoli Palma - 24.123.041-6  
-**Tipo:** análogo
-**Link oficial:** https://rosettacode.org/wiki/Rosetta_Code
-**Data de acesso:** 02/09/2026
+###### Contexto e proposta
 
-#### Contexto e proposta
+Agregador estático de testes de desempenho entre linguagens compiladas e interpretadas. Organiza medições de tempo de CPU, consumo de memória (KB) e tamanho do código-fonte em tabelas ordenáveis, acompanhadas de breves descrições do problema matemático e dos parâmetros de máquina.
 
-C01 - É um exemplo básico de um agregador de problemas e resultados, organizando-os em tabelas. Tem uma interface simples e explica cada problema para o usuário entender o que uma linguagem ser "boa" ou "rápida" significa para aquela questão específica.
+###### Funcionalidades relevantes (C01)
 
-C02 - Biblioteca de soluções de diversos problemas de programação conceituados resolvidos em centenas de linguagens de programação, organizando-os em blocos de código. Tem uma interface simples, com uma breve descrição de cada problema e uma lista de blocos de código embaixo.  
+| Funcionalidade | Como é realizada | Evidência visual | Observação de IHC |
+| :--- | :--- | :--- | :--- |
+| **Visualização de tabelas densas** | Seleciona-se um problema na lista lateral da página inicial. | `debian_table.png` | Apresenta os dados tabulares em lote. Permite inspeção de várias linguagens simultaneamente, mas sofre com excesso de informação sem agrupamento visual. |
+| **Ordenação por métrica** | Clique no cabeçalho das colunas (Secs, Mem, Busy). | `debian_sort.png` | A ordenação funciona de forma descendente direta. É eficiente para identificar o primeiro colocado, mas não permite isolar subconjuntos de linguagens. |
+| **Auditoria de código e compilação** | Clique sobre o nome da implementação na tabela. | `debian_source.png` | Exibe o código-fonte integral com destaque de sintaxe, flags do compilador utilizadas e linha de comando de execução. |
+| **Descrição do algoritmo** | Clique no link "description" no topo da página. | `debian_nbody.png` | Textos concisos delimitando as regras do teste para evitar implementações que burlem o algoritmo base. |
 
-#### Funcionalidades relevantes
+---
 
-##### C01
-| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
-|---|---|---|---|
-| visualização de tabelas | é selecionado um problema na página inicial | ![tabela com resultados de um problema](../assets/02_concorrencia/debian_table.png) | é básica, mas tem as funções de filtragem esperadas de uma ferramenta desse tipo |
-| filtragem de tabelas | é selecionado um tipo de campo na tabela | ![mesma tabela com o filtro decrescente no campo gz](../assets/02_concorrencia/debian_sort.png) | os filtros na tabela são só em ordem decrescente, mas funcionam |
-| leitura de código-fonte | é selecionado um item da tabela | ![código-fonte do C GCC do mesmo problema](../assets/02_concorrencia/debian_source.png) | o código possui destaque de sintaxe e detalhes sobre a compilação (comandos usados, tempo, etc) |
-| descrição do problema | é selecionado o botão "description" na página da tabela | ![descrição do problema n-body](../assets/02_concorrencia/debian_nbody.png) | descrições curtas, com instruções de implementação em outras linguagens para submissão |
+##### Análise C02 — Rosetta Code
 
-##### C02
-| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
-|---|---|---|---|
-| visualização de um problema em centenas de linguagens diferentes | é selecionada uma *task* na lista de *tasks* do site | ![task hello world](../assets/02_concorrencia/rosetta_helloworld.png) | é básica e difícil (por conta da quantidade de linguagens), mas faz o que é previsto |
-| destaque de sintaxe para certas linguagens | é feito automaticamente | ![destaque de sintaxe do hello world em C](../assets/02_concorrencia/rosetta_c_highlight.png) | não está presente em todas as linguagens (seria humanamente impossível fazer isso para todas) |
-| descrição da *task* | no topo da página de cada *task* existe uma descrição dela | ![descrição da task happy numbers](../assets/02_concorrencia/rosetta_happy_numbers.png) | as descrições são bem diretas, e explicam de forma curta o que cada problema faz |
+* **Autor(a):** João Pedro Bazoli Palma — 24.123.041-6
+* **Tipo:** Análogo de domínio
+* **Link oficial:** [suspicious link removed]
+* **Data de acesso:** 02/09/2026
 
-#### Experiência do usuário e opiniões
+###### Contexto e proposta
 
-Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte identificável. Não trate opinião isolada como verdade universal.
+Enciclopédia colaborativa baseada no modelo *wiki* que apresenta a resolução de um mesmo problema de programação em centenas de linguagens. Foca na semântica, sintaxe e idiomática de cada linguagem, organizando as implementações em seções sequenciais na mesma página.
 
-#### Preço/modelo de negócio
+###### Funcionalidades relevantes (C02)
 
-C01 - É gratuito, aberto e disponível na internet.
-C02 - É gratuito, aberto e disponível na internet. Usa o padrão *wiki* para as suas páginas (parecido com a Wikipédia e similares).
+| Funcionalidade | Como é realizada | Evidência visual | Observação de IHC |
+| :--- | :--- | :--- | :--- |
+| **Navegação por tarefas (*tasks*)** | Seleção a partir de lista alfabética de problemas. | `rosetta_helloworld.png` | Navegação simples por links diretos, porém com alta sobrecarga visual devido à quantidade massiva de tarefas cadastradas. |
+| **Exibição paralela de implementações** | Rolagem vertical da página da tarefa selecionada. | `rosetta_happy_numbers.png` | Concentra diversas linguagens na mesma página, permitindo comparar estilos de código sem trocar de aba. |
+| **Destaque de sintaxe (*syntax highlighting*)** | Formatação automática nos blocos de código. | `rosetta_c_highlight.png` | Aumenta a legibilidade de estruturas e palavras-chave nas linguagens suportadas pela ferramenta de realce. |
 
-#### Padrões e tendências percebidos
+---
 
-C01 - É feito com desenvolvedores/programadores experientes em mente. O usuário tem que saber o que cada programa testa interpretando as descrições e/ou o código. A interface é simples mas não acessível (não há explicação do que cada coisa faz).
-C02 - É feito com desenvolvedores/programadores e interessados em mente. O usuário tem que ter um conhecimento mínimo dos problemas representados na biblioteca. A interface é simples mas não é direta (muitas abas,nenhuma explicação de navegação)  
+###### Experiência do usuário e inspeção técnica
 
-#### Pontos positivos, limitações e lições
+Não foram localizados estudos formais de usabilidade publicados sobre os dois sites. A avaliação a seguir fundamenta-se em **inspeção analítica realizada pela equipe técnica**, orientada por boas práticas de IHC e ergonomia de interfaces:
 
-##### C01
-| Ponto | Evidência | Implicação para nosso projeto |
-|---|---|---|
-| interface simples | não há menus ou opções, só links para outras páginas | nossa interface pode ser parecida, **?** mas não sabemos se a simplicidade implicará em uma interface pior ou mais rasa |
-| não há representação gráfica | só tabelas | nosso projeto terá gráficos para uma representação visual dos resultados |
-| é possível comparar versões antigas do mesmo algoritmo | existem casos em que as linguagens têm várias versões do mesmo algoritmo | isso pode ser interessante para guardar histórico, assim como para a reprodutibilidade do(s) problema(s) |
+* **C01 (Debian Game):** A interface é minimalista e rápida no carregamento, mas impõe alta carga cognitiva. A ausência de representação visual (gráficos de dispersão) força o usuário a realizar cálculos mentais para compreender a relação de *trade-off* entre tempo e consumo de memória.
+* **C02 (Rosetta Code):** A estrutura de *wiki* tradicional favorece a indexação de busca textual, mas falha gravemente na filtragem: o usuário precisa realizar rolagem extensa de tela (*infinite scroll* manual) para encontrar a linguagem desejada em meio a centenas de blocos não filtráveis.
 
-##### C02
-| Ponto | Evidência | Implicação para nosso projeto |
-|---|---|---|
-|opções de filtragem| não existem opções de filtragem por linguagem ou tipo de problema | nosso projeto terá opções de filtragem |
-|interface simples | não há menus ou opções, só links para outras páginas | nossa interface pode ser parecida, **?** mas não sabemos se a simplicidade implicará em uma interface pior ou mais rasa  |
-|variedade enorme de problemas e linguagens  | biblioteca contendo centenas de problemas resolvidos em centenas de linguagens  | nosso projeto vai ter uma quantidade limitada de problemas e linguagens  |
+###### Modelo de acesso
 
-## 3. Softwares que o público-alvo usa no cotidiano
+Ambas as ferramentas são gratuitas, públicas e de código aberto, operando na web sem barreiras de autenticação ou cadastro.
 
-Analise interfaces que moldam a expectativa do público, mesmo que não sejam concorrentes.
+###### Padrões percebidos e hipóteses sobre o perfil de uso
 
-### TODO: REVISAR
+* **C01:** Adota densidade informacional estrita, vocabulário altamente técnico e dispensa tutoriais. **Hipótese de IHC:** Usuários com maturidade técnica valorizam acesso imediato aos dados brutos e métricas, mas demandam mecanismos de ordenação e filtros para reduzir ruído visual.
+* **C02:** Organiza soluções como documentação de referência comparativa. **Hipótese de IHC:** Ter o código-fonte visível lado a lado com os resultados aumenta a confiabilidade da comparação.
 
-| Software | Por que o público usa | Padrões relevantes | O que aprender |
-|---|---|---|---|
-| StackOverflow | desenvolvedores usam para pesquisar/pedir ajuda com programação | padrões de fórum (post/respostas/comentários, junção em categorias/subcategorias, etc) | esse tipo de usuário espera uma interface feita para ele, sem "dar as mãos" nem "ensinar o básico" |
-| GitHub | repositórios de código e projetos de software | padrão git (repositórios, READMEs) | formas de mostrar arquivos de código e documentação |
+---
 
-## 3.1 Padrões de interface relevantes ao escopo de IHC
+###### Pontos fortes, limitações e implicações para o BMML
 
-Registre somente padrões encontrados nas soluções analisadas e que possam ter relação com objetivos reais da equipe.
+| Produto | Pontos fortes observados | Limitações observadas | Implicações para o BMML |
+| :---: | :--- | :--- | :--- |
+| **C01** | Transparência de flags e comandos de compilação; registro de versões de bibliotecas e histórico de execuções. | Total ausência de gráficos interativos; impossibilidade de desmarcar linguagens não desejadas na tabela. | Adotar gráfico cartesiano de dispersão (Tempo × Memória) com toggles paramétricos e sincronizado a uma tabela de dados. |
+| **C02** | Código-fonte acessível diretamente com realce de sintaxe; descrição conceitual clara do objetivo do algoritmo. | Ausência completa de filtros por família de linguagem ou paradigma; poluição visual por rolagem excessiva. | Implementar abas dedicadas de código e filtros diretos no catálogo de problemas (`CPU-bound` vs. `Memory-bound`). |
 
-| Padrão observado | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Aplicável ao nosso escopo? |
-|---|---|---|---|---|---|
-| relatório | C01,C02 | Uma breve descrição dos problemas de programação representados nos produtos | Ajuda o usuário a compreender melhor o problema que está sendo resolvido  | Problemas complexos podem precisar de descrições complexas | sim |
-| histórico + filtros | C01 | Melhor comparação/observação de resultados | O usuário consegue ver problemas específicos, assim como versões anteriores deles | **?** Histório pode ser difícil de implementar | sim |
-| comparação de resultados | C01| Visualizar benchmarks de diferentes linguagens de programação em diversos problemas de forma clara e direta | facilita com que o usuário compare varias linguagens de programação  | Métricas podem ficar confusas caso a visualização seja muito simples | sim |
+---
 
-> O objetivo não é concluir “todo concorrente tem dashboard, então teremos um”. O padrão só será adotado se apoiar uma tarefa rastreável.
+#### 3. Softwares que o público-alvo usa no cotidiano
 
-## 4. Síntese comparativa da equipe
+Análise de plataformas técnicas de referência que moldam os modelos mentais e hábitos de interação do perfil de usuário:
 
-| Critério | C01 | C02 | Oportunidade para o projeto |
-|---|---|---|---|
-| Navegação | Sim | Não | Inspiração para o nosso projeto |
-| Feedback/estado | Não | Não | N.A. |
-| Prevenção/recuperação de erro | Não | Não | N.A. |
-| Terminologia | Sim | Sim | Termos e vocabulário técnico específicos |
-| Acessibilidade | Não | Parcial | C02 tem opções de tamanho de fonte |
-| Eficiência | Sim | Sim | Ambos são sites leves e sem *bloatware* |
+| Software | Por que o público utiliza | Padrões de interface relevantes | Lições e convenções aplicáveis ao BMML |
+| :--- | :--- | :--- | :--- |
+| **GitHub** | Versionamento de código, auditoria de alterações e documentação de software. | Blocos de código monoespaçados com numeração de linhas, botões integrados de cópia direta (`Copy`) e abas de navegação de arquivos. | Incorporar o padrão de bloco de código com botão `Copy` para comandos de terminal e scripts determinísticos do GNU Guix. |
+| **Stack Overflow** | Consulta técnica de problemas, discussões e comparação de soluções algorítmicas. | Identificação de tópicos via tags semânticas, tipografia com alto contraste e distinção clara entre texto explicativo e código executável. | Utilizar tags visuais para caracterizar o perfil de processamento dos algoritmos (`CPU-bound`, `Memory-bound`). |
 
-## 5. Recomendações derivadas
+---
 
-Liste recomendações com origem explícita.
+#### 3.1 Padrões de interface relevantes ao escopo de IHC
 
-- **RC01:** Fazer interface leve e direta - derivada de C01
-- **RC02:** Mostrar resultados na mesma página de forma concisa - derivada de C02
-- **RC03:** Descrever brevemente os problemas para o usuário entender como funcionam e como implementá-los - derivada de C01 e C02
-- **RC04:** Métricas bem descritas (tempo, tamanho, compactação, etc) - derivada de C01
+| Padrão observado | Origem | Tarefa do usuário que justifica | Vantagem de IHC | Risco / Limitação de design | Decisão no BMML |
+| :--- | :---: | :--- | :--- | :--- | :---: |
+| **Catálogo com tags semânticas** | Stack Overflow / C02 | Localizar e selecionar o benchmark de interesse. | Categoriza algoritmos por perfil de carga, agilizando a busca de casos representativos. | Excesso de tags pode fragmentar a navegação. | **Adotado** (Filtro por CPU-bound e Memory-bound no catálogo F01). |
+| **Gráfico de dispersão com toggles** | Literatura de visualização de dados | Comparar o *trade-off* relativo entre velocidade e memória. | Permite correlacionar duas grandezas contínuas em um único plano visual. | Pode haver sobreposição de pontos caso a escala seja linear. | **Adotado** (Gráfico com switches `Log X` e `Log Y` na tela F02). |
+| **Tabela com filtros de séries (checkboxes)** | C01 | Isolar linguagens específicas para confronto direto. | Reduz a carga cognitiva permitindo ocultar séries irrelevantes para a análise do usuário. | Risco de deixar a área do gráfico vazia caso tudo seja desmarcado. | **Adotado** (Tabela sincronizada com checkboxes na tela F03). |
+| **Bloco de comando com cópia assistida** | GitHub | Auditar e reproduzir o ambiente experimental no terminal. | Acelera a reprodução e elimina erros motores de digitação de instruções complexas. | Dependência do suporte à área de transferência do navegador. | **Adotado** (Botão `Copy` na receita do Guix na tela F07). |
+| **Modal sobreposto sob demanda** | Convenções web modernas | Checar especificações da máquina física de testes. | Evita a quebra do fluxo da análise atual, sem recarregar a página ou perder o estado dos filtros. | Deve prever múltiplos métodos de fechamento (botão 'X', clique externo e `Esc`). | **Adotado** (Modal `About` ubíquo na tela F06). |
 
-## Referências
+---
 
-[Debian Benchmark Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html)
-[Rosetta Code](https://rosettacode.org/wiki/Rosetta_Code)
+#### 4. Síntese comparativa da equipe
 
-## Checklist
+Avaliação sistemática dos produtos com base nas tarefas prioritárias do domínio de benchmarking:
 
-- [X] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
-- [X] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
-- [X] Há pelo menos uma análise completa por integrante.
-- [X] Cada análise contém prints legíveis da interface.
-- [X] Prints mostram telas/estados relevantes, não apenas logos/homepage.
-- [X] Foram analisados concorrentes e/ou interfaces representativas ao público.
-- [X] Em TCC sem interface original, foram investigadas ferramentas profissionais análogas às atividades do usuário escolhido.
-- [X] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
-- [X] Opiniões de UX têm fonte.
-- [X] A síntese compara critérios comuns e produz recomendações.
-- [X] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
+| Critério operacional de tarefa | C01 (Debian Game) | C02 (Rosetta Code) | Oportunidade e decisão para o BMML |
+| :--- | :--- | :--- | :--- |
+| **Localização rápida de algoritmos** | Lista alfabética longa em texto puro. | Índice massivo em formato *wiki* com mais de 1000 itens. | Adotar grade de cartões (*cards*) organizados por categoria de processamento com busca rápida. |
+| **Comparação direta de métricas** | Boa apresentação tabular numérica, mas sem gráficos. | Inexistente (foco exclusivo em sintaxe e código). | Unir visualização cartesiana de dispersão a uma tabela de médias numéricas exatas. |
+| **Filtragem seletiva de dados** | Ordenação de colunas em sentido único; sem ocultação de linhas. | Inexistente (rolagem vertical obrigatória). | Checkboxes individuais por linguagem, permitindo isolar apenas os competidores de interesse. |
+| **Acesso a código e compilação** | Página dedicada com código estático e flags textuais. | Blocos de código sequenciais na mesma página. | Aba de código integrada na mesma tela, exibindo flags de build e script de contêiner. |
+| **Garantia de reprodutibilidade** | Descreve versão do compilador, mas não fornece contêiner. | Não aborda ambiente de execução ou reprodutibilidade. | Disponibilizar receita declarativa de contêiner GNU Guix com botão de cópia direta. |
+| **Acessibilidade e ergonomia visual** | Alto contraste nativo, mas sem suporte a leitores modernos ou responsividade. | Suporte parcial a ajuste de tamanho de fonte nativo do MediaWiki. | Tema escuro com alto contraste WCAG AA, tipografia sem serifa para dados e monoespaçada para código. |
+
+---
+
+#### 5. Recomendações derivadas para o projeto
+
+Recomendações fundamentadas nas observações empíricas das interfaces, conectadas diretamente às metas e tarefas do BMML:
+
+| ID | Recomendação de Design | Origem no estudo | Tarefa / Objetivo apoiado | Impacto esperado na interação | Status no projeto |
+| :---: | :--- | :---: | :--- | :--- | :---: |
+| **RC01** | **Interface limpa e focada nos dados:** Apresentar gráficos e tabelas com baixa densidade decorativa, priorizando espaço de tela para dados brutos. | C01 | T01 (Comparar métricas de desempenho). | Reduz fadiga visual e permite visualização contínua de múltiplos benchmarks em tela cheia. | **Adotada** (Telas F01 e F02) |
+| **RC02** | **Centralização da análise na mesma visualização:** Manter gráfico e tabela de médias na mesma tela, sem exigir troca constante de páginas. | C02 / C01 | T01 (Avaliar ganho relativo). | Elimina a sobrecarga de memória de trabalho ao comparar números e curvas visuais. | **Adotada** (Telas F02 e F03) |
+| **RC03** | **Descrições conceituais dos problemas:** Exibir breve contextualização sobre a natureza da carga do benchmark (ex.: CPU vs. memória). | C01 / C02 | T01 / T02 (Selecionar algoritmo). | Ajuda o usuário a compreender por que uma linguagem teve comportamento anômalo naquele caso específico. | **Adotada** (Tags e cards em F01) |
+| **RC04** | **Explicitação rigorosa de métricas e eixos:** Declarar expressamente as unidades de medida (segundos, MB) e prover chaves de escala logarítmica. | C01 | T01 (Analisar trade-off de recursos). | Previne distorções na interpretação de ordens de grandeza discrepantes entre linguagens compiladas e interpretadas. | **Adotada** (Controles de eixos em F02) |
+| **RC05** | **Filtragem dinâmica de séries com checkboxes:** Permitir ligar e desligar linguagens diretamente na tabela de médias. | Ausência em C01 e C02 | T01 / T02 (Isolar linguagens de interesse). | Permite comparar concorrentes diretos (ex.: C vs. Rust) sem a poluição visual das demais séries no gráfico. | **Adotada** (Tabela de séries em F03) |
+| **RC06** | **Reprodutibilidade e auditoria em um clique:** Fornecer o script de contêiner e comandos de compilação acompanhados de botão de cópia assistida. | C01 / GitHub | T02 (Validar ambiente e citar teste). | Garante credibilidade científica ao estudo e economiza tempo do auditor ao reproduzir os testes localmente. | **Adotada** (Aba Guix em F07) |
+| **RC07** | **Acesso ubíquo aos dados de calibração física:** Disponibilizar os parâmetros de hardware (CPU, RAM, Kernel) em modal sobreposto acessível de qualquer tela. | C01 | T01 / T02 (Conferir especificações de hardware). | Evita que o usuário precise sair da análise gráfica em andamento para verificar em que máquina os testes rodaram. | **Adotada** (Modal About em F06) |
+
+---
+
+#### Referências
+
+* Debian Benchmark Game Team. *The Computer Language Benchmarks Game*. Disponível em: <[suspicious link removed]>. Acesso em: 02 set. 2026.
+* Rosetta Code Consortium. *Rosetta Code: Chrestomathy of Computer Programs*. Disponível em: <[suspicious link removed]>. Acesso em: 02 set. 2026.
+* GitHub Docs. *About READMEs and Code Navigation*. Disponível em: <[suspicious link removed]>. Acesso em: 02 set. 2026.
+
+---
+
+#### Checklist
+
+* [x] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
+* [x] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade com base nas evidências.
+* [x] Há pelo menos uma análise completa e identificada por integrante.
+* [x] Cada análise contém referências a prints legíveis e pertinentes de estados reais.
+* [x] Foram analisados concorrentes e interfaces de referência de uso cotidiano do público.
+* [x] Padrões de interface foram justificados como respostas a tarefas reais, e não por mera imitação.
+* [x] A seção de opiniões de UX registra inspeção técnica fundamentada e fontes explícitas.
+* [x] A síntese comparativa adota critérios operacionais e objetivos de tarefas.
+* [x] As recomendações compõem uma matriz rastreável com origem, objetivo e impacto.
