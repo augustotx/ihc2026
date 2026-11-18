@@ -36,6 +36,8 @@ Mapeamento de insumos e evolução do conhecimento da equipe desde a fase explor
 * **Base de evidências:** Proto-persona fundamentada nas Entregas 1 e 2, mantida sob hipótese até os testes empíricos.
 * **Hipóteses da Entrega 1 relacionadas:** H01, H03.
 
+![Rafael Mendes](../assets/03_personas/man.png)
+
 | Campo | Descrição |
 | :--- | :--- |
 | **Identidade e Dados Demográficos** | 42 anos, graduado em Ciência da Computação com especialização em Engenharia de Software. 20 anos de experiência prática no desenvolvimento de sistemas backend de alto desempenho. |
@@ -60,6 +62,8 @@ Mapeamento de insumos e evolução do conhecimento da equipe desde a fase explor
 * **Tipo:** **Secundária** (suas necessidades de auditoria e rigor científico são essenciais, mas podem ser atendidas por abas e modais complementares sem descaracterizar a interface focada na tomada de decisão de P01).
 * **Base de evidências:** Proto-persona fundamentada no contexto acadêmico da Entrega 1 e no padrão colaborativo do Rosetta Code.
 * **Hipóteses da Entrega 1 relacionadas:** H01, H03, H04.
+
+![Mariana Costa](../assets/03_personas/woman.png)
 
 | Campo | Descrição |
 | :--- | :--- |
@@ -92,6 +96,8 @@ Mapeamento de insumos e evolução do conhecimento da equipe desde a fase explor
 #### 2. Mapa de empatia — Equipe (Foco: Rafael Mendes — P01)
 
 > **Nota epistemológica:** Os conteúdos a seguir representam **hipóteses de empatia** estruturadas pela equipe com base na proto-persona P01 e nas observações da Entrega 2. As citações e sentimentos expressos simulam o modelo mental do ator e serão verificados empiricamente nos testes com usuários.
+
+![Mapa de Empatia](../assets/03_personas/Mapa_Empatia.png)
 
 | Dimensão | Conteúdo empático (Hipóteses da equipe) |
 | :--- | :--- |
@@ -141,7 +147,7 @@ A Entrega 3 consolidou o alinhamento metodológico entre a contribuição técni
 
 1. **Foco no usuário decisor:** A caracterização de Rafael como *Tech Lead* equilibra o rigor técnico de baixo nível com a responsabilidade decisória, orientando a interface para a visualização clara de *trade-offs*.
 2. **Atendimento a demandas acadêmicas:** O perfil de Mariana garante que o sistema não seja uma "caixa-preta", incorporando transparência sobre hardware, flags de compilação e comandos de reprodução em contêineres.
-3. **Direcionamento para a Entrega 4:** As dores e necessidades mapeadas nesta etapa servem como insumo direto para a elaboração dos **cenários narrativos de problema (C01 e C02)**, que serão refinados sistematicamente na próxima entrega.
+3. **Direcionamento para a Entrega 4:** As dores e necessidades mapeadas nesta etapa servem como insumo direto para a elaboração dos **cenários narrativos de problema (C01 e C02)**, que foram refinados sistematicamente na entrega seguinte.
 
 ---
 
@@ -149,11 +155,12 @@ A Entrega 3 consolidou o alinhamento metodológico entre a contribuição técni
 
 * [x] Existe pelo menos uma persona identificada e modelada por integrante.
 * [x] As personas representam papéis distintos e fundamentam decisões de design concretas.
+* [x] As imagens reais das personas (`man.png` e `woman.png`) e do mapa de empatia (`Mapa_Empatia.png`) estão presentes e vinculadas.
 * [x] O elenco possui justificativa explícita para a persona primária (P01) e secundária (P02).
 * [x] A inconsistência entre "desenvolvedor" e "gestor" foi formalmente resolvida com o perfil *Tech Lead*.
 * [x] A seção "Síntese das personas" foi integralmente preenchida.
 * [x] Está claramente distinguido o que é evidência e o que é hipótese/proto-persona.
 * [x] O contexto de uso descreve detalhadamente os ambientes físico, social e técnico.
 * [x] A jornada cobre as etapas de antes, durante e após o uso do sistema.
-* [x] Expressões absolutas como "linguagem ideal" foram eliminadas da documentação.
+* [x] Expressões absolutas como "linguagem ideal" foram eliminadas em prol de "adequação aos requisitos".
 * [x] Os identificadores das personas e hipóteses estão alinhados com a matriz de rastreabilidade.
