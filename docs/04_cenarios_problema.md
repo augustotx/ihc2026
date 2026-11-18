@@ -1,120 +1,124 @@
-# Entrega 4 — Cenários de análise/problema
+### Entrega 4 — Cenários de análise/problema
 
-**Data:** 18/10/2026  
-**Status:** completo 🟩   
-**Responsabilidade:** 1 solução completa por integrante
+**Data:** 18/10/2026 (Revisado em 18/11/2026)
 
-## Objetivo da atividade
+**Status:** 🟩 concluída
 
-Descrever situações atuais em que o usuário tenta alcançar um objetivo e encontra dificuldades. O cenário de análise/problema deve tornar visível **o contexto, os atores, as ações e as rupturas**, sem antecipar a interface que será projetada.
+**Responsabilidade:** João Pedro Bazoli Palma (C01); Augusto Pereira Teixeira (C02).
 
-> **Regra central:** cenário de problema é a “história do problema”. Se o texto já diz “o sistema mostra”, “o aplicativo resolve” ou descreve botões/telas futuras, provavelmente está misturando problema com solução.
+#### Objetivo da atividade
 
-Sempre que possível, o cenário deve aprofundar uma **situação concreta já registrada na Entrega 1**.
+Descrever e investigar sistematicamente situações reais do problema atual em que o usuário tenta alcançar seus objetivos e encontra dificuldades e rupturas metodológicas. O cenário de análise/problema investiga **o contexto, os atores, o planejamento, as ações, os eventos e a avaliação**, sem antecipar telas, botões ou fluxos da futura interface de IHC.
 
-### Quando o TCC não possuía interface
+---
 
-O cenário continua sendo uma história de **problema/atividade humana**, não uma história do futuro sistema. Descreva como o profissional realiza hoje uma atividade semelhante ou como lida atualmente com dados, resultados, configurações, logs, decisões e limitações que o tema do TCC pretende apoiar.
+#### Cenário C01 — Seleção e justificativa de linguagem de programação para um novo serviço
 
-Exemplo: em vez de “o DBA abre o novo dashboard e executa o algoritmo”, descreva “o DBA precisa investigar uma consulta lenta, reúne informações em ferramentas distintas, compara planos manualmente e tem dificuldade para estimar o impacto de uma mudança”.
+* **Autor(a):** João Pedro Bazoli Palma — 24.123.041-6
+* **Persona(s) relacionada(s):** P01 — Rafael Mendes (Líder Técnico / *Tech Lead*)
+* **Necessidade relacionada:** N01 — Fundamentar a escolha da linguagem de programação com base em dados objetivos e comparáveis de desempenho
+* **Situação concreta da Entrega 1 relacionada:** Seção 4.5 — Escolha de linguagem para um projeto específico
+* **Hipóteses da Entrega 1 relacionadas:** H01, H03
 
-A interface da disciplina aparecerá somente depois, nos cenários de interação.
+##### 1. Cenário inicial (C01)
 
-Se o integrante escolher um novo problema/situação, explique por que ele passou a ser relevante e indique a evidência que motivou sua inclusão.
+Rafael Mendes é líder técnico de desenvolvimento e precisa definir a linguagem de programação mais adequada para um novo microsserviço de alto rendimento. Para evitar decisões baseadas em preferências pessoais ou modismos, ele pesquisa testes de desempenho na internet. Porém, encontra apenas dados dispersos, contraditórios e sem informações sobre o computador ou as versões utilizadas. Sem uma fonte padronizada, Rafael tenta organizar os dados em uma planilha manual, mas fica inseguro para defender a escolha técnica perante a equipe de desenvolvimento, que pressiona pelo uso de suas linguagens favoritas.
 
-## Cenário C01 — Seleção e justificativa de linguagem de programação para um novo projeto
+##### 2. Questões de refinamento sistemático (C01)
 
-**Autor(a):** João Pedro Bazoli Palma — 24.123.041-6  
-**Persona(s) relacionada(s):** P01 — Rafael Mendes  
-**Necessidade relacionada:** N01 — Fundamentar a escolha da linguagem de programação com base em dados objetivos e comparáveis de desempenho  
-**Situação concreta da Entrega 1 relacionada:** Seção 4.5 — Escolha de linguagem para um projeto específico  
-**Hipóteses ainda presentes:** H01 — O uso de uma base objetiva de dados de desempenho auxilia na escolha de linguagens
+| # | Elemento característico refinado | Questão de refinamento | Por que precisa ser respondida | Fonte / Forma de obtenção |
+| :-: | :--- | :--- | :--- | :--- |
+| **Q1** | **Objetivos** | Quais restrições de desempenho e métricas específicas são prioritárias para o novo microsserviço? | Determinar as grandezas que guiam a escolha e evitam decisões generalistas. | Requisitos não-funcionais do sistema e SLA da empresa. |
+| **Q2** | **Ambiente / Contexto** | Qual é o prazo limite e as condições de pressão sob as quais Rafael precisa consolidar a recomendação técnica? | Compreender a pressão de tempo e a densidade de trabalho na rotina profissional. | Cronograma da sprint de arquitetura e diretoria. |
+| **Q3** | **Atores / Relações sociais** | Quais conflitos e pressões internas a equipe técnica manifesta sobre a escolha da tecnologia? | Mapear as dinâmicas sociais e resistências que exigem fundamentação por evidências. | Observação de reuniões de alinhamento com a equipe de engenharia. |
+| **Q4** | **Eventos** | Que evento disparou a necessidade dessa escolha e qual evento marcará a conclusão da tomada de decisão? | Delimitar com precisão o início e o término da atividade no tempo. | Ata de aprovação de novo projeto corporativo. |
+| **Q5** | **Planejamento** | Qual estratégia de busca Rafael adota e como organiza o processo investigativo ao encontrar fontes conflitantes? | Explicitar a atividade mental e o método de triagem de dados do profissional. | Entrevista em profundidade com o perfil profissional da persona. |
+| **Q6** | **Ações** | Como Rafael tenta tabular e normalizar manualmente as medições extraídas de fóruns e artigos dispersos? | Identificar o esforço operacional e as ferramentas paliativas empregadas hoje. | Análise de planilhas de teste de bancada de projetos anteriores. |
+| **Q7** | **Avaliação** | Quais critérios objetivos Rafael adota para julgar se uma fonte é confiável e decidir que já tem dados suficientes? | Identificar os critérios mentais de aceitação e confiança técnica nos dados. | Discussão sobre governança de arquitetura e credibilidade metodológica. |
 
-## 1. Cenário inicial
+##### 3. Cenário refinado com referências de refinamento (C01)
 
-Rafael Mendes é gestor de projetos e precisa definir a linguagem de programação ideal para um novo serviço de alto desempenho. Para evitar decisões baseadas em preferências pessoais ou modismos, ele pesquisa testes de desempenho na internet. Porém, encontra apenas dados dispersos, contraditórios e sem informações sobre o computador ou as versões utilizadas. Sem uma fonte padronizada, Rafael tenta organizar os dados em uma planilha manual, mas fica inseguro para defender a escolha técnica perante a equipe de desenvolvimento, que pressiona pelo uso de suas linguagens favoritas.
+Um incidente de sobrecarga no serviço legado de liquidação financeira disparou a abertura de um novo projeto de microsserviço [Q4]. Rafael Mendes, na condição de líder técnico, recebe a responsabilidade de recomendar a linguagem de programação mais adequada às restrições do sistema, tendo como meta estrita garantir baixa latência de execução e teto máximo de 256 MB de memória RAM por instância de contêiner [Q1]. Com apenas dois dias úteis antes da reunião formal de arquitetura com a diretoria executiva [Q2], Rafael inicia seu planejamento delimitando a busca a benchmarks de algoritmos de ordenação e estruturas de dados intensivas em memória [Q5]. Ele pesquisa em repositórios abertos e artigos de engenharia, mas logo se depara com dados contraditórios: o mesmo algoritmo em Rust aparece ora cinco vezes mais rápido, ora com o dobro do consumo de memória em relação a C [Q5]. Para tentar comparar as informações, Rafael gasta horas copiando medições manuais para uma planilha eletrônica, convertendo tempos de milissegundos para segundos e estimando o uso de memória [Q6]. No entanto, ao avaliar a credibilidade das fontes, percebe que nenhum dos artigos cita o processador utilizado, a quantidade de núcleos ativados ou se foram usadas flags de otimização de compilação como `-O3`, o que impede Rafael de considerar as medições válidas para uma decisão de produção [Q7]. Enquanto tenta validar os números, Rafael sofre pressão contínua no escritório: engenheiros seniores insistem em manter C++ por familiaridade da equipe, enquanto desenvolvedores recém-contratados pressionam para reescrever o núcleo em Go [Q3]. Diante da falta de evidências padronizadas e verificáveis, Rafael sente-se inseguro para apresentar a recomendação na reunião com a diretoria [Q2, Q4], ciente de que qualquer escolha equivocada poderá estourar o orçamento de nuvem da empresa [Q1].
 
-### 2. Questões de refinamento
+##### 4. Elementos característicos extraídos (C01)
 
-| # | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
-| :--- | :--- | :--- | :--- |
-| **Q1** | Quais métricas de desempenho são prioritárias para o projeto? | Identificar quais métricas devem ser comparadas. | Requisitos do projeto e conversa com o arquiteto de software. |
-| **Q2** | Como Rafael verifica se os testes encontrados na web foram realizados em condições equivalentes? | Identificar como ele avalia a confiabilidade dos dados. | Entrevista com a persona (P01 — Rafael). |
-| **Q3** | Quais questionamentos e preferências a equipe apresenta sobre a escolha da linguagem? | Compreender os conflitos e as pressões enfrentados pelo gestor. | Observação de reuniões com a equipe técnica. |
-| **Q4** | Quanto tempo Rafael tem para pesquisar e definir a linguagem do projeto? | Avaliar o impacto da pesquisa no cronograma. | Cronograma do projeto e conversa com a diretoria. |
-
-### 3. Cenário refinado
-
-Rafael Mendes é gestor de projetos e precisa escolher a linguagem de programação ideal para um novo sistema. Com apenas dois dias antes da reunião com a diretoria, ele precisa focar na velocidade de execução e no consumo de memória. Para evitar decisões baseadas em gosto pessoal, ele pesquisa testes na internet. Porém, só encontra dados dispersos e contraditórios. Ele tenta procurar detalhes sobre os computadores usados nos testes, mas quase nunca encontra essas informações. Sem uma fonte confiável, Rafael tenta organizar tudo em uma planilha manual, mas fica inseguro. A equipe de programação duvida dos testes disponíveis na internet e pressiona para usar as linguagens com as quais tem mais familiaridade.
-
-### 4. Elementos extraídos
-
-
-| Elemento | Evidência no cenário |
+| Elemento característico | Evidência textual no cenário refinado |
 | :--- | :--- |
-| **Ator(es)** | Rafael Mendes (Gestor de Projetos). |
-| **Objetivo(s)** | Escolher a linguagem de programação ideal para um novo sistema com base em velocidade e uso de memória. |
-| **Contexto** | Empresa de software, com prazo apertado de 2 dias antes da reunião com a diretoria. |
-| **Recursos/informações** | Artigos técnicos na internet, buscas web e planilha manual para organizar os dados. |
-| **Ações** | Pesquisar testes na internet, tentar identificar o computador usado nos testes e montar uma planilha comparativa. |
-| **Problemas/rupturas** | Dados dispersos e contraditórios na web; falta de detalhes sobre os testes; resistência e dúvida da equipe de programação. |
-| **Consequências** | Perda de tempo, insegurança do gestor e dificuldade para justificar a escolha técnica para a equipe. |
+| **Atores** | Rafael Mendes (*Tech Lead* decisor), equipe de engenharia de software (pressão técnica) e diretoria executiva (aprovação final). |
+| **Ambiente / Contexto** | Escritório corporativo de software, prazo crítico de 2 dias úteis, alta cobrança por redução de custos de infraestrutura. |
+| **Objetivos** | Selecionar a linguagem mais adequada sob a restrição de baixa latência e consumo de RAM abaixo de 256 MB por contêiner. |
+| **Planejamento** | Focar em algoritmos representativos de carga de memória e tentar isolar variáveis para confrontar resultados discrepantes da web. |
+| **Ações** | Pesquisar em fóruns técnicos, copiar medições para planilha eletrônica manual, converter unidades de medida e buscar dados de hardware. |
+| **Eventos** | **Gatilho inicial:** Sobrecarga no sistema legado disparando novo microsserviço.<br />**Conclusão:** Reunião decisória formal com a diretoria. |
+| **Avaliação** | Rafael julga as fontes da internet como insuficientes e não-confiáveis por omitirem processador, memória física e flags de compilação. |
+| **Recursos / Informações** | Artigos na web, repositórios públicos, planilha eletrônica de apoio e documentação de arquitetura da empresa. |
+| **Problemas / Rupturas** | Resultados contraditórios na internet, falta de transparência sobre o ambiente de execução e esforço manual improdutivo. |
+| **Consequências** | Perda de tempo hábil de projeto, atrito com a equipe técnica e insegurança na tomada de decisão arquitetural. |
 
-### 5. Implicações para as próximas entregas
+##### 5. Implicações para as próximas entregas
 
-Este cenário mostra a necessidade de analisar como o gestor pesquisa e compara dados de desempenho no dia a dia. Nas próximas etapas, será preciso mapear quais informações sobre os testes (como tipo de computador, uso de memória e velocidade) são essenciais para gerar confiança e ajudar o gestor a justificar sua decisão para a equipe, sem ainda desenhar telas ou antecipar soluções.
+Este cenário demonstra a necessidade imperiosa de prover visualizações comparativas que combinem tempo e memória simultaneamente (gráfico de dispersão cartesiano) e deixem explícita a calibração física dos testes, permitindo ao líder técnico fundamentar suas decisões sem perda de tempo em planilhas manuais.
 
+---
 
-## Cenário C02 — Comparação de linguagens para trabalho acadêmico
+#### Cenário C02 — Comparação e auditoria de linguagens para trabalho acadêmico
 
-**Autor(a):** Augusto Pereira Teixeira — 24.123.008-5  
-**Persona(s) relacionada(s):** P02 — Mariana Costa  
-**Necessidade relacionada:** N02 — Acessar dados confiáveis e detalhados para embasar trabalhos e pesquisas  
-**Situação concreta da Entrega 1 relacionada:** Seção 4.5 — Comparação de desempenho de linguagens para estudos  
-**Hipóteses ainda presentes:** H01 — O uso de uma base objetiva de dados auxilia estudantes e pesquisadores
+* **Autor(a):** Augusto Pereira Teixeira — 24.123.008-5
+* **Persona(s) relacionada(s):** P02 — Mariana Costa (Pesquisadora e Mestranda)
+* **Necessidade relacionada:** N02 — Acessar dados confiáveis e detalhados para embasar trabalhos e pesquisas acadêmicas
+* **Situação concreta da Entrega 1 relacionada:** Seção 4.5 — Comparação de desempenho de linguagens para estudos
+* **Hipóteses da Entrega 1 relacionadas:** H01, H03, H04
 
-### 1. Cenário inicial
+##### 1. Cenário inicial (C02)
 
 Mariana Costa é estudante de mestrado e precisa comparar a velocidade de diferentes linguagens de programação para um artigo. Ela pesquisa testes na internet, mas só encontra dados espalhados, pouco confiáveis e sem informações sobre qual computador foi usado. Sem fontes seguras, Mariana precisa baixar os códigos e rodar os testes manualmente no próprio computador, o que toma muito tempo e limita seus resultados.
 
-### 2. Questões de refinamento
+##### 2. Questões de refinamento sistemático (C02)
 
-| # | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
-| :--- | :--- | :--- | :--- |
-| **Q1** | Quais detalhes sobre o computador e os testes Mariana precisa para confiar nos dados? | Saber quais informações são essenciais para um trabalho acadêmico. | Conversa com o orientador da pesquisa. |
-| **Q2** | Como Mariana tenta juntar e organizar os resultados de fontes diferentes hoje? | Mapear o esforço e a perda de tempo na organização manual dos dados. | Entrevista com a persona (P02 — Mariana). |
-| **Q3** | Por que testar tudo no próprio computador atrapalha a pesquisa? | Entender a limitação de rodar testes em apenas um notebook. | Observação do dia a dia no laboratório. |
-| **Q4** | Qual é o prazo final que Mariana tem para entregar o artigo? | Avaliar a urgência de obter esses dados rapidamente. | Cronograma do curso de pós-graduação. |
+| # | Elemento característico refinado | Questão de refinamento | Por que precisa ser respondida | Fonte / Forma de obtenção |
+| :-: | :--- | :--- | :--- | :--- |
+| **Q1** | **Objetivos** | Quais dados experimentais e evidências de compilação Mariana necessita extrair para fundamentar sua pesquisa? | Definir o conjunto de dados indispensável para a validade do experimento científico. | Metodologia da dissertação de mestrado. |
+| **Q2** | **Ambiente / Contexto** | Em quais prazos e sob quais condições de infraestrutura acadêmica Mariana está conduzindo a comparação? | Caracterizar a urgência e as limitações de hardware enfrentadas pelo pesquisador. | Calendário de submissão do congresso e condições do laboratório. |
+| **Q3** | **Atores / Relações sociais** | Quem são as partes acadêmicas que auditam o trabalho de Mariana e exigem comprovação metodológica dos testes? | Identificar o rigor avaliativo e as exigências do meio científico sobre os dados. | Reuniões de orientação com o orientador e diretrizes dos revisores de artigos (*peer review*). |
+| **Q4** | **Eventos** | Qual evento acadêmico iniciou a necessidade dos benchmarks e o que ocorre após a obtenção dos dados? | Estabelecer o marco temporal inicial e a consequência da entrega do experimento. | Chamada de trabalhos (*Call for Papers*) de simpósio científico. |
+| **Q5** | **Planejamento** | Qual método Mariana planeja seguir para selecionar os algoritmos antes de decidir compilar tudo manualmente? | Explicitar a estratégia investigativa e a tomada de decisão da pesquisadora. | Planejamento experimental de bancada acadêmica. |
+| **Q6** | **Ações** | Como Mariana tenta contornar a falta de reprodutibilidade da web executando testes locais em seu notebook? | Descrever a sequência de tarefas operacionais, scripts e limitações de bancada. | Observação direta de rotina de testes em ambiente Linux. |
+| **Q7** | **Avaliação** | Quais critérios metodológicos Mariana utiliza para considerar se um teste de terceiros possui validade científica? | Definir os requisitos de reprodutibilidade formal (determinismo, hardware e flags). | Critérios epistemológicos de reprodutibilidade computacional (ACM / SBC). |
 
-### 3. Cenário refinado
+##### 3. Cenário refinado com referências de refinamento (C02)
 
-Mariana Costa é estudante de mestrado e precisa comparar a velocidade de diferentes linguagens para um artigo. Com o prazo de entrega do trabalho se aproximando, ela precisa urgentemente de dados confiáveis de tempo e memória. Ela pesquisa testes na internet, mas só encontra informações incompletas. Para seu artigo, é essencial saber qual computador e quais programas foram usados, mas os sites não mostram isso. Sem como confirmar os dados da web, Mariana tenta rodar tudo manualmente no próprio notebook. O processo leva horas e os resultados ficam limitados à capacidade da sua máquina pessoal.
+A aprovação do resumo de sua pesquisa para apresentação no Simpósio de Sistemas Computacionais disparou o prazo fatal de duas semanas para a submissão do manuscrito completo [Q4]. Mariana Costa precisa incluir uma seção experimental quantitativa comparando tempo de CPU e consumo de memória entre C, Rust e Zig, com o objetivo de avaliar se as garantias de segurança de memória das linguagens modernas impõem sobrecusto computacional mensurável [Q1]. Trabalhando no laboratório da universidade com um notebook pessoal de recursos limitados [Q2], Mariana planeja inicialmente aproveitar medições públicas de projetos abertos de benchmarking para evitar a reexecução manual de dezenas de suítes de testes [Q5]. Contudo, ao avaliar os relatórios disponíveis na internet, constata que nenhum artigo descreve as flags de otimização utilizadas no compilador (como `.ReleaseFast` ou `-O3`), tampouco detalham a frequência da CPU, a memória RAM física ou a versão do kernel Linux adotado [Q7]. Seu orientador de mestrado já a alertou rigorosamente de que os revisores do simpósio rejeitam artigos que utilizam dados de bancada sem comprovação de ambiente determinístico e controle de variáveis [Q3, Q7]. Diante da falta de fontes críveis, Mariana altera seu plano e decide reproduzir os testes por conta própria: clona repositórios de algoritmos, escreve scripts manuais em Shell para medir o tempo via `/usr/bin/time -v` e compila cada programa individualmente em sua máquina [Q6]. O processo de compilação e execução repetida consome mais de seis horas consecutivas de processamento, travando seu notebook devido ao esgotamento de memória e gerando dados enviesados pela interferência de processos do sistema operacional [Q2, Q6]. Ao avaliar os resultados preliminares, Mariana conclui que seus próprios dados não possuem o isolamento térmico e a calibração de bancada necessários para publicação [Q7], deixando-a frustrada e com o cronograma de submissão do artigo criticamente ameaçado [Q2, Q4].
 
-### 4. Elementos extraídos
+##### 4. Elementos característicos extraídos (C02)
 
-| Elemento | Evidência no cenário |
+| Elemento característico | Evidência textual no cenário refinado |
 | :--- | :--- |
-| **Ator(es)** | Mariana Costa (Estudante e Pesquisadora). |
-| **Objetivo(s)** | Encontrar dados organizados e confiáveis sobre linguagens de programação para seu artigo. |
-| **Contexto** | Pesquisa acadêmica na universidade, com prazo apertado para entregar o artigo. |
-| **Recursos/informações** | Artigos na internet, notebook pessoal e códigos de teste. |
-| **Ações** | Pesquisar na web, tentar descobrir como os testes foram feitos e rodar os programas manualmente. |
-| **Problemas/rupturas** | Falta de detalhes nos testes da internet e perda de tempo testando tudo no próprio computador. |
-| **Consequências** | Cansaço, atraso no trabalho e pesquisa limitada ao seu próprio notebook. |
+| **Atores** | Mariana Costa (pesquisadora/mestranda), professor orientador e revisores científicos (*reviewers* do simpósio). |
+| **Ambiente / Contexto** | Laboratório acadêmico, bancada com notebook pessoal, prazo rígido de 2 semanas para submissão do artigo. |
+| **Objetivos** | Obter dados experimentais rigorosos e auditáveis de tempo e memória entre C, Rust e Zig para validar hipótese científica. |
+| **Planejamento** | Buscar primeiro dados secundários confiáveis na web; falhando isso, montar ambiente de bancada local para execução empírica. |
+| **Ações** | Clonar códigos-fonte de algoritmos, criar scripts manuais de automação (`time -v`), compilar programas e monitorar logs de terminal. |
+| **Eventos** | **Gatilho inicial:** Aprovação de trabalho científico exigindo manuscrito completo em 2 semanas.<br />**Conclusão:** Submissão do artigo com a seção experimental validada. |
+| **Avaliação** | Mariana e seu orientador avaliam que testes sem especificação de flags e determinismo ambiental não possuem validade para publicação. |
+| **Recursos / Informações** | Artigos na web, terminal Linux, compiladores (GCC, Clang, rustc, zig), scripts Bash e notebook pessoal. |
+| **Problemas / Rupturas** | Falta de dados metodológicos na internet, esforço manual excessivo, travamento de máquina pessoal e falta de reprodutibilidade. |
+| **Consequências** | Perda de horas úteis de pesquisa, estresse com prazos acadêmicos e risco iminente de rejeição do artigo científico. |
 
+##### 5. Implicações para as próximas entregas
 
-### 5. Implicações para as próximas entregas
+O cenário de Mariana demonstra que a interface não pode ser apenas um visualizador gráfico de médias; ela precisa obrigatoriamente fornecer transparência de auditoria: exibição do hardware de bancada (CPU, RAM, Kernel), acesso às diretivas de compilação e disponibilização de comandos declarativos de reprodução em contêineres (como GNU Guix), que alimentarão as tarefas da Entrega 5 e a modelagem do MoLIC M02.
 
-Este cenário evidencia a necessidade de entender detalhadamente quais dados metodológicos (como processador, sistema operacional e versão do compilador) são indispensáveis para dar validade acadêmica a uma pesquisa. Nas próximas entregas, deveremos mapear como essas informações devem ser organizadas para evitar que o pesquisador perca tempo com testes manuais, sem antecipar a interface do projeto.
+---
 
-## Checklist
+#### Checklist
 
-- [x] Há um cenário completo por integrante.
-- [x] Cada cenário tem título, ator, objetivo, contexto e problema.
-- [x] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
-- [x] O texto descreve a situação atual, sem antecipar a solução.
-- [x] Para TCC sem interface original, o cenário descreve uma prática humana plausível relacionada à contribuição técnica, e não “a falta de uma tela”.
-- [x] Questões de refinamento acrescentam informação nova.
-- [x] O refinamento mostra claramente o que foi adicionado/alterado.
-- [x] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
-- [x] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
+* [x] Há um cenário completo, refinado e com autoria individual para cada integrante.
+* [x] Cada cenário possui título, ator, objetivo, contexto, planejamento, ações, eventos e avaliação.
+* [x] Os cenários descrevem rigorosamente a situação do problema atual, sem antecipar a futura interface.
+* [x] O refinamento cobre de forma sistemática os 7 elementos característicos recomendados pela literatura de IHC.
+* [x] Cada questão de refinamento está explicitamente associada ao elemento característico correspondente.
+* [x] As respostas das questões de refinamento estão claramente sinalizadas na narrativa refinada através de colchetes `[Q1]`, `[Q2]` etc.
+* [x] A tabela de elementos extraídos reflete fielmente os 7 elementos de Carroll/Rosson.
+* [x] Questões inválidas ou redundantes com o cenário inicial foram substituídas por investigações reais.
+* [x] Expressões absolutas como "linguagem ideal" foram eliminadas em prol de "adequação aos requisitos".
+* [x] Os cenários e personas estão formalmente conectados na matriz de rastreabilidade.
