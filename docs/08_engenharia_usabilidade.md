@@ -46,6 +46,10 @@ Converter o conhecimento sobre usuários, tarefas, plataforma e contexto em **me
 
 Foi usada a paleta de cores [Catppuccin](https://catppuccin.com/), que tem razão de contraste texto-fundo 10:1 na sua versão escura. Para os gráficos, foi usada a paleta Okabe-Ito (com algumas cores adicionais feitas pelo grupo), para facilitar a visualização dos gráficos por pessoas com os três principais daltonismos (protanopia, deuteranopia e tritanopia).
 
+Foi usada a fonte [JetBrains Mono](https://www.jetbrains.com/lp/mono/), usada pelas IDEs da JetBrains e por muitos desenvolvedores de software pelas suas ligaduras de caracteres ("->" vira uma seta, "==" vira um "=" longo, etc) para melhor leitura.
+
+- **Nota do Augusto**: eu considerei usar a fonte [OpenDyslexic](https://opendyslexic.org/), mas escolhi não usar por estética. Achei ela feia demais para o projeto, por mais que eu use ela no dia-a-dia.
+
 ---
 
 #### 3. Metas de usabilidade
