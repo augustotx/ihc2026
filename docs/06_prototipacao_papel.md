@@ -84,7 +84,7 @@ Com base nas tarefas priorizadas para P01 e P02, o protótipo explora três fam�
 
 ![P02 — Gráfico cartesiano de dispersão (tempo vs. memória)](../assets/06_prototipos/p02.png)
 
-![P03 — Bloco de código/receita Guix e botão COPY](../assets/06_prototipos/p03.png)
+![P03 — Bloco de código/receita Guix e botão COPY](../assets/06_prototipos/P03.png)
 
 ![P04 — Memorial de hardware e ambiente experimental](../assets/06_prototipos/p04.png)
 
