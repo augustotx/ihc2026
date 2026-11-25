@@ -158,9 +158,9 @@ Recomendações fundamentadas nas observações empíricas das interfaces, conec
 
 #### Referências
 
-* Debian Benchmark Game Team. *The Computer Language Benchmarks Game*. Disponível em: <[suspicious link removed]>. Acesso em: 02 set. 2026.
-* Rosetta Code Consortium. *Rosetta Code: Chrestomathy of Computer Programs*. Disponível em: <[suspicious link removed]>. Acesso em: 02 set. 2026.
-* GitHub Docs. *About READMEs and Code Navigation*. Disponível em: <[suspicious link removed]>. Acesso em: 02 set. 2026.
+* Debian Benchmark Game Team. *The Computer Language Benchmarks Game*. Disponível em: <[https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html]>. Acesso em: 02 set. 2026.
+* Rosetta Code Consortium. *Rosetta Code: Chrestomathy of Computer Programs*. Disponível em: <[https://rosettacode.org/wiki/Rosetta_Code]>. Acesso em: 02 set. 2026.
+* GitHub Docs. *About READMEs and Code Navigation*. Disponível em: <[https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes]>. Acesso em: 02 set. 2026.
 
 ---
 
