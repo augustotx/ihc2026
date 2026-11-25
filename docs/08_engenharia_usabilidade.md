@@ -48,9 +48,16 @@ Converter o conhecimento sobre usuários, tarefas, plataforma e contexto em **me
 
 | Princípio/norma | Aplicabilidade | Decisão/requisito | Fonte |
 | ------ | ------ | ------ | ------ |
-| **Acessibilidade (WCAG 2.1 AA)** | Gráficos legíveis para daltonismo e baixa acuidade. | Contraste 4.5:1 (texto) e 3:1 (gráficos); texturas/rótulos além de cores. | W3C |
+| **Acessibilidade (WCAG 2.1 AA)** | Gráficos legíveis para daltonismo e baixa acuidade. | Contraste 4.5:1 (texto) e 3:1 (gráficos); texturas/rótulos além de cores. \[notas 1 e 2 abaixo\]| W3C |
 | **Carga Cognitiva (Nielsen)** | Comparar opções sem alternar páginas. | Métricas lado a lado e cópia de comandos em um clique. | Nielsen |
-| **Tipografia Técnica Especializada** | Leitura de comandos e tabelas. | Fonte monoespaçada (JetBrains Mono) reservada para códigos e dados numéricos, mantendo fonte sem serifa para textos de interface. | Diretrizes de UI |
+| **Tipografia Técnica Especializada** | Leitura de comandos e tabelas. | Fonte monoespaçada (JetBrains Mono) reservada para códigos e dados numéricos, mantendo fonte sem serifa para textos de interface. \[notas 3 e 4 abaixo\]| Diretrizes de UI |
+
+Notas pós implementação:
+
+1. Foi usada a paleta de cores [Catppuccin](https://catppuccin.com/), que na sua versão *mocha* (mais escura), tem contrastes que chegam a 10:1, que é maior que o mínimo 4.5:1 estipulado pelo WCAG AA, mas que também não é absurdo como preto/branco.
+2. Para os gráficos, foi usada a paleta de cores Okabe-Ito, feita para pessoas daltônicas conseguirem distinguir as cores de pontos em gráficos *scatter*. Dessa forma, a interface fica mais acessível, por mais que as cores não sigam o padrão Catppuccin. 
+3. Foi usada a fonte [JetBrains Mono](https://www.jetbrains.com/lp/mono/), amplamente usada pela comunidade *dev* em IDEs, interfaces de terminal, etc. Ela conta com suporte a ligaduras de caracteres e ampla adoção pelo mercado e pela "bolha" *dev*.
+4. Foi considerado usar a fonte [OpenDyslexic](https://opendyslexic.org/) por ser uma fonte acessível para pessoas disléxicas, mas eu (Augusto) decidi não usá-la por não ser tão bonita quando a JetBrains Mono. A decisão foi puramente estética e as duas fontes poderiam ter sido usadas (para interface vs display de código, por exemplo).
 
 --------------------------------------------------------------------------------
 
