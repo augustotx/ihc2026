@@ -37,7 +37,7 @@ Modele também rupturas plausíveis: entrada inválida, falha de processamento, 
 
 ###### Diagrama
 
-![Diagrama MoLIC M01](../assets/10_molic/M01.jpg)
+![Diagrama MoLIC M01](../assets/10_molic/Molic1_refeito.png)
 
 ###### Leitura do diagrama
 
@@ -87,7 +87,7 @@ Modele também rupturas plausíveis: entrada inválida, falha de processamento, 
 
 ###### Diagrama
 
-![Diagrama MoLIC M02](../assets/10_molic/M02.jpg)
+![Diagrama MoLIC M02](../assets/10_molic/Molic2_refeito.png)
 
 ###### Leitura do diagrama
 
